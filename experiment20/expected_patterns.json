@@ -1,0 +1,570 @@
+{
+  "provenance": "事前に作成した人工データ上の期待グループ。探索器はこのファイルを読まない。",
+  "groups": [
+    {
+      "id": "G1",
+      "description": "追加 → 活動にかかる時間の増加",
+      "occurrences": [
+        {
+          "document_id": "K01",
+          "claim_ids": [
+            "n8"
+          ]
+        },
+        {
+          "document_id": "K02",
+          "claim_ids": [
+            "n2"
+          ]
+        },
+        {
+          "document_id": "K03",
+          "claim_ids": [
+            "n8"
+          ]
+        },
+        {
+          "document_id": "K04",
+          "claim_ids": [
+            "n4"
+          ]
+        },
+        {
+          "document_id": "K05",
+          "claim_ids": [
+            "n10"
+          ]
+        },
+        {
+          "document_id": "K06",
+          "claim_ids": [
+            "n1"
+          ]
+        },
+        {
+          "document_id": "K07",
+          "claim_ids": [
+            "n1"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "G2",
+      "description": "活動にかかる時間の増加 → 利用可能時間の減少",
+      "occurrences": [
+        {
+          "document_id": "K01",
+          "claim_ids": [
+            "n3"
+          ]
+        },
+        {
+          "document_id": "K02",
+          "claim_ids": [
+            "n4"
+          ]
+        },
+        {
+          "document_id": "K03",
+          "claim_ids": [
+            "n10"
+          ]
+        },
+        {
+          "document_id": "K04",
+          "claim_ids": [
+            "n12"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "G3",
+      "description": "追加 → 活動時間増加 → 利用可能時間減少の連鎖",
+      "occurrences": [
+        {
+          "document_id": "K01",
+          "claim_ids": [
+            "n3",
+            "n8"
+          ]
+        },
+        {
+          "document_id": "K02",
+          "claim_ids": [
+            "n2",
+            "n4"
+          ]
+        },
+        {
+          "document_id": "K03",
+          "claim_ids": [
+            "n10",
+            "n8"
+          ]
+        },
+        {
+          "document_id": "K04",
+          "claim_ids": [
+            "n12",
+            "n4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "G4",
+      "description": "件数10以上の条件付きで、活動時間増加 → 利用可能時間減少",
+      "occurrences": [
+        {
+          "document_id": "K09",
+          "claim_ids": [
+            "n10"
+          ]
+        },
+        {
+          "document_id": "K11",
+          "claim_ids": [
+            "n7"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "G5",
+      "description": "活動時間の増加が、業務の遅れの手がかりになる",
+      "occurrences": [
+        {
+          "document_id": "K13",
+          "claim_ids": [
+            "n1"
+          ]
+        },
+        {
+          "document_id": "K14",
+          "claim_ids": [
+            "n4"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "G6",
+      "description": "始動には、同じ対象の温度が80度以下であることが必要",
+      "occurrences": [
+        {
+          "document_id": "K16",
+          "claim_ids": [
+            "n1"
+          ]
+        },
+        {
+          "document_id": "K17",
+          "claim_ids": [
+            "n3"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "G7",
+      "description": "二つの活動時間がともに増加 → 利用可能時間減少",
+      "occurrences": [
+        {
+          "document_id": "K19",
+          "claim_ids": [
+            "n11"
+          ]
+        },
+        {
+          "document_id": "K20",
+          "claim_ids": [
+            "n3"
+          ]
+        }
+      ]
+    }
+  ],
+  "deferred_documents": [
+    "K12"
+  ],
+  "aliases": {
+    "K01": {
+      "target": "n1",
+      "add": "n4",
+      "activity": "n10",
+      "duration": "n7",
+      "increase": "n9",
+      "work": "n2",
+      "available": "n5",
+      "decrease": "n6",
+      "c1": "n8",
+      "c2": "n3"
+    },
+    "K02": {
+      "target": "n9",
+      "add": "n8",
+      "activity": "n6",
+      "duration": "n7",
+      "increase": "n3",
+      "work": "n5",
+      "available": "n10",
+      "decrease": "n1",
+      "c1": "n2",
+      "c2": "n4"
+    },
+    "K03": {
+      "target": "n5",
+      "add": "n6",
+      "activity": "n9",
+      "duration": "n7",
+      "increase": "n1",
+      "work": "n4",
+      "available": "n2",
+      "decrease": "n3",
+      "c1": "n8",
+      "c2": "n10"
+    },
+    "K04": {
+      "target": "n3",
+      "add": "n5",
+      "activity": "n2",
+      "duration": "n11",
+      "increase": "n7",
+      "work": "n10",
+      "available": "n8",
+      "decrease": "n9",
+      "c1": "n4",
+      "c2": "n12",
+      "observer": "n6",
+      "scene": "n13",
+      "observe": "n1"
+    },
+    "K05": {
+      "target": "n3",
+      "add": "n4",
+      "activity": "n7",
+      "duration": "n8",
+      "increase": "n5",
+      "work": "n9",
+      "available": "n2",
+      "decrease": "n1",
+      "c1": "n10",
+      "c2": "n6"
+    },
+    "K06": {
+      "target": "n4",
+      "add": "n9",
+      "activity": "n6",
+      "duration": "n5",
+      "increase": "n3",
+      "work": "n10",
+      "available": "n8",
+      "decrease": "n7",
+      "c1": "n1",
+      "c2": "n2"
+    },
+    "K07": {
+      "target": "n5",
+      "add": "n3",
+      "activity": "n7",
+      "duration": "n6",
+      "increase": "n9",
+      "work": "n4",
+      "available": "n2",
+      "decrease": "n10",
+      "c1": "n1",
+      "c2": "n8"
+    },
+    "K08": {
+      "target": "n5",
+      "add": "n2",
+      "activity": "n9",
+      "duration": "n10",
+      "increase": "n3",
+      "work": "n8",
+      "available": "n7",
+      "decrease": "n1",
+      "c1": "n4",
+      "c2": "n6"
+    },
+    "K09": {
+      "counted": "n5",
+      "count": "n1",
+      "condition": "n9",
+      "activity": "n2",
+      "duration": "n3",
+      "increase": "n4",
+      "work": "n6",
+      "available": "n7",
+      "decrease": "n8",
+      "c1": "n10"
+    },
+    "K10": {
+      "counted": "n3",
+      "count": "n1",
+      "condition": "n7",
+      "activity": "n9",
+      "duration": "n6",
+      "increase": "n10",
+      "work": "n4",
+      "available": "n2",
+      "decrease": "n8",
+      "c1": "n5"
+    },
+    "K11": {
+      "counted": "n6",
+      "count": "n3",
+      "condition": "n9",
+      "activity": "n1",
+      "duration": "n8",
+      "increase": "n2",
+      "work": "n5",
+      "available": "n4",
+      "decrease": "n10",
+      "c1": "n7"
+    },
+    "K12": {
+      "target": "n2",
+      "add": "n4",
+      "work": "n6",
+      "ease": "n1",
+      "increase": "n3",
+      "c1": "n5"
+    },
+    "K13": {
+      "activity": "n4",
+      "duration": "n2",
+      "increase": "n3",
+      "process": "n5",
+      "delayed": "n6",
+      "c1": "n1"
+    },
+    "K14": {
+      "activity": "n5",
+      "duration": "n2",
+      "increase": "n1",
+      "process": "n3",
+      "delayed": "n6",
+      "c1": "n4"
+    },
+    "K15": {
+      "activity": "n4",
+      "duration": "n6",
+      "increase": "n2",
+      "process": "n5",
+      "delayed": "n1",
+      "c1": "n3"
+    },
+    "K16": {
+      "machine": "n5",
+      "start": "n3",
+      "temperature": "n2",
+      "state": "n4",
+      "c1": "n1"
+    },
+    "K17": {
+      "machine": "n2",
+      "start": "n4",
+      "temperature": "n1",
+      "state": "n5",
+      "c1": "n3"
+    },
+    "K18": {
+      "machine": "n1",
+      "start": "n3",
+      "temperature": "n5",
+      "state": "n4",
+      "c1": "n2"
+    },
+    "K19": {
+      "a0": "n9",
+      "q0": "n2",
+      "ch0": "n10",
+      "a1": "n6",
+      "q1": "n8",
+      "ch1": "n5",
+      "and": "n1",
+      "work": "n3",
+      "available": "n7",
+      "decrease": "n4",
+      "c1": "n11"
+    },
+    "K20": {
+      "a0": "n8",
+      "q0": "n9",
+      "ch0": "n2",
+      "a1": "n4",
+      "q1": "n5",
+      "ch1": "n10",
+      "and": "n11",
+      "work": "n6",
+      "available": "n7",
+      "decrease": "n1",
+      "c1": "n3"
+    }
+  },
+  "contrast_checks": [
+    {
+      "name": "量の意味",
+      "left": [
+        "K01",
+        [
+          "c2"
+        ]
+      ],
+      "right": [
+        "K05",
+        [
+          "c2"
+        ]
+      ],
+      "same": false
+    },
+    {
+      "name": "因果の否定",
+      "left": [
+        "K01",
+        [
+          "c2"
+        ]
+      ],
+      "right": [
+        "K06",
+        [
+          "c2"
+        ]
+      ],
+      "same": false
+    },
+    {
+      "name": "因果と時間順序",
+      "left": [
+        "K01",
+        [
+          "c2"
+        ]
+      ],
+      "right": [
+        "K07",
+        [
+          "c2"
+        ]
+      ],
+      "same": false
+    },
+    {
+      "name": "可能性と断定",
+      "left": [
+        "K01",
+        [
+          "c2"
+        ]
+      ],
+      "right": [
+        "K08",
+        [
+          "c2"
+        ]
+      ],
+      "same": false
+    },
+    {
+      "name": "条件の有無",
+      "left": [
+        "K01",
+        [
+          "c2"
+        ]
+      ],
+      "right": [
+        "K09",
+        [
+          "c1"
+        ]
+      ],
+      "same": false
+    },
+    {
+      "name": "条件値10と20",
+      "left": [
+        "K09",
+        [
+          "c1"
+        ]
+      ],
+      "right": [
+        "K10",
+        [
+          "c1"
+        ]
+      ],
+      "same": false
+    },
+    {
+      "name": "同じ条件値10",
+      "left": [
+        "K09",
+        [
+          "c1"
+        ]
+      ],
+      "right": [
+        "K11",
+        [
+          "c1"
+        ]
+      ],
+      "same": true
+    },
+    {
+      "name": "兆候と因果",
+      "left": [
+        "K13",
+        [
+          "c1"
+        ]
+      ],
+      "right": [
+        "K15",
+        [
+          "c1"
+        ]
+      ],
+      "same": false
+    },
+    {
+      "name": "比較演算子以下と以上",
+      "left": [
+        "K16",
+        [
+          "c1"
+        ]
+      ],
+      "right": [
+        "K18",
+        [
+          "c1"
+        ]
+      ],
+      "same": false
+    },
+    {
+      "name": "共同条件と単独原因",
+      "left": [
+        "K01",
+        [
+          "c2"
+        ]
+      ],
+      "right": [
+        "K19",
+        [
+          "c1"
+        ]
+      ],
+      "same": false
+    }
+  ]
+}

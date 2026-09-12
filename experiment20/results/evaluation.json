@@ -1,0 +1,1209 @@
+{
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "annotation_provenance": "Author-assigned structured graphs; no Bedrock or external LLM extraction was run.",
+  "timing_scope": "Single local run per profile, including graph-contract validation, excluding annotation authoring, file I/O, report generation, and any LLM inference.",
+  "runs": {
+    "strict": {
+      "stats": {
+        "documents": 20,
+        "fragments_total": 36,
+        "fragments_accepted": 35,
+        "fragments_deferred": 1,
+        "distinct_patterns": 19,
+        "recurring_patterns": 7,
+        "exact_isomorphism_calls": 16,
+        "elapsed_seconds_including_validation": 0.012615399999958754
+      },
+      "evaluation": {
+        "definition": "Pair = two fragment occurrences from different documents, not two whole documents. Ground truth was author-assigned for synthetic data.",
+        "ground_truth_positive_pairs": 37,
+        "predicted_positive_pairs": 37,
+        "true_positive": 37,
+        "false_positive": 0,
+        "false_negative": 0,
+        "precision": 1.0,
+        "recall": 1.0,
+        "exact_expected_groups": 7,
+        "expected_groups_total": 7,
+        "group_matches": [
+          {
+            "expected_id": "G1",
+            "description": "追加 → 活動にかかる時間の増加",
+            "found_pattern_id": "P002",
+            "support_count": 7
+          },
+          {
+            "expected_id": "G2",
+            "description": "活動にかかる時間の増加 → 利用可能時間の減少",
+            "found_pattern_id": "P001",
+            "support_count": 4
+          },
+          {
+            "expected_id": "G3",
+            "description": "追加 → 活動時間増加 → 利用可能時間減少の連鎖",
+            "found_pattern_id": "P003",
+            "support_count": 4
+          },
+          {
+            "expected_id": "G4",
+            "description": "件数10以上の条件付きで、活動時間増加 → 利用可能時間減少",
+            "found_pattern_id": "P013",
+            "support_count": 2
+          },
+          {
+            "expected_id": "G5",
+            "description": "活動時間の増加が、業務の遅れの手がかりになる",
+            "found_pattern_id": "P015",
+            "support_count": 2
+          },
+          {
+            "expected_id": "G6",
+            "description": "始動には、同じ対象の温度が80度以下であることが必要",
+            "found_pattern_id": "P017",
+            "support_count": 2
+          },
+          {
+            "expected_id": "G7",
+            "description": "二つの活動時間がともに増加 → 利用可能時間減少",
+            "found_pattern_id": "P019",
+            "support_count": 2
+          }
+        ],
+        "contrast_checks": [
+          {
+            "name": "量の意味",
+            "expected_same": false,
+            "actual_same": false,
+            "pass": true
+          },
+          {
+            "name": "因果の否定",
+            "expected_same": false,
+            "actual_same": false,
+            "pass": true
+          },
+          {
+            "name": "因果と時間順序",
+            "expected_same": false,
+            "actual_same": false,
+            "pass": true
+          },
+          {
+            "name": "可能性と断定",
+            "expected_same": false,
+            "actual_same": false,
+            "pass": true
+          },
+          {
+            "name": "条件の有無",
+            "expected_same": false,
+            "actual_same": false,
+            "pass": true
+          },
+          {
+            "name": "条件値10と20",
+            "expected_same": false,
+            "actual_same": false,
+            "pass": true
+          },
+          {
+            "name": "同じ条件値10",
+            "expected_same": true,
+            "actual_same": true,
+            "pass": true
+          },
+          {
+            "name": "兆候と因果",
+            "expected_same": false,
+            "actual_same": false,
+            "pass": true
+          },
+          {
+            "name": "比較演算子以下と以上",
+            "expected_same": false,
+            "actual_same": false,
+            "pass": true
+          },
+          {
+            "name": "共同条件と単独原因",
+            "expected_same": false,
+            "actual_same": false,
+            "pass": true
+          }
+        ],
+        "false_positive_pairs": [],
+        "false_negative_pairs": []
+      }
+    },
+    "no_concepts": {
+      "stats": {
+        "documents": 20,
+        "fragments_total": 36,
+        "fragments_accepted": 35,
+        "fragments_deferred": 1,
+        "distinct_patterns": 17,
+        "recurring_patterns": 7,
+        "exact_isomorphism_calls": 18,
+        "elapsed_seconds_including_validation": 0.011050500000237662
+      },
+      "evaluation": {
+        "definition": "Pair = two fragment occurrences from different documents, not two whole documents. Ground truth was author-assigned for synthetic data.",
+        "ground_truth_positive_pairs": 37,
+        "predicted_positive_pairs": 45,
+        "true_positive": 37,
+        "false_positive": 8,
+        "false_negative": 0,
+        "precision": 0.8222222222222222,
+        "recall": 1.0,
+        "exact_expected_groups": 5,
+        "expected_groups_total": 7,
+        "group_matches": [
+          {
+            "expected_id": "G1",
+            "description": "追加 → 活動にかかる時間の増加",
+            "found_pattern_id": "P002",
+            "support_count": 7
+          },
+          {
+            "expected_id": "G2",
+            "description": "活動にかかる時間の増加 → 利用可能時間の減少",
+            "found_pattern_id": null,
+            "support_count": 4
+          },
+          {
+            "expected_id": "G3",
+            "description": "追加 → 活動時間増加 → 利用可能時間減少の連鎖",
+            "found_pattern_id": null,
+            "support_count": 4
+          },
+          {
+            "expected_id": "G4",
+            "description": "件数10以上の条件付きで、活動時間増加 → 利用可能時間減少",
+            "found_pattern_id": "P011",
+            "support_count": 2
+          },
+          {
+            "expected_id": "G5",
+            "description": "活動時間の増加が、業務の遅れの手がかりになる",
+            "found_pattern_id": "P013",
+            "support_count": 2
+          },
+          {
+            "expected_id": "G6",
+            "description": "始動には、同じ対象の温度が80度以下であることが必要",
+            "found_pattern_id": "P015",
+            "support_count": 2
+          },
+          {
+            "expected_id": "G7",
+            "description": "二つの活動時間がともに増加 → 利用可能時間減少",
+            "found_pattern_id": "P017",
+            "support_count": 2
+          }
+        ],
+        "contrast_checks": [
+          {
+            "name": "量の意味",
+            "expected_same": false,
+            "actual_same": true,
+            "pass": false
+          },
+          {
+            "name": "因果の否定",
+            "expected_same": false,
+            "actual_same": false,
+            "pass": true
+          },
+          {
+            "name": "因果と時間順序",
+            "expected_same": false,
+            "actual_same": false,
+            "pass": true
+          },
+          {
+            "name": "可能性と断定",
+            "expected_same": false,
+            "actual_same": false,
+            "pass": true
+          },
+          {
+            "name": "条件の有無",
+            "expected_same": false,
+            "actual_same": false,
+            "pass": true
+          },
+          {
+            "name": "条件値10と20",
+            "expected_same": false,
+            "actual_same": false,
+            "pass": true
+          },
+          {
+            "name": "同じ条件値10",
+            "expected_same": true,
+            "actual_same": true,
+            "pass": true
+          },
+          {
+            "name": "兆候と因果",
+            "expected_same": false,
+            "actual_same": false,
+            "pass": true
+          },
+          {
+            "name": "比較演算子以下と以上",
+            "expected_same": false,
+            "actual_same": false,
+            "pass": true
+          },
+          {
+            "name": "共同条件と単独原因",
+            "expected_same": false,
+            "actual_same": false,
+            "pass": true
+          }
+        ],
+        "false_positive_pairs": [
+          [
+            "K01:n3",
+            "K05:n6"
+          ],
+          [
+            "K01:n3,n8",
+            "K05:n10,n6"
+          ],
+          [
+            "K02:n2,n4",
+            "K05:n10,n6"
+          ],
+          [
+            "K02:n4",
+            "K05:n6"
+          ],
+          [
+            "K03:n10",
+            "K05:n6"
+          ],
+          [
+            "K03:n10,n8",
+            "K05:n10,n6"
+          ],
+          [
+            "K04:n12",
+            "K05:n6"
+          ],
+          [
+            "K04:n12,n4",
+            "K05:n10,n6"
+          ]
+        ],
+        "false_negative_pairs": []
+      }
+    },
+    "no_polarity": {
+      "stats": {
+        "documents": 20,
+        "fragments_total": 36,
+        "fragments_accepted": 35,
+        "fragments_deferred": 1,
+        "distinct_patterns": 18,
+        "recurring_patterns": 8,
+        "exact_isomorphism_calls": 17,
+        "elapsed_seconds_including_validation": 0.012220499999784806
+      },
+      "evaluation": {
+        "definition": "Pair = two fragment occurrences from different documents, not two whole documents. Ground truth was author-assigned for synthetic data.",
+        "ground_truth_positive_pairs": 37,
+        "predicted_positive_pairs": 38,
+        "true_positive": 37,
+        "false_positive": 1,
+        "false_negative": 0,
+        "precision": 0.9736842105263158,
+        "recall": 1.0,
+        "exact_expected_groups": 7,
+        "expected_groups_total": 7,
+        "group_matches": [
+          {
+            "expected_id": "G1",
+            "description": "追加 → 活動にかかる時間の増加",
+            "found_pattern_id": "P002",
+            "support_count": 7
+          },
+          {
+            "expected_id": "G2",
+            "description": "活動にかかる時間の増加 → 利用可能時間の減少",
+            "found_pattern_id": "P001",
+            "support_count": 4
+          },
+          {
+            "expected_id": "G3",
+            "description": "追加 → 活動時間増加 → 利用可能時間減少の連鎖",
+            "found_pattern_id": "P003",
+            "support_count": 4
+          },
+          {
+            "expected_id": "G4",
+            "description": "件数10以上の条件付きで、活動時間増加 → 利用可能時間減少",
+            "found_pattern_id": "P012",
+            "support_count": 2
+          },
+          {
+            "expected_id": "G5",
+            "description": "活動時間の増加が、業務の遅れの手がかりになる",
+            "found_pattern_id": "P014",
+            "support_count": 2
+          },
+          {
+            "expected_id": "G6",
+            "description": "始動には、同じ対象の温度が80度以下であることが必要",
+            "found_pattern_id": "P016",
+            "support_count": 2
+          },
+          {
+            "expected_id": "G7",
+            "description": "二つの活動時間がともに増加 → 利用可能時間減少",
+            "found_pattern_id": "P018",
+            "support_count": 2
+          }
+        ],
+        "contrast_checks": [
+          {
+            "name": "量の意味",
+            "expected_same": false,
+            "actual_same": false,
+            "pass": true
+          },
+          {
+            "name": "因果の否定",
+            "expected_same": false,
+            "actual_same": false,
+            "pass": true
+          },
+          {
+            "name": "因果と時間順序",
+            "expected_same": false,
+            "actual_same": false,
+            "pass": true
+          },
+          {
+            "name": "可能性と断定",
+            "expected_same": false,
+            "actual_same": false,
+            "pass": true
+          },
+          {
+            "name": "条件の有無",
+            "expected_same": false,
+            "actual_same": false,
+            "pass": true
+          },
+          {
+            "name": "条件値10と20",
+            "expected_same": false,
+            "actual_same": false,
+            "pass": true
+          },
+          {
+            "name": "同じ条件値10",
+            "expected_same": true,
+            "actual_same": true,
+            "pass": true
+          },
+          {
+            "name": "兆候と因果",
+            "expected_same": false,
+            "actual_same": false,
+            "pass": true
+          },
+          {
+            "name": "比較演算子以下と以上",
+            "expected_same": false,
+            "actual_same": false,
+            "pass": true
+          },
+          {
+            "name": "共同条件と単独原因",
+            "expected_same": false,
+            "actual_same": false,
+            "pass": true
+          }
+        ],
+        "false_positive_pairs": [
+          [
+            "K06:n2",
+            "K08:n6"
+          ]
+        ],
+        "false_negative_pairs": []
+      }
+    },
+    "no_conditions": {
+      "stats": {
+        "documents": 20,
+        "fragments_total": 36,
+        "fragments_accepted": 35,
+        "fragments_deferred": 1,
+        "distinct_patterns": 17,
+        "recurring_patterns": 6,
+        "exact_isomorphism_calls": 18,
+        "elapsed_seconds_including_validation": 0.011231099999804428
+      },
+      "evaluation": {
+        "definition": "Pair = two fragment occurrences from different documents, not two whole documents. Ground truth was author-assigned for synthetic data.",
+        "ground_truth_positive_pairs": 37,
+        "predicted_positive_pairs": 51,
+        "true_positive": 37,
+        "false_positive": 14,
+        "false_negative": 0,
+        "precision": 0.7254901960784313,
+        "recall": 1.0,
+        "exact_expected_groups": 5,
+        "expected_groups_total": 7,
+        "group_matches": [
+          {
+            "expected_id": "G1",
+            "description": "追加 → 活動にかかる時間の増加",
+            "found_pattern_id": "P002",
+            "support_count": 7
+          },
+          {
+            "expected_id": "G2",
+            "description": "活動にかかる時間の増加 → 利用可能時間の減少",
+            "found_pattern_id": null,
+            "support_count": 4
+          },
+          {
+            "expected_id": "G3",
+            "description": "追加 → 活動時間増加 → 利用可能時間減少の連鎖",
+            "found_pattern_id": "P003",
+            "support_count": 4
+          },
+          {
+            "expected_id": "G4",
+            "description": "件数10以上の条件付きで、活動時間増加 → 利用可能時間減少",
+            "found_pattern_id": null,
+            "support_count": 2
+          },
+          {
+            "expected_id": "G5",
+            "description": "活動時間の増加が、業務の遅れの手がかりになる",
+            "found_pattern_id": "P013",
+            "support_count": 2
+          },
+          {
+            "expected_id": "G6",
+            "description": "始動には、同じ対象の温度が80度以下であることが必要",
+            "found_pattern_id": "P015",
+            "support_count": 2
+          },
+          {
+            "expected_id": "G7",
+            "description": "二つの活動時間がともに増加 → 利用可能時間減少",
+            "found_pattern_id": "P017",
+            "support_count": 2
+          }
+        ],
+        "contrast_checks": [
+          {
+            "name": "量の意味",
+            "expected_same": false,
+            "actual_same": false,
+            "pass": true
+          },
+          {
+            "name": "因果の否定",
+            "expected_same": false,
+            "actual_same": false,
+            "pass": true
+          },
+          {
+            "name": "因果と時間順序",
+            "expected_same": false,
+            "actual_same": false,
+            "pass": true
+          },
+          {
+            "name": "可能性と断定",
+            "expected_same": false,
+            "actual_same": false,
+            "pass": true
+          },
+          {
+            "name": "条件の有無",
+            "expected_same": false,
+            "actual_same": true,
+            "pass": false
+          },
+          {
+            "name": "条件値10と20",
+            "expected_same": false,
+            "actual_same": true,
+            "pass": false
+          },
+          {
+            "name": "同じ条件値10",
+            "expected_same": true,
+            "actual_same": true,
+            "pass": true
+          },
+          {
+            "name": "兆候と因果",
+            "expected_same": false,
+            "actual_same": false,
+            "pass": true
+          },
+          {
+            "name": "比較演算子以下と以上",
+            "expected_same": false,
+            "actual_same": false,
+            "pass": true
+          },
+          {
+            "name": "共同条件と単独原因",
+            "expected_same": false,
+            "actual_same": false,
+            "pass": true
+          }
+        ],
+        "false_positive_pairs": [
+          [
+            "K01:n3",
+            "K09:n10"
+          ],
+          [
+            "K01:n3",
+            "K10:n5"
+          ],
+          [
+            "K01:n3",
+            "K11:n7"
+          ],
+          [
+            "K02:n4",
+            "K09:n10"
+          ],
+          [
+            "K02:n4",
+            "K10:n5"
+          ],
+          [
+            "K02:n4",
+            "K11:n7"
+          ],
+          [
+            "K03:n10",
+            "K09:n10"
+          ],
+          [
+            "K03:n10",
+            "K10:n5"
+          ],
+          [
+            "K03:n10",
+            "K11:n7"
+          ],
+          [
+            "K04:n12",
+            "K09:n10"
+          ],
+          [
+            "K04:n12",
+            "K10:n5"
+          ],
+          [
+            "K04:n12",
+            "K11:n7"
+          ],
+          [
+            "K09:n10",
+            "K10:n5"
+          ],
+          [
+            "K10:n5",
+            "K11:n7"
+          ]
+        ],
+        "false_negative_pairs": []
+      }
+    },
+    "shape_only": {
+      "stats": {
+        "documents": 20,
+        "fragments_total": 36,
+        "fragments_accepted": 35,
+        "fragments_deferred": 1,
+        "distinct_patterns": 7,
+        "recurring_patterns": 7,
+        "exact_isomorphism_calls": 28,
+        "elapsed_seconds_including_validation": 0.017976900000121532
+      },
+      "evaluation": {
+        "definition": "Pair = two fragment occurrences from different documents, not two whole documents. Ground truth was author-assigned for synthetic data.",
+        "ground_truth_positive_pairs": 37,
+        "predicted_positive_pairs": 94,
+        "true_positive": 37,
+        "false_positive": 57,
+        "false_negative": 0,
+        "precision": 0.39361702127659576,
+        "recall": 1.0,
+        "exact_expected_groups": 1,
+        "expected_groups_total": 7,
+        "group_matches": [
+          {
+            "expected_id": "G1",
+            "description": "追加 → 活動にかかる時間の増加",
+            "found_pattern_id": null,
+            "support_count": 7
+          },
+          {
+            "expected_id": "G2",
+            "description": "活動にかかる時間の増加 → 利用可能時間の減少",
+            "found_pattern_id": null,
+            "support_count": 4
+          },
+          {
+            "expected_id": "G3",
+            "description": "追加 → 活動時間増加 → 利用可能時間減少の連鎖",
+            "found_pattern_id": null,
+            "support_count": 4
+          },
+          {
+            "expected_id": "G4",
+            "description": "件数10以上の条件付きで、活動時間増加 → 利用可能時間減少",
+            "found_pattern_id": null,
+            "support_count": 2
+          },
+          {
+            "expected_id": "G5",
+            "description": "活動時間の増加が、業務の遅れの手がかりになる",
+            "found_pattern_id": null,
+            "support_count": 2
+          },
+          {
+            "expected_id": "G6",
+            "description": "始動には、同じ対象の温度が80度以下であることが必要",
+            "found_pattern_id": null,
+            "support_count": 2
+          },
+          {
+            "expected_id": "G7",
+            "description": "二つの活動時間がともに増加 → 利用可能時間減少",
+            "found_pattern_id": "P007",
+            "support_count": 2
+          }
+        ],
+        "contrast_checks": [
+          {
+            "name": "量の意味",
+            "expected_same": false,
+            "actual_same": true,
+            "pass": false
+          },
+          {
+            "name": "因果の否定",
+            "expected_same": false,
+            "actual_same": true,
+            "pass": false
+          },
+          {
+            "name": "因果と時間順序",
+            "expected_same": false,
+            "actual_same": true,
+            "pass": false
+          },
+          {
+            "name": "可能性と断定",
+            "expected_same": false,
+            "actual_same": true,
+            "pass": false
+          },
+          {
+            "name": "条件の有無",
+            "expected_same": false,
+            "actual_same": false,
+            "pass": true
+          },
+          {
+            "name": "条件値10と20",
+            "expected_same": false,
+            "actual_same": true,
+            "pass": false
+          },
+          {
+            "name": "同じ条件値10",
+            "expected_same": true,
+            "actual_same": true,
+            "pass": true
+          },
+          {
+            "name": "兆候と因果",
+            "expected_same": false,
+            "actual_same": true,
+            "pass": false
+          },
+          {
+            "name": "比較演算子以下と以上",
+            "expected_same": false,
+            "actual_same": true,
+            "pass": false
+          },
+          {
+            "name": "共同条件と単独原因",
+            "expected_same": false,
+            "actual_same": false,
+            "pass": true
+          }
+        ],
+        "false_positive_pairs": [
+          [
+            "K01:n3",
+            "K05:n6"
+          ],
+          [
+            "K01:n3",
+            "K06:n2"
+          ],
+          [
+            "K01:n3",
+            "K07:n8"
+          ],
+          [
+            "K01:n3",
+            "K08:n6"
+          ],
+          [
+            "K01:n3,n8",
+            "K05:n10,n6"
+          ],
+          [
+            "K01:n3,n8",
+            "K06:n1,n2"
+          ],
+          [
+            "K01:n3,n8",
+            "K07:n1,n8"
+          ],
+          [
+            "K01:n3,n8",
+            "K08:n4,n6"
+          ],
+          [
+            "K01:n8",
+            "K08:n4"
+          ],
+          [
+            "K02:n2",
+            "K08:n4"
+          ],
+          [
+            "K02:n2,n4",
+            "K05:n10,n6"
+          ],
+          [
+            "K02:n2,n4",
+            "K06:n1,n2"
+          ],
+          [
+            "K02:n2,n4",
+            "K07:n1,n8"
+          ],
+          [
+            "K02:n2,n4",
+            "K08:n4,n6"
+          ],
+          [
+            "K02:n4",
+            "K05:n6"
+          ],
+          [
+            "K02:n4",
+            "K06:n2"
+          ],
+          [
+            "K02:n4",
+            "K07:n8"
+          ],
+          [
+            "K02:n4",
+            "K08:n6"
+          ],
+          [
+            "K03:n10",
+            "K05:n6"
+          ],
+          [
+            "K03:n10",
+            "K06:n2"
+          ],
+          [
+            "K03:n10",
+            "K07:n8"
+          ],
+          [
+            "K03:n10",
+            "K08:n6"
+          ],
+          [
+            "K03:n10,n8",
+            "K05:n10,n6"
+          ],
+          [
+            "K03:n10,n8",
+            "K06:n1,n2"
+          ],
+          [
+            "K03:n10,n8",
+            "K07:n1,n8"
+          ],
+          [
+            "K03:n10,n8",
+            "K08:n4,n6"
+          ],
+          [
+            "K03:n8",
+            "K08:n4"
+          ],
+          [
+            "K04:n12",
+            "K05:n6"
+          ],
+          [
+            "K04:n12",
+            "K06:n2"
+          ],
+          [
+            "K04:n12",
+            "K07:n8"
+          ],
+          [
+            "K04:n12",
+            "K08:n6"
+          ],
+          [
+            "K04:n12,n4",
+            "K05:n10,n6"
+          ],
+          [
+            "K04:n12,n4",
+            "K06:n1,n2"
+          ],
+          [
+            "K04:n12,n4",
+            "K07:n1,n8"
+          ],
+          [
+            "K04:n12,n4",
+            "K08:n4,n6"
+          ],
+          [
+            "K04:n4",
+            "K08:n4"
+          ],
+          [
+            "K05:n10",
+            "K08:n4"
+          ],
+          [
+            "K05:n10,n6",
+            "K06:n1,n2"
+          ],
+          [
+            "K05:n10,n6",
+            "K07:n1,n8"
+          ],
+          [
+            "K05:n10,n6",
+            "K08:n4,n6"
+          ],
+          [
+            "K05:n6",
+            "K06:n2"
+          ],
+          [
+            "K05:n6",
+            "K07:n8"
+          ],
+          [
+            "K05:n6",
+            "K08:n6"
+          ],
+          [
+            "K06:n1",
+            "K08:n4"
+          ],
+          [
+            "K06:n1,n2",
+            "K07:n1,n8"
+          ],
+          [
+            "K06:n1,n2",
+            "K08:n4,n6"
+          ],
+          [
+            "K06:n2",
+            "K07:n8"
+          ],
+          [
+            "K06:n2",
+            "K08:n6"
+          ],
+          [
+            "K07:n1",
+            "K08:n4"
+          ],
+          [
+            "K07:n1,n8",
+            "K08:n4,n6"
+          ],
+          [
+            "K07:n8",
+            "K08:n6"
+          ],
+          [
+            "K09:n10",
+            "K10:n5"
+          ],
+          [
+            "K10:n5",
+            "K11:n7"
+          ],
+          [
+            "K13:n1",
+            "K15:n3"
+          ],
+          [
+            "K14:n4",
+            "K15:n3"
+          ],
+          [
+            "K16:n1",
+            "K18:n2"
+          ],
+          [
+            "K17:n3",
+            "K18:n2"
+          ]
+        ],
+        "false_negative_pairs": []
+      }
+    },
+    "entity_kind": {
+      "stats": {
+        "documents": 20,
+        "fragments_total": 36,
+        "fragments_accepted": 35,
+        "fragments_deferred": 1,
+        "distinct_patterns": 25,
+        "recurring_patterns": 6,
+        "exact_isomorphism_calls": 10,
+        "elapsed_seconds_including_validation": 0.009882800000013958
+      },
+      "evaluation": {
+        "definition": "Pair = two fragment occurrences from different documents, not two whole documents. Ground truth was author-assigned for synthetic data.",
+        "ground_truth_positive_pairs": 37,
+        "predicted_positive_pairs": 16,
+        "true_positive": 16,
+        "false_positive": 0,
+        "false_negative": 21,
+        "precision": 1.0,
+        "recall": 0.43243243243243246,
+        "exact_expected_groups": 5,
+        "expected_groups_total": 7,
+        "group_matches": [
+          {
+            "expected_id": "G1",
+            "description": "追加 → 活動にかかる時間の増加",
+            "found_pattern_id": null,
+            "support_count": 7
+          },
+          {
+            "expected_id": "G2",
+            "description": "活動にかかる時間の増加 → 利用可能時間の減少",
+            "found_pattern_id": "P001",
+            "support_count": 4
+          },
+          {
+            "expected_id": "G3",
+            "description": "追加 → 活動時間増加 → 利用可能時間減少の連鎖",
+            "found_pattern_id": null,
+            "support_count": 4
+          },
+          {
+            "expected_id": "G4",
+            "description": "件数10以上の条件付きで、活動時間増加 → 利用可能時間減少",
+            "found_pattern_id": "P019",
+            "support_count": 2
+          },
+          {
+            "expected_id": "G5",
+            "description": "活動時間の増加が、業務の遅れの手がかりになる",
+            "found_pattern_id": "P021",
+            "support_count": 2
+          },
+          {
+            "expected_id": "G6",
+            "description": "始動には、同じ対象の温度が80度以下であることが必要",
+            "found_pattern_id": "P023",
+            "support_count": 2
+          },
+          {
+            "expected_id": "G7",
+            "description": "二つの活動時間がともに増加 → 利用可能時間減少",
+            "found_pattern_id": "P025",
+            "support_count": 2
+          }
+        ],
+        "contrast_checks": [
+          {
+            "name": "量の意味",
+            "expected_same": false,
+            "actual_same": false,
+            "pass": true
+          },
+          {
+            "name": "因果の否定",
+            "expected_same": false,
+            "actual_same": false,
+            "pass": true
+          },
+          {
+            "name": "因果と時間順序",
+            "expected_same": false,
+            "actual_same": false,
+            "pass": true
+          },
+          {
+            "name": "可能性と断定",
+            "expected_same": false,
+            "actual_same": false,
+            "pass": true
+          },
+          {
+            "name": "条件の有無",
+            "expected_same": false,
+            "actual_same": false,
+            "pass": true
+          },
+          {
+            "name": "条件値10と20",
+            "expected_same": false,
+            "actual_same": false,
+            "pass": true
+          },
+          {
+            "name": "同じ条件値10",
+            "expected_same": true,
+            "actual_same": true,
+            "pass": true
+          },
+          {
+            "name": "兆候と因果",
+            "expected_same": false,
+            "actual_same": false,
+            "pass": true
+          },
+          {
+            "name": "比較演算子以下と以上",
+            "expected_same": false,
+            "actual_same": false,
+            "pass": true
+          },
+          {
+            "name": "共同条件と単独原因",
+            "expected_same": false,
+            "actual_same": false,
+            "pass": true
+          }
+        ],
+        "false_positive_pairs": [],
+        "false_negative_pairs": [
+          [
+            "K01:n3,n8",
+            "K02:n2,n4"
+          ],
+          [
+            "K01:n3,n8",
+            "K03:n10,n8"
+          ],
+          [
+            "K01:n3,n8",
+            "K04:n12,n4"
+          ],
+          [
+            "K01:n8",
+            "K02:n2"
+          ],
+          [
+            "K01:n8",
+            "K03:n8"
+          ],
+          [
+            "K01:n8",
+            "K04:n4"
+          ],
+          [
+            "K01:n8",
+            "K05:n10"
+          ],
+          [
+            "K01:n8",
+            "K06:n1"
+          ],
+          [
+            "K01:n8",
+            "K07:n1"
+          ],
+          [
+            "K02:n2",
+            "K03:n8"
+          ],
+          [
+            "K02:n2",
+            "K04:n4"
+          ],
+          [
+            "K02:n2",
+            "K05:n10"
+          ],
+          [
+            "K02:n2",
+            "K06:n1"
+          ],
+          [
+            "K02:n2",
+            "K07:n1"
+          ],
+          [
+            "K02:n2,n4",
+            "K03:n10,n8"
+          ],
+          [
+            "K02:n2,n4",
+            "K04:n12,n4"
+          ],
+          [
+            "K03:n10,n8",
+            "K04:n12,n4"
+          ],
+          [
+            "K03:n8",
+            "K04:n4"
+          ],
+          [
+            "K03:n8",
+            "K05:n10"
+          ],
+          [
+            "K03:n8",
+            "K06:n1"
+          ],
+          [
+            "K03:n8",
+            "K07:n1"
+          ]
+        ]
+      }
+    }
+  }
+}

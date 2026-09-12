@@ -1,0 +1,24 @@
+test_all_contracts (__main__.MinerTests.test_all_contracts) ... ok
+test_and_or_are_different (__main__.MinerTests.test_and_or_are_different) ... ok
+test_and_requires_all_members (__main__.MinerTests.test_and_requires_all_members) ... ok
+test_bad_quote_rejected (__main__.MinerTests.test_bad_quote_rejected) ... ok
+test_condition_value_is_retained (__main__.MinerTests.test_condition_value_is_retained) ... ok
+test_coreference_is_not_erased (__main__.MinerTests.test_coreference_is_not_erased) ... ok
+test_dangling_reference_rejected (__main__.MinerTests.test_dangling_reference_rejected) ... ok
+test_disconnected_background_does_not_break_partial_match (__main__.MinerTests.test_disconnected_background_does_not_break_partial_match) ... ok
+test_document_order_invariance (__main__.MinerTests.test_document_order_invariance) ... ok
+test_duplicate_occurrences_do_not_increase_document_support (__main__.MinerTests.test_duplicate_occurrences_do_not_increase_document_support) ... ok
+test_equal_signature_does_not_mean_isomorphic (__main__.MinerTests.test_equal_signature_does_not_mean_isomorphic) ... ok
+test_id_and_array_order_invariance (__main__.MinerTests.test_id_and_array_order_invariance) ... ok
+test_mapping_preserves_every_edge_and_node (__main__.MinerTests.test_mapping_preserves_every_edge_and_node) ... ok
+test_matcher_against_independent_permutation_oracle (__main__.MinerTests.test_matcher_against_independent_permutation_oracle) ... ok
+test_qualifier_blocks_only_affected_fragments (__main__.MinerTests.test_qualifier_blocks_only_affected_fragments) ... ok
+test_quantity_meanings_differ (__main__.MinerTests.test_quantity_meanings_differ) ... ok
+test_seven_expected_groups (__main__.MinerTests.test_seven_expected_groups) ... ok
+test_single_attribute_changes_are_not_matches (__main__.MinerTests.test_single_attribute_changes_are_not_matches) ... ok
+test_unknown_quantity_is_deferred (__main__.MinerTests.test_unknown_quantity_is_deferred) ... ok
+
+----------------------------------------------------------------------
+Ran 19 tests in 0.109s
+
+OK

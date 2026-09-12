@@ -1,0 +1,4067 @@
+[
+  {
+    "schema_version": "knowhow-graph-0.1",
+    "dictionary_versions": {
+      "core": "core-0.1",
+      "additional": "none"
+    },
+    "document_id": "K01",
+    "text": "人員の追加によって、説明・調整にかかる時間が増えることがある。説明・調整にかかる時間の増加によって、実作業に使える時間が減ることがある。",
+    "nodes": [
+      {
+        "id": "n9",
+        "type": "CHANGE",
+        "surface": "説明・調整にかかる時間が増える",
+        "evidence_ids": [
+          "ev1",
+          "ev2"
+        ],
+        "direction": "INCREASE",
+        "polarity": "POSITIVE",
+        "modality": "ASSERTED",
+        "context": "CONDITIONAL"
+      },
+      {
+        "id": "n6",
+        "type": "CHANGE",
+        "surface": "実作業に使える時間が減る",
+        "evidence_ids": [
+          "ev2"
+        ],
+        "direction": "DECREASE",
+        "polarity": "POSITIVE",
+        "modality": "ASSERTED",
+        "context": "CONDITIONAL"
+      },
+      {
+        "id": "n3",
+        "type": "CLAIM",
+        "surface": "説明・調整にかかる時間の増加によって、実作業に使える時間が減ることがある。",
+        "evidence_ids": [
+          "ev2"
+        ],
+        "predicate": "CAUSES",
+        "modality": "POSSIBLE",
+        "polarity": "POSITIVE",
+        "context": "GENERAL",
+        "match_status": "READY"
+      },
+      {
+        "id": "n7",
+        "type": "QUANTITY",
+        "surface": "説明・調整にかかる時間",
+        "evidence_ids": [
+          "ev1",
+          "ev2"
+        ],
+        "concept_id": "core:quantity.activity_duration",
+        "dictionary_entry_id": "core:quantity.activity_duration",
+        "dimension": "TIME",
+        "unit": null
+      },
+      {
+        "id": "n5",
+        "type": "QUANTITY",
+        "surface": "実作業に使える時間",
+        "evidence_ids": [
+          "ev2"
+        ],
+        "concept_id": "core:quantity.available_duration",
+        "dictionary_entry_id": "core:quantity.available_duration",
+        "dimension": "TIME",
+        "unit": null
+      },
+      {
+        "id": "n8",
+        "type": "CLAIM",
+        "surface": "人員の追加によって、説明・調整にかかる時間が増えることがある。",
+        "evidence_ids": [
+          "ev1"
+        ],
+        "predicate": "CAUSES",
+        "modality": "POSSIBLE",
+        "polarity": "POSITIVE",
+        "context": "GENERAL",
+        "match_status": "READY"
+      },
+      {
+        "id": "n1",
+        "type": "ENTITY",
+        "surface": "人員",
+        "evidence_ids": [
+          "ev1"
+        ],
+        "concept_id": null,
+        "entity_kind": "GROUP",
+        "dictionary_entry_id": null
+      },
+      {
+        "id": "n2",
+        "type": "ENTITY",
+        "surface": "実作業",
+        "evidence_ids": [
+          "ev2"
+        ],
+        "concept_id": null,
+        "entity_kind": "ACTIVITY",
+        "dictionary_entry_id": null
+      },
+      {
+        "id": "n4",
+        "type": "ACTION",
+        "surface": "人員の追加",
+        "evidence_ids": [
+          "ev1"
+        ],
+        "concept_id": "core:action.add",
+        "dictionary_entry_id": "core:action.add",
+        "polarity": "POSITIVE",
+        "modality": "ASSERTED",
+        "context": "CONDITIONAL"
+      },
+      {
+        "id": "n10",
+        "type": "ENTITY",
+        "surface": "説明・調整",
+        "evidence_ids": [
+          "ev1",
+          "ev2"
+        ],
+        "concept_id": null,
+        "entity_kind": "ACTIVITY",
+        "dictionary_entry_id": null
+      }
+    ],
+    "relations": [
+      {
+        "id": "r5",
+        "from": "n6",
+        "role": "QUANTITY",
+        "to": "n5",
+        "evidence_ids": [
+          "ev2"
+        ]
+      },
+      {
+        "id": "r8",
+        "from": "n3",
+        "role": "FROM",
+        "to": "n9",
+        "evidence_ids": [
+          "ev2"
+        ]
+      },
+      {
+        "id": "r2",
+        "from": "n7",
+        "role": "BEARER",
+        "to": "n10",
+        "evidence_ids": [
+          "ev1",
+          "ev2"
+        ]
+      },
+      {
+        "id": "r1",
+        "from": "n4",
+        "role": "TARGET",
+        "to": "n1",
+        "evidence_ids": [
+          "ev1"
+        ]
+      },
+      {
+        "id": "r9",
+        "from": "n3",
+        "role": "TO",
+        "to": "n6",
+        "evidence_ids": [
+          "ev2"
+        ]
+      },
+      {
+        "id": "r6",
+        "from": "n8",
+        "role": "FROM",
+        "to": "n4",
+        "evidence_ids": [
+          "ev1"
+        ]
+      },
+      {
+        "id": "r4",
+        "from": "n5",
+        "role": "BEARER",
+        "to": "n2",
+        "evidence_ids": [
+          "ev2"
+        ]
+      },
+      {
+        "id": "r7",
+        "from": "n8",
+        "role": "TO",
+        "to": "n9",
+        "evidence_ids": [
+          "ev1"
+        ]
+      },
+      {
+        "id": "r3",
+        "from": "n9",
+        "role": "QUANTITY",
+        "to": "n7",
+        "evidence_ids": [
+          "ev1",
+          "ev2"
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "id": "ev1",
+        "quote": "人員の追加によって、説明・調整にかかる時間が増えることがある。"
+      },
+      {
+        "id": "ev2",
+        "quote": "説明・調整にかかる時間の増加によって、実作業に使える時間が減ることがある。"
+      }
+    ],
+    "qualifiers": [],
+    "unrepresented": [],
+    "dictionary_candidates": [],
+    "issues": []
+  },
+  {
+    "schema_version": "knowhow-graph-0.1",
+    "dictionary_versions": {
+      "core": "core-0.1",
+      "additional": "none"
+    },
+    "document_id": "K02",
+    "text": "製品種類の追加によって、段取り替えにかかる時間が増えることがある。段取り替えにかかる時間の増加によって、製造に使える時間が減ることがある。",
+    "nodes": [
+      {
+        "id": "n5",
+        "type": "ENTITY",
+        "surface": "製造",
+        "evidence_ids": [
+          "ev2"
+        ],
+        "concept_id": null,
+        "entity_kind": "ACTIVITY",
+        "dictionary_entry_id": null
+      },
+      {
+        "id": "n2",
+        "type": "CLAIM",
+        "surface": "製品種類の追加によって、段取り替えにかかる時間が増えることがある。",
+        "evidence_ids": [
+          "ev1"
+        ],
+        "predicate": "CAUSES",
+        "modality": "POSSIBLE",
+        "polarity": "POSITIVE",
+        "context": "GENERAL",
+        "match_status": "READY"
+      },
+      {
+        "id": "n7",
+        "type": "QUANTITY",
+        "surface": "段取り替えにかかる時間",
+        "evidence_ids": [
+          "ev1",
+          "ev2"
+        ],
+        "concept_id": "core:quantity.activity_duration",
+        "dictionary_entry_id": "core:quantity.activity_duration",
+        "dimension": "TIME",
+        "unit": null
+      },
+      {
+        "id": "n10",
+        "type": "QUANTITY",
+        "surface": "製造に使える時間",
+        "evidence_ids": [
+          "ev2"
+        ],
+        "concept_id": "core:quantity.available_duration",
+        "dictionary_entry_id": "core:quantity.available_duration",
+        "dimension": "TIME",
+        "unit": null
+      },
+      {
+        "id": "n1",
+        "type": "CHANGE",
+        "surface": "製造に使える時間が減る",
+        "evidence_ids": [
+          "ev2"
+        ],
+        "direction": "DECREASE",
+        "polarity": "POSITIVE",
+        "modality": "ASSERTED",
+        "context": "CONDITIONAL"
+      },
+      {
+        "id": "n6",
+        "type": "ENTITY",
+        "surface": "段取り替え",
+        "evidence_ids": [
+          "ev1",
+          "ev2"
+        ],
+        "concept_id": null,
+        "entity_kind": "ACTIVITY",
+        "dictionary_entry_id": null
+      },
+      {
+        "id": "n3",
+        "type": "CHANGE",
+        "surface": "段取り替えにかかる時間が増える",
+        "evidence_ids": [
+          "ev1",
+          "ev2"
+        ],
+        "direction": "INCREASE",
+        "polarity": "POSITIVE",
+        "modality": "ASSERTED",
+        "context": "CONDITIONAL"
+      },
+      {
+        "id": "n9",
+        "type": "ENTITY",
+        "surface": "製品種類",
+        "evidence_ids": [
+          "ev1"
+        ],
+        "concept_id": null,
+        "entity_kind": "CATEGORY",
+        "dictionary_entry_id": null
+      },
+      {
+        "id": "n4",
+        "type": "CLAIM",
+        "surface": "段取り替えにかかる時間の増加によって、製造に使える時間が減ることがある。",
+        "evidence_ids": [
+          "ev2"
+        ],
+        "predicate": "CAUSES",
+        "modality": "POSSIBLE",
+        "polarity": "POSITIVE",
+        "context": "GENERAL",
+        "match_status": "READY"
+      },
+      {
+        "id": "n8",
+        "type": "ACTION",
+        "surface": "製品種類の追加",
+        "evidence_ids": [
+          "ev1"
+        ],
+        "concept_id": "core:action.add",
+        "dictionary_entry_id": "core:action.add",
+        "polarity": "POSITIVE",
+        "modality": "ASSERTED",
+        "context": "CONDITIONAL"
+      }
+    ],
+    "relations": [
+      {
+        "id": "r3",
+        "from": "n3",
+        "role": "QUANTITY",
+        "to": "n7",
+        "evidence_ids": [
+          "ev1",
+          "ev2"
+        ]
+      },
+      {
+        "id": "r5",
+        "from": "n1",
+        "role": "QUANTITY",
+        "to": "n10",
+        "evidence_ids": [
+          "ev2"
+        ]
+      },
+      {
+        "id": "r7",
+        "from": "n2",
+        "role": "TO",
+        "to": "n3",
+        "evidence_ids": [
+          "ev1"
+        ]
+      },
+      {
+        "id": "r2",
+        "from": "n7",
+        "role": "BEARER",
+        "to": "n6",
+        "evidence_ids": [
+          "ev1",
+          "ev2"
+        ]
+      },
+      {
+        "id": "r8",
+        "from": "n4",
+        "role": "FROM",
+        "to": "n3",
+        "evidence_ids": [
+          "ev2"
+        ]
+      },
+      {
+        "id": "r9",
+        "from": "n4",
+        "role": "TO",
+        "to": "n1",
+        "evidence_ids": [
+          "ev2"
+        ]
+      },
+      {
+        "id": "r6",
+        "from": "n2",
+        "role": "FROM",
+        "to": "n8",
+        "evidence_ids": [
+          "ev1"
+        ]
+      },
+      {
+        "id": "r4",
+        "from": "n10",
+        "role": "BEARER",
+        "to": "n5",
+        "evidence_ids": [
+          "ev2"
+        ]
+      },
+      {
+        "id": "r1",
+        "from": "n8",
+        "role": "TARGET",
+        "to": "n9",
+        "evidence_ids": [
+          "ev1"
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "id": "ev1",
+        "quote": "製品種類の追加によって、段取り替えにかかる時間が増えることがある。"
+      },
+      {
+        "id": "ev2",
+        "quote": "段取り替えにかかる時間の増加によって、製造に使える時間が減ることがある。"
+      }
+    ],
+    "qualifiers": [],
+    "unrepresented": [],
+    "dictionary_candidates": [],
+    "issues": []
+  },
+  {
+    "schema_version": "knowhow-graph-0.1",
+    "dictionary_versions": {
+      "core": "core-0.1",
+      "additional": "none"
+    },
+    "document_id": "K03",
+    "text": "予約枠の追加によって、予約確認にかかる時間が増えることがある。予約確認にかかる時間の増加によって、接客に使える時間が減ることがある。",
+    "nodes": [
+      {
+        "id": "n4",
+        "type": "ENTITY",
+        "surface": "接客",
+        "evidence_ids": [
+          "ev2"
+        ],
+        "concept_id": null,
+        "entity_kind": "ACTIVITY",
+        "dictionary_entry_id": null
+      },
+      {
+        "id": "n7",
+        "type": "QUANTITY",
+        "surface": "予約確認にかかる時間",
+        "evidence_ids": [
+          "ev1",
+          "ev2"
+        ],
+        "concept_id": "core:quantity.activity_duration",
+        "dictionary_entry_id": "core:quantity.activity_duration",
+        "dimension": "TIME",
+        "unit": null
+      },
+      {
+        "id": "n6",
+        "type": "ACTION",
+        "surface": "予約枠の追加",
+        "evidence_ids": [
+          "ev1"
+        ],
+        "concept_id": "core:action.add",
+        "dictionary_entry_id": "core:action.add",
+        "polarity": "POSITIVE",
+        "modality": "ASSERTED",
+        "context": "CONDITIONAL"
+      },
+      {
+        "id": "n9",
+        "type": "ENTITY",
+        "surface": "予約確認",
+        "evidence_ids": [
+          "ev1",
+          "ev2"
+        ],
+        "concept_id": null,
+        "entity_kind": "ACTIVITY",
+        "dictionary_entry_id": null
+      },
+      {
+        "id": "n2",
+        "type": "QUANTITY",
+        "surface": "接客に使える時間",
+        "evidence_ids": [
+          "ev2"
+        ],
+        "concept_id": "core:quantity.available_duration",
+        "dictionary_entry_id": "core:quantity.available_duration",
+        "dimension": "TIME",
+        "unit": null
+      },
+      {
+        "id": "n10",
+        "type": "CLAIM",
+        "surface": "予約確認にかかる時間の増加によって、接客に使える時間が減ることがある。",
+        "evidence_ids": [
+          "ev2"
+        ],
+        "predicate": "CAUSES",
+        "modality": "POSSIBLE",
+        "polarity": "POSITIVE",
+        "context": "GENERAL",
+        "match_status": "READY"
+      },
+      {
+        "id": "n1",
+        "type": "CHANGE",
+        "surface": "予約確認にかかる時間が増える",
+        "evidence_ids": [
+          "ev1",
+          "ev2"
+        ],
+        "direction": "INCREASE",
+        "polarity": "POSITIVE",
+        "modality": "ASSERTED",
+        "context": "CONDITIONAL"
+      },
+      {
+        "id": "n3",
+        "type": "CHANGE",
+        "surface": "接客に使える時間が減る",
+        "evidence_ids": [
+          "ev2"
+        ],
+        "direction": "DECREASE",
+        "polarity": "POSITIVE",
+        "modality": "ASSERTED",
+        "context": "CONDITIONAL"
+      },
+      {
+        "id": "n5",
+        "type": "ENTITY",
+        "surface": "予約枠",
+        "evidence_ids": [
+          "ev1"
+        ],
+        "concept_id": null,
+        "entity_kind": "ABSTRACT",
+        "dictionary_entry_id": null
+      },
+      {
+        "id": "n8",
+        "type": "CLAIM",
+        "surface": "予約枠の追加によって、予約確認にかかる時間が増えることがある。",
+        "evidence_ids": [
+          "ev1"
+        ],
+        "predicate": "CAUSES",
+        "modality": "POSSIBLE",
+        "polarity": "POSITIVE",
+        "context": "GENERAL",
+        "match_status": "READY"
+      }
+    ],
+    "relations": [
+      {
+        "id": "r3",
+        "from": "n1",
+        "role": "QUANTITY",
+        "to": "n7",
+        "evidence_ids": [
+          "ev1",
+          "ev2"
+        ]
+      },
+      {
+        "id": "r8",
+        "from": "n10",
+        "role": "FROM",
+        "to": "n1",
+        "evidence_ids": [
+          "ev2"
+        ]
+      },
+      {
+        "id": "r9",
+        "from": "n10",
+        "role": "TO",
+        "to": "n3",
+        "evidence_ids": [
+          "ev2"
+        ]
+      },
+      {
+        "id": "r1",
+        "from": "n6",
+        "role": "TARGET",
+        "to": "n5",
+        "evidence_ids": [
+          "ev1"
+        ]
+      },
+      {
+        "id": "r6",
+        "from": "n8",
+        "role": "FROM",
+        "to": "n6",
+        "evidence_ids": [
+          "ev1"
+        ]
+      },
+      {
+        "id": "r7",
+        "from": "n8",
+        "role": "TO",
+        "to": "n1",
+        "evidence_ids": [
+          "ev1"
+        ]
+      },
+      {
+        "id": "r4",
+        "from": "n2",
+        "role": "BEARER",
+        "to": "n4",
+        "evidence_ids": [
+          "ev2"
+        ]
+      },
+      {
+        "id": "r2",
+        "from": "n7",
+        "role": "BEARER",
+        "to": "n9",
+        "evidence_ids": [
+          "ev1",
+          "ev2"
+        ]
+      },
+      {
+        "id": "r5",
+        "from": "n3",
+        "role": "QUANTITY",
+        "to": "n2",
+        "evidence_ids": [
+          "ev2"
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "id": "ev1",
+        "quote": "予約枠の追加によって、予約確認にかかる時間が増えることがある。"
+      },
+      {
+        "id": "ev2",
+        "quote": "予約確認にかかる時間の増加によって、接客に使える時間が減ることがある。"
+      }
+    ],
+    "qualifiers": [],
+    "unrepresented": [],
+    "dictionary_candidates": [],
+    "issues": []
+  },
+  {
+    "schema_version": "knowhow-graph-0.1",
+    "dictionary_versions": {
+      "core": "core-0.1",
+      "additional": "none"
+    },
+    "document_id": "K04",
+    "text": "書類様式の追加によって、照合にかかる時間が増えることがある。照合にかかる時間の増加によって、審査に使える時間が減ることがある。また、担当者は受付の様子を観察する。",
+    "nodes": [
+      {
+        "id": "n8",
+        "type": "QUANTITY",
+        "surface": "審査に使える時間",
+        "evidence_ids": [
+          "ev2"
+        ],
+        "concept_id": "core:quantity.available_duration",
+        "dictionary_entry_id": "core:quantity.available_duration",
+        "dimension": "TIME",
+        "unit": null
+      },
+      {
+        "id": "n13",
+        "type": "ENTITY",
+        "surface": "受付の様子",
+        "evidence_ids": [
+          "ev3"
+        ],
+        "concept_id": null,
+        "entity_kind": "ABSTRACT",
+        "dictionary_entry_id": null
+      },
+      {
+        "id": "n5",
+        "type": "ACTION",
+        "surface": "書類様式の追加",
+        "evidence_ids": [
+          "ev1"
+        ],
+        "concept_id": "core:action.add",
+        "dictionary_entry_id": "core:action.add",
+        "polarity": "POSITIVE",
+        "modality": "ASSERTED",
+        "context": "CONDITIONAL"
+      },
+      {
+        "id": "n6",
+        "type": "ENTITY",
+        "surface": "担当者",
+        "evidence_ids": [
+          "ev3"
+        ],
+        "concept_id": null,
+        "entity_kind": "PERSON",
+        "dictionary_entry_id": null
+      },
+      {
+        "id": "n4",
+        "type": "CLAIM",
+        "surface": "書類様式の追加によって、照合にかかる時間が増えることがある。",
+        "evidence_ids": [
+          "ev1"
+        ],
+        "predicate": "CAUSES",
+        "modality": "POSSIBLE",
+        "polarity": "POSITIVE",
+        "context": "GENERAL",
+        "match_status": "READY"
+      },
+      {
+        "id": "n7",
+        "type": "CHANGE",
+        "surface": "照合にかかる時間が増える",
+        "evidence_ids": [
+          "ev1",
+          "ev2"
+        ],
+        "direction": "INCREASE",
+        "polarity": "POSITIVE",
+        "modality": "ASSERTED",
+        "context": "CONDITIONAL"
+      },
+      {
+        "id": "n12",
+        "type": "CLAIM",
+        "surface": "照合にかかる時間の増加によって、審査に使える時間が減ることがある。",
+        "evidence_ids": [
+          "ev2"
+        ],
+        "predicate": "CAUSES",
+        "modality": "POSSIBLE",
+        "polarity": "POSITIVE",
+        "context": "GENERAL",
+        "match_status": "READY"
+      },
+      {
+        "id": "n9",
+        "type": "CHANGE",
+        "surface": "審査に使える時間が減る",
+        "evidence_ids": [
+          "ev2"
+        ],
+        "direction": "DECREASE",
+        "polarity": "POSITIVE",
+        "modality": "ASSERTED",
+        "context": "CONDITIONAL"
+      },
+      {
+        "id": "n1",
+        "type": "ACTION",
+        "surface": "観察する",
+        "evidence_ids": [
+          "ev3"
+        ],
+        "concept_id": "core:action.observe",
+        "dictionary_entry_id": "core:action.observe",
+        "polarity": "POSITIVE",
+        "modality": "ASSERTED",
+        "context": "GENERAL"
+      },
+      {
+        "id": "n10",
+        "type": "ENTITY",
+        "surface": "審査",
+        "evidence_ids": [
+          "ev2"
+        ],
+        "concept_id": null,
+        "entity_kind": "ACTIVITY",
+        "dictionary_entry_id": null
+      },
+      {
+        "id": "n2",
+        "type": "ENTITY",
+        "surface": "照合",
+        "evidence_ids": [
+          "ev1",
+          "ev2"
+        ],
+        "concept_id": null,
+        "entity_kind": "ACTIVITY",
+        "dictionary_entry_id": null
+      },
+      {
+        "id": "n3",
+        "type": "ENTITY",
+        "surface": "書類様式",
+        "evidence_ids": [
+          "ev1"
+        ],
+        "concept_id": null,
+        "entity_kind": "INFORMATION",
+        "dictionary_entry_id": null
+      },
+      {
+        "id": "n11",
+        "type": "QUANTITY",
+        "surface": "照合にかかる時間",
+        "evidence_ids": [
+          "ev1",
+          "ev2"
+        ],
+        "concept_id": "core:quantity.activity_duration",
+        "dictionary_entry_id": "core:quantity.activity_duration",
+        "dimension": "TIME",
+        "unit": null
+      }
+    ],
+    "relations": [
+      {
+        "id": "r8",
+        "from": "n12",
+        "role": "FROM",
+        "to": "n7",
+        "evidence_ids": [
+          "ev2"
+        ]
+      },
+      {
+        "id": "r2",
+        "from": "n11",
+        "role": "BEARER",
+        "to": "n2",
+        "evidence_ids": [
+          "ev1",
+          "ev2"
+        ]
+      },
+      {
+        "id": "r4",
+        "from": "n8",
+        "role": "BEARER",
+        "to": "n10",
+        "evidence_ids": [
+          "ev2"
+        ]
+      },
+      {
+        "id": "r6",
+        "from": "n4",
+        "role": "FROM",
+        "to": "n5",
+        "evidence_ids": [
+          "ev1"
+        ]
+      },
+      {
+        "id": "r11",
+        "from": "n1",
+        "role": "AGENT",
+        "to": "n6",
+        "evidence_ids": [
+          "ev3"
+        ]
+      },
+      {
+        "id": "r9",
+        "from": "n12",
+        "role": "TO",
+        "to": "n9",
+        "evidence_ids": [
+          "ev2"
+        ]
+      },
+      {
+        "id": "r10",
+        "from": "n1",
+        "role": "TARGET",
+        "to": "n13",
+        "evidence_ids": [
+          "ev3"
+        ]
+      },
+      {
+        "id": "r1",
+        "from": "n5",
+        "role": "TARGET",
+        "to": "n3",
+        "evidence_ids": [
+          "ev1"
+        ]
+      },
+      {
+        "id": "r7",
+        "from": "n4",
+        "role": "TO",
+        "to": "n7",
+        "evidence_ids": [
+          "ev1"
+        ]
+      },
+      {
+        "id": "r3",
+        "from": "n7",
+        "role": "QUANTITY",
+        "to": "n11",
+        "evidence_ids": [
+          "ev1",
+          "ev2"
+        ]
+      },
+      {
+        "id": "r5",
+        "from": "n9",
+        "role": "QUANTITY",
+        "to": "n8",
+        "evidence_ids": [
+          "ev2"
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "id": "ev1",
+        "quote": "書類様式の追加によって、照合にかかる時間が増えることがある。"
+      },
+      {
+        "id": "ev2",
+        "quote": "照合にかかる時間の増加によって、審査に使える時間が減ることがある。"
+      },
+      {
+        "id": "ev3",
+        "quote": "また、担当者は受付の様子を観察する。"
+      }
+    ],
+    "qualifiers": [],
+    "unrepresented": [],
+    "dictionary_candidates": [],
+    "issues": []
+  },
+  {
+    "schema_version": "knowhow-graph-0.1",
+    "dictionary_versions": {
+      "core": "core-0.1",
+      "additional": "none"
+    },
+    "document_id": "K05",
+    "text": "参考書類の追加によって、照合にかかる時間が増えることがある。照合にかかる時間の増加によって、審査に必要な時間が減ることがある。",
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "CHANGE",
+        "surface": "審査に必要な時間が減る",
+        "evidence_ids": [
+          "ev2"
+        ],
+        "direction": "DECREASE",
+        "polarity": "POSITIVE",
+        "modality": "ASSERTED",
+        "context": "CONDITIONAL"
+      },
+      {
+        "id": "n3",
+        "type": "ENTITY",
+        "surface": "参考書類",
+        "evidence_ids": [
+          "ev1"
+        ],
+        "concept_id": null,
+        "entity_kind": "INFORMATION",
+        "dictionary_entry_id": null
+      },
+      {
+        "id": "n8",
+        "type": "QUANTITY",
+        "surface": "照合にかかる時間",
+        "evidence_ids": [
+          "ev1",
+          "ev2"
+        ],
+        "concept_id": "core:quantity.activity_duration",
+        "dictionary_entry_id": "core:quantity.activity_duration",
+        "dimension": "TIME",
+        "unit": null
+      },
+      {
+        "id": "n6",
+        "type": "CLAIM",
+        "surface": "照合にかかる時間の増加によって、審査に必要な時間が減ることがある。",
+        "evidence_ids": [
+          "ev2"
+        ],
+        "predicate": "CAUSES",
+        "modality": "POSSIBLE",
+        "polarity": "POSITIVE",
+        "context": "GENERAL",
+        "match_status": "READY"
+      },
+      {
+        "id": "n5",
+        "type": "CHANGE",
+        "surface": "照合にかかる時間が増える",
+        "evidence_ids": [
+          "ev1",
+          "ev2"
+        ],
+        "direction": "INCREASE",
+        "polarity": "POSITIVE",
+        "modality": "ASSERTED",
+        "context": "CONDITIONAL"
+      },
+      {
+        "id": "n7",
+        "type": "ENTITY",
+        "surface": "照合",
+        "evidence_ids": [
+          "ev1",
+          "ev2"
+        ],
+        "concept_id": null,
+        "entity_kind": "ACTIVITY",
+        "dictionary_entry_id": null
+      },
+      {
+        "id": "n10",
+        "type": "CLAIM",
+        "surface": "参考書類の追加によって、照合にかかる時間が増えることがある。",
+        "evidence_ids": [
+          "ev1"
+        ],
+        "predicate": "CAUSES",
+        "modality": "POSSIBLE",
+        "polarity": "POSITIVE",
+        "context": "GENERAL",
+        "match_status": "READY"
+      },
+      {
+        "id": "n2",
+        "type": "QUANTITY",
+        "surface": "審査に必要な時間",
+        "evidence_ids": [
+          "ev2"
+        ],
+        "concept_id": "core:quantity.required_duration",
+        "dictionary_entry_id": "core:quantity.required_duration",
+        "dimension": "TIME",
+        "unit": null
+      },
+      {
+        "id": "n4",
+        "type": "ACTION",
+        "surface": "参考書類の追加",
+        "evidence_ids": [
+          "ev1"
+        ],
+        "concept_id": "core:action.add",
+        "dictionary_entry_id": "core:action.add",
+        "polarity": "POSITIVE",
+        "modality": "ASSERTED",
+        "context": "CONDITIONAL"
+      },
+      {
+        "id": "n9",
+        "type": "ENTITY",
+        "surface": "審査",
+        "evidence_ids": [
+          "ev2"
+        ],
+        "concept_id": null,
+        "entity_kind": "ACTIVITY",
+        "dictionary_entry_id": null
+      }
+    ],
+    "relations": [
+      {
+        "id": "r1",
+        "from": "n4",
+        "role": "TARGET",
+        "to": "n3",
+        "evidence_ids": [
+          "ev1"
+        ]
+      },
+      {
+        "id": "r8",
+        "from": "n6",
+        "role": "FROM",
+        "to": "n5",
+        "evidence_ids": [
+          "ev2"
+        ]
+      },
+      {
+        "id": "r5",
+        "from": "n1",
+        "role": "QUANTITY",
+        "to": "n2",
+        "evidence_ids": [
+          "ev2"
+        ]
+      },
+      {
+        "id": "r4",
+        "from": "n2",
+        "role": "BEARER",
+        "to": "n9",
+        "evidence_ids": [
+          "ev2"
+        ]
+      },
+      {
+        "id": "r2",
+        "from": "n8",
+        "role": "BEARER",
+        "to": "n7",
+        "evidence_ids": [
+          "ev1",
+          "ev2"
+        ]
+      },
+      {
+        "id": "r9",
+        "from": "n6",
+        "role": "TO",
+        "to": "n1",
+        "evidence_ids": [
+          "ev2"
+        ]
+      },
+      {
+        "id": "r6",
+        "from": "n10",
+        "role": "FROM",
+        "to": "n4",
+        "evidence_ids": [
+          "ev1"
+        ]
+      },
+      {
+        "id": "r7",
+        "from": "n10",
+        "role": "TO",
+        "to": "n5",
+        "evidence_ids": [
+          "ev1"
+        ]
+      },
+      {
+        "id": "r3",
+        "from": "n5",
+        "role": "QUANTITY",
+        "to": "n8",
+        "evidence_ids": [
+          "ev1",
+          "ev2"
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "id": "ev1",
+        "quote": "参考書類の追加によって、照合にかかる時間が増えることがある。"
+      },
+      {
+        "id": "ev2",
+        "quote": "照合にかかる時間の増加によって、審査に必要な時間が減ることがある。"
+      }
+    ],
+    "qualifiers": [],
+    "unrepresented": [],
+    "dictionary_candidates": [],
+    "issues": []
+  },
+  {
+    "schema_version": "knowhow-graph-0.1",
+    "dictionary_versions": {
+      "core": "core-0.1",
+      "additional": "none"
+    },
+    "document_id": "K06",
+    "text": "帳票の追加によって、照合にかかる時間が増えることがある。照合にかかる時間の増加は、審査に使える時間の減少を引き起こさない。",
+    "nodes": [
+      {
+        "id": "n5",
+        "type": "QUANTITY",
+        "surface": "照合にかかる時間",
+        "evidence_ids": [
+          "ev1",
+          "ev2"
+        ],
+        "concept_id": "core:quantity.activity_duration",
+        "dictionary_entry_id": "core:quantity.activity_duration",
+        "dimension": "TIME",
+        "unit": null
+      },
+      {
+        "id": "n3",
+        "type": "CHANGE",
+        "surface": "照合にかかる時間が増える",
+        "evidence_ids": [
+          "ev1",
+          "ev2"
+        ],
+        "direction": "INCREASE",
+        "polarity": "POSITIVE",
+        "modality": "ASSERTED",
+        "context": "CONDITIONAL"
+      },
+      {
+        "id": "n2",
+        "type": "CLAIM",
+        "surface": "照合にかかる時間の増加は、審査に使える時間の減少を引き起こさない。",
+        "evidence_ids": [
+          "ev2"
+        ],
+        "predicate": "CAUSES",
+        "modality": "ASSERTED",
+        "polarity": "NEGATIVE",
+        "context": "GENERAL",
+        "match_status": "READY"
+      },
+      {
+        "id": "n7",
+        "type": "CHANGE",
+        "surface": "審査に使える時間の減少",
+        "evidence_ids": [
+          "ev2"
+        ],
+        "direction": "DECREASE",
+        "polarity": "POSITIVE",
+        "modality": "ASSERTED",
+        "context": "CONDITIONAL"
+      },
+      {
+        "id": "n4",
+        "type": "ENTITY",
+        "surface": "帳票",
+        "evidence_ids": [
+          "ev1"
+        ],
+        "concept_id": null,
+        "entity_kind": "INFORMATION",
+        "dictionary_entry_id": null
+      },
+      {
+        "id": "n8",
+        "type": "QUANTITY",
+        "surface": "審査に使える時間",
+        "evidence_ids": [
+          "ev2"
+        ],
+        "concept_id": "core:quantity.available_duration",
+        "dictionary_entry_id": "core:quantity.available_duration",
+        "dimension": "TIME",
+        "unit": null
+      },
+      {
+        "id": "n1",
+        "type": "CLAIM",
+        "surface": "帳票の追加によって、照合にかかる時間が増えることがある。",
+        "evidence_ids": [
+          "ev1"
+        ],
+        "predicate": "CAUSES",
+        "modality": "POSSIBLE",
+        "polarity": "POSITIVE",
+        "context": "GENERAL",
+        "match_status": "READY"
+      },
+      {
+        "id": "n10",
+        "type": "ENTITY",
+        "surface": "審査",
+        "evidence_ids": [
+          "ev2"
+        ],
+        "concept_id": null,
+        "entity_kind": "ACTIVITY",
+        "dictionary_entry_id": null
+      },
+      {
+        "id": "n9",
+        "type": "ACTION",
+        "surface": "帳票の追加",
+        "evidence_ids": [
+          "ev1"
+        ],
+        "concept_id": "core:action.add",
+        "dictionary_entry_id": "core:action.add",
+        "polarity": "POSITIVE",
+        "modality": "ASSERTED",
+        "context": "CONDITIONAL"
+      },
+      {
+        "id": "n6",
+        "type": "ENTITY",
+        "surface": "照合",
+        "evidence_ids": [
+          "ev1",
+          "ev2"
+        ],
+        "concept_id": null,
+        "entity_kind": "ACTIVITY",
+        "dictionary_entry_id": null
+      }
+    ],
+    "relations": [
+      {
+        "id": "r5",
+        "from": "n7",
+        "role": "QUANTITY",
+        "to": "n8",
+        "evidence_ids": [
+          "ev2"
+        ]
+      },
+      {
+        "id": "r2",
+        "from": "n5",
+        "role": "BEARER",
+        "to": "n6",
+        "evidence_ids": [
+          "ev1",
+          "ev2"
+        ]
+      },
+      {
+        "id": "r9",
+        "from": "n2",
+        "role": "TO",
+        "to": "n7",
+        "evidence_ids": [
+          "ev2"
+        ]
+      },
+      {
+        "id": "r3",
+        "from": "n3",
+        "role": "QUANTITY",
+        "to": "n5",
+        "evidence_ids": [
+          "ev1",
+          "ev2"
+        ]
+      },
+      {
+        "id": "r6",
+        "from": "n1",
+        "role": "FROM",
+        "to": "n9",
+        "evidence_ids": [
+          "ev1"
+        ]
+      },
+      {
+        "id": "r4",
+        "from": "n8",
+        "role": "BEARER",
+        "to": "n10",
+        "evidence_ids": [
+          "ev2"
+        ]
+      },
+      {
+        "id": "r8",
+        "from": "n2",
+        "role": "FROM",
+        "to": "n3",
+        "evidence_ids": [
+          "ev2"
+        ]
+      },
+      {
+        "id": "r7",
+        "from": "n1",
+        "role": "TO",
+        "to": "n3",
+        "evidence_ids": [
+          "ev1"
+        ]
+      },
+      {
+        "id": "r1",
+        "from": "n9",
+        "role": "TARGET",
+        "to": "n4",
+        "evidence_ids": [
+          "ev1"
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "id": "ev1",
+        "quote": "帳票の追加によって、照合にかかる時間が増えることがある。"
+      },
+      {
+        "id": "ev2",
+        "quote": "照合にかかる時間の増加は、審査に使える時間の減少を引き起こさない。"
+      }
+    ],
+    "qualifiers": [],
+    "unrepresented": [],
+    "dictionary_candidates": [],
+    "issues": []
+  },
+  {
+    "schema_version": "knowhow-graph-0.1",
+    "dictionary_versions": {
+      "core": "core-0.1",
+      "additional": "none"
+    },
+    "document_id": "K07",
+    "text": "確認項目の追加によって、照合にかかる時間が増えることがある。照合にかかる時間が増えた後に、審査に使える時間が減ることがある。",
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "CLAIM",
+        "surface": "確認項目の追加によって、照合にかかる時間が増えることがある。",
+        "evidence_ids": [
+          "ev1"
+        ],
+        "predicate": "CAUSES",
+        "modality": "POSSIBLE",
+        "polarity": "POSITIVE",
+        "context": "GENERAL",
+        "match_status": "READY"
+      },
+      {
+        "id": "n6",
+        "type": "QUANTITY",
+        "surface": "照合にかかる時間",
+        "evidence_ids": [
+          "ev1",
+          "ev2"
+        ],
+        "concept_id": "core:quantity.activity_duration",
+        "dictionary_entry_id": "core:quantity.activity_duration",
+        "dimension": "TIME",
+        "unit": null
+      },
+      {
+        "id": "n3",
+        "type": "ACTION",
+        "surface": "確認項目の追加",
+        "evidence_ids": [
+          "ev1"
+        ],
+        "concept_id": "core:action.add",
+        "dictionary_entry_id": "core:action.add",
+        "polarity": "POSITIVE",
+        "modality": "ASSERTED",
+        "context": "CONDITIONAL"
+      },
+      {
+        "id": "n5",
+        "type": "ENTITY",
+        "surface": "確認項目",
+        "evidence_ids": [
+          "ev1"
+        ],
+        "concept_id": null,
+        "entity_kind": "INFORMATION",
+        "dictionary_entry_id": null
+      },
+      {
+        "id": "n2",
+        "type": "QUANTITY",
+        "surface": "審査に使える時間",
+        "evidence_ids": [
+          "ev2"
+        ],
+        "concept_id": "core:quantity.available_duration",
+        "dictionary_entry_id": "core:quantity.available_duration",
+        "dimension": "TIME",
+        "unit": null
+      },
+      {
+        "id": "n4",
+        "type": "ENTITY",
+        "surface": "審査",
+        "evidence_ids": [
+          "ev2"
+        ],
+        "concept_id": null,
+        "entity_kind": "ACTIVITY",
+        "dictionary_entry_id": null
+      },
+      {
+        "id": "n9",
+        "type": "CHANGE",
+        "surface": "照合にかかる時間が増える",
+        "evidence_ids": [
+          "ev1",
+          "ev2"
+        ],
+        "direction": "INCREASE",
+        "polarity": "POSITIVE",
+        "modality": "ASSERTED",
+        "context": "CONDITIONAL"
+      },
+      {
+        "id": "n10",
+        "type": "CHANGE",
+        "surface": "審査に使える時間が減る",
+        "evidence_ids": [
+          "ev2"
+        ],
+        "direction": "DECREASE",
+        "polarity": "POSITIVE",
+        "modality": "ASSERTED",
+        "context": "CONDITIONAL"
+      },
+      {
+        "id": "n8",
+        "type": "CLAIM",
+        "surface": "照合にかかる時間が増えた後に、審査に使える時間が減ることがある。",
+        "evidence_ids": [
+          "ev2"
+        ],
+        "predicate": "PRECEDES",
+        "modality": "POSSIBLE",
+        "polarity": "POSITIVE",
+        "context": "GENERAL",
+        "match_status": "READY"
+      },
+      {
+        "id": "n7",
+        "type": "ENTITY",
+        "surface": "照合",
+        "evidence_ids": [
+          "ev1",
+          "ev2"
+        ],
+        "concept_id": null,
+        "entity_kind": "ACTIVITY",
+        "dictionary_entry_id": null
+      }
+    ],
+    "relations": [
+      {
+        "id": "r4",
+        "from": "n2",
+        "role": "BEARER",
+        "to": "n4",
+        "evidence_ids": [
+          "ev2"
+        ]
+      },
+      {
+        "id": "r5",
+        "from": "n10",
+        "role": "QUANTITY",
+        "to": "n2",
+        "evidence_ids": [
+          "ev2"
+        ]
+      },
+      {
+        "id": "r2",
+        "from": "n6",
+        "role": "BEARER",
+        "to": "n7",
+        "evidence_ids": [
+          "ev1",
+          "ev2"
+        ]
+      },
+      {
+        "id": "r6",
+        "from": "n1",
+        "role": "FROM",
+        "to": "n3",
+        "evidence_ids": [
+          "ev1"
+        ]
+      },
+      {
+        "id": "r8",
+        "from": "n8",
+        "role": "FROM",
+        "to": "n9",
+        "evidence_ids": [
+          "ev2"
+        ]
+      },
+      {
+        "id": "r3",
+        "from": "n9",
+        "role": "QUANTITY",
+        "to": "n6",
+        "evidence_ids": [
+          "ev1",
+          "ev2"
+        ]
+      },
+      {
+        "id": "r1",
+        "from": "n3",
+        "role": "TARGET",
+        "to": "n5",
+        "evidence_ids": [
+          "ev1"
+        ]
+      },
+      {
+        "id": "r7",
+        "from": "n1",
+        "role": "TO",
+        "to": "n9",
+        "evidence_ids": [
+          "ev1"
+        ]
+      },
+      {
+        "id": "r9",
+        "from": "n8",
+        "role": "TO",
+        "to": "n10",
+        "evidence_ids": [
+          "ev2"
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "id": "ev1",
+        "quote": "確認項目の追加によって、照合にかかる時間が増えることがある。"
+      },
+      {
+        "id": "ev2",
+        "quote": "照合にかかる時間が増えた後に、審査に使える時間が減ることがある。"
+      }
+    ],
+    "qualifiers": [],
+    "unrepresented": [],
+    "dictionary_candidates": [],
+    "issues": []
+  },
+  {
+    "schema_version": "knowhow-graph-0.1",
+    "dictionary_versions": {
+      "core": "core-0.1",
+      "additional": "none"
+    },
+    "document_id": "K08",
+    "text": "記録項目の追加によって、照合にかかる時間が増える。照合にかかる時間の増加によって、審査に使える時間が減る。",
+    "nodes": [
+      {
+        "id": "n10",
+        "type": "QUANTITY",
+        "surface": "照合にかかる時間",
+        "evidence_ids": [
+          "ev1",
+          "ev2"
+        ],
+        "concept_id": "core:quantity.activity_duration",
+        "dictionary_entry_id": "core:quantity.activity_duration",
+        "dimension": "TIME",
+        "unit": null
+      },
+      {
+        "id": "n9",
+        "type": "ENTITY",
+        "surface": "照合",
+        "evidence_ids": [
+          "ev1",
+          "ev2"
+        ],
+        "concept_id": null,
+        "entity_kind": "ACTIVITY",
+        "dictionary_entry_id": null
+      },
+      {
+        "id": "n5",
+        "type": "ENTITY",
+        "surface": "記録項目",
+        "evidence_ids": [
+          "ev1"
+        ],
+        "concept_id": null,
+        "entity_kind": "INFORMATION",
+        "dictionary_entry_id": null
+      },
+      {
+        "id": "n4",
+        "type": "CLAIM",
+        "surface": "記録項目の追加によって、照合にかかる時間が増える。",
+        "evidence_ids": [
+          "ev1"
+        ],
+        "predicate": "CAUSES",
+        "modality": "ASSERTED",
+        "polarity": "POSITIVE",
+        "context": "GENERAL",
+        "match_status": "READY"
+      },
+      {
+        "id": "n6",
+        "type": "CLAIM",
+        "surface": "照合にかかる時間の増加によって、審査に使える時間が減る。",
+        "evidence_ids": [
+          "ev2"
+        ],
+        "predicate": "CAUSES",
+        "modality": "ASSERTED",
+        "polarity": "POSITIVE",
+        "context": "GENERAL",
+        "match_status": "READY"
+      },
+      {
+        "id": "n2",
+        "type": "ACTION",
+        "surface": "記録項目の追加",
+        "evidence_ids": [
+          "ev1"
+        ],
+        "concept_id": "core:action.add",
+        "dictionary_entry_id": "core:action.add",
+        "polarity": "POSITIVE",
+        "modality": "ASSERTED",
+        "context": "CONDITIONAL"
+      },
+      {
+        "id": "n3",
+        "type": "CHANGE",
+        "surface": "照合にかかる時間が増える",
+        "evidence_ids": [
+          "ev1",
+          "ev2"
+        ],
+        "direction": "INCREASE",
+        "polarity": "POSITIVE",
+        "modality": "ASSERTED",
+        "context": "CONDITIONAL"
+      },
+      {
+        "id": "n7",
+        "type": "QUANTITY",
+        "surface": "審査に使える時間",
+        "evidence_ids": [
+          "ev2"
+        ],
+        "concept_id": "core:quantity.available_duration",
+        "dictionary_entry_id": "core:quantity.available_duration",
+        "dimension": "TIME",
+        "unit": null
+      },
+      {
+        "id": "n1",
+        "type": "CHANGE",
+        "surface": "審査に使える時間が減る",
+        "evidence_ids": [
+          "ev2"
+        ],
+        "direction": "DECREASE",
+        "polarity": "POSITIVE",
+        "modality": "ASSERTED",
+        "context": "CONDITIONAL"
+      },
+      {
+        "id": "n8",
+        "type": "ENTITY",
+        "surface": "審査",
+        "evidence_ids": [
+          "ev2"
+        ],
+        "concept_id": null,
+        "entity_kind": "ACTIVITY",
+        "dictionary_entry_id": null
+      }
+    ],
+    "relations": [
+      {
+        "id": "r6",
+        "from": "n4",
+        "role": "FROM",
+        "to": "n2",
+        "evidence_ids": [
+          "ev1"
+        ]
+      },
+      {
+        "id": "r3",
+        "from": "n3",
+        "role": "QUANTITY",
+        "to": "n10",
+        "evidence_ids": [
+          "ev1",
+          "ev2"
+        ]
+      },
+      {
+        "id": "r8",
+        "from": "n6",
+        "role": "FROM",
+        "to": "n3",
+        "evidence_ids": [
+          "ev2"
+        ]
+      },
+      {
+        "id": "r1",
+        "from": "n2",
+        "role": "TARGET",
+        "to": "n5",
+        "evidence_ids": [
+          "ev1"
+        ]
+      },
+      {
+        "id": "r5",
+        "from": "n1",
+        "role": "QUANTITY",
+        "to": "n7",
+        "evidence_ids": [
+          "ev2"
+        ]
+      },
+      {
+        "id": "r2",
+        "from": "n10",
+        "role": "BEARER",
+        "to": "n9",
+        "evidence_ids": [
+          "ev1",
+          "ev2"
+        ]
+      },
+      {
+        "id": "r4",
+        "from": "n7",
+        "role": "BEARER",
+        "to": "n8",
+        "evidence_ids": [
+          "ev2"
+        ]
+      },
+      {
+        "id": "r9",
+        "from": "n6",
+        "role": "TO",
+        "to": "n1",
+        "evidence_ids": [
+          "ev2"
+        ]
+      },
+      {
+        "id": "r7",
+        "from": "n4",
+        "role": "TO",
+        "to": "n3",
+        "evidence_ids": [
+          "ev1"
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "id": "ev1",
+        "quote": "記録項目の追加によって、照合にかかる時間が増える。"
+      },
+      {
+        "id": "ev2",
+        "quote": "照合にかかる時間の増加によって、審査に使える時間が減る。"
+      }
+    ],
+    "qualifiers": [],
+    "unrepresented": [],
+    "dictionary_candidates": [],
+    "issues": []
+  },
+  {
+    "schema_version": "knowhow-graph-0.1",
+    "dictionary_versions": {
+      "core": "core-0.1",
+      "additional": "none"
+    },
+    "document_id": "K09",
+    "text": "受付件数が10件以上の場合、照合にかかる時間の増加によって、審査に使える時間が減ることがある。",
+    "nodes": [
+      {
+        "id": "n8",
+        "type": "CHANGE",
+        "surface": "審査に使える時間が減る",
+        "evidence_ids": [
+          "ev1"
+        ],
+        "direction": "DECREASE",
+        "polarity": "POSITIVE",
+        "modality": "ASSERTED",
+        "context": "CONDITIONAL"
+      },
+      {
+        "id": "n10",
+        "type": "CLAIM",
+        "surface": "受付件数が10件以上の場合、照合にかかる時間の増加によって、審査に使える時間が減ることがある。",
+        "evidence_ids": [
+          "ev1"
+        ],
+        "predicate": "CAUSES",
+        "modality": "POSSIBLE",
+        "polarity": "POSITIVE",
+        "context": "GENERAL",
+        "match_status": "READY"
+      },
+      {
+        "id": "n6",
+        "type": "ENTITY",
+        "surface": "審査",
+        "evidence_ids": [
+          "ev1"
+        ],
+        "concept_id": null,
+        "entity_kind": "ACTIVITY",
+        "dictionary_entry_id": null
+      },
+      {
+        "id": "n5",
+        "type": "ENTITY",
+        "surface": "受付",
+        "evidence_ids": [
+          "ev1"
+        ],
+        "concept_id": null,
+        "entity_kind": "ACTIVITY",
+        "dictionary_entry_id": null
+      },
+      {
+        "id": "n1",
+        "type": "QUANTITY",
+        "surface": "受付件数",
+        "evidence_ids": [
+          "ev1"
+        ],
+        "concept_id": "core:quantity.count",
+        "dictionary_entry_id": "core:quantity.count",
+        "dimension": "COUNT",
+        "unit": "件"
+      },
+      {
+        "id": "n9",
+        "type": "STATE",
+        "surface": "受付件数が10件以上",
+        "evidence_ids": [
+          "ev1"
+        ],
+        "form": "COMPARISON",
+        "concept_id": null,
+        "dictionary_entry_id": null,
+        "comparator": "GE",
+        "value": 10,
+        "value_unit": "件",
+        "polarity": "POSITIVE",
+        "modality": "ASSERTED",
+        "context": "CONDITIONAL"
+      },
+      {
+        "id": "n4",
+        "type": "CHANGE",
+        "surface": "照合にかかる時間の増加",
+        "evidence_ids": [
+          "ev1"
+        ],
+        "direction": "INCREASE",
+        "polarity": "POSITIVE",
+        "modality": "ASSERTED",
+        "context": "CONDITIONAL"
+      },
+      {
+        "id": "n7",
+        "type": "QUANTITY",
+        "surface": "審査に使える時間",
+        "evidence_ids": [
+          "ev1"
+        ],
+        "concept_id": "core:quantity.available_duration",
+        "dictionary_entry_id": "core:quantity.available_duration",
+        "dimension": "TIME",
+        "unit": null
+      },
+      {
+        "id": "n3",
+        "type": "QUANTITY",
+        "surface": "照合にかかる時間",
+        "evidence_ids": [
+          "ev1"
+        ],
+        "concept_id": "core:quantity.activity_duration",
+        "dictionary_entry_id": "core:quantity.activity_duration",
+        "dimension": "TIME",
+        "unit": null
+      },
+      {
+        "id": "n2",
+        "type": "ENTITY",
+        "surface": "照合",
+        "evidence_ids": [
+          "ev1"
+        ],
+        "concept_id": null,
+        "entity_kind": "ACTIVITY",
+        "dictionary_entry_id": null
+      }
+    ],
+    "relations": [
+      {
+        "id": "r6",
+        "from": "n8",
+        "role": "QUANTITY",
+        "to": "n7",
+        "evidence_ids": [
+          "ev1"
+        ]
+      },
+      {
+        "id": "r8",
+        "from": "n10",
+        "role": "TO",
+        "to": "n8",
+        "evidence_ids": [
+          "ev1"
+        ]
+      },
+      {
+        "id": "r3",
+        "from": "n3",
+        "role": "BEARER",
+        "to": "n2",
+        "evidence_ids": [
+          "ev1"
+        ]
+      },
+      {
+        "id": "r5",
+        "from": "n7",
+        "role": "BEARER",
+        "to": "n6",
+        "evidence_ids": [
+          "ev1"
+        ]
+      },
+      {
+        "id": "r2",
+        "from": "n9",
+        "role": "SUBJECT",
+        "to": "n1",
+        "evidence_ids": [
+          "ev1"
+        ]
+      },
+      {
+        "id": "r9",
+        "from": "n10",
+        "role": "CONDITION",
+        "to": "n9",
+        "evidence_ids": [
+          "ev1"
+        ]
+      },
+      {
+        "id": "r4",
+        "from": "n4",
+        "role": "QUANTITY",
+        "to": "n3",
+        "evidence_ids": [
+          "ev1"
+        ]
+      },
+      {
+        "id": "r1",
+        "from": "n1",
+        "role": "BEARER",
+        "to": "n5",
+        "evidence_ids": [
+          "ev1"
+        ]
+      },
+      {
+        "id": "r7",
+        "from": "n10",
+        "role": "FROM",
+        "to": "n4",
+        "evidence_ids": [
+          "ev1"
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "id": "ev1",
+        "quote": "受付件数が10件以上の場合、照合にかかる時間の増加によって、審査に使える時間が減ることがある。"
+      }
+    ],
+    "qualifiers": [],
+    "unrepresented": [],
+    "dictionary_candidates": [],
+    "issues": []
+  },
+  {
+    "schema_version": "knowhow-graph-0.1",
+    "dictionary_versions": {
+      "core": "core-0.1",
+      "additional": "none"
+    },
+    "document_id": "K10",
+    "text": "受注件数が20件以上の場合、段取り替えにかかる時間の増加によって、製造に使える時間が減ることがある。",
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "QUANTITY",
+        "surface": "受注件数",
+        "evidence_ids": [
+          "ev1"
+        ],
+        "concept_id": "core:quantity.count",
+        "dictionary_entry_id": "core:quantity.count",
+        "dimension": "COUNT",
+        "unit": "件"
+      },
+      {
+        "id": "n10",
+        "type": "CHANGE",
+        "surface": "段取り替えにかかる時間の増加",
+        "evidence_ids": [
+          "ev1"
+        ],
+        "direction": "INCREASE",
+        "polarity": "POSITIVE",
+        "modality": "ASSERTED",
+        "context": "CONDITIONAL"
+      },
+      {
+        "id": "n8",
+        "type": "CHANGE",
+        "surface": "製造に使える時間が減る",
+        "evidence_ids": [
+          "ev1"
+        ],
+        "direction": "DECREASE",
+        "polarity": "POSITIVE",
+        "modality": "ASSERTED",
+        "context": "CONDITIONAL"
+      },
+      {
+        "id": "n9",
+        "type": "ENTITY",
+        "surface": "段取り替え",
+        "evidence_ids": [
+          "ev1"
+        ],
+        "concept_id": null,
+        "entity_kind": "ACTIVITY",
+        "dictionary_entry_id": null
+      },
+      {
+        "id": "n2",
+        "type": "QUANTITY",
+        "surface": "製造に使える時間",
+        "evidence_ids": [
+          "ev1"
+        ],
+        "concept_id": "core:quantity.available_duration",
+        "dictionary_entry_id": "core:quantity.available_duration",
+        "dimension": "TIME",
+        "unit": null
+      },
+      {
+        "id": "n4",
+        "type": "ENTITY",
+        "surface": "製造",
+        "evidence_ids": [
+          "ev1"
+        ],
+        "concept_id": null,
+        "entity_kind": "ACTIVITY",
+        "dictionary_entry_id": null
+      },
+      {
+        "id": "n7",
+        "type": "STATE",
+        "surface": "受注件数が20件以上",
+        "evidence_ids": [
+          "ev1"
+        ],
+        "form": "COMPARISON",
+        "concept_id": null,
+        "dictionary_entry_id": null,
+        "comparator": "GE",
+        "value": 20,
+        "value_unit": "件",
+        "polarity": "POSITIVE",
+        "modality": "ASSERTED",
+        "context": "CONDITIONAL"
+      },
+      {
+        "id": "n3",
+        "type": "ENTITY",
+        "surface": "受注",
+        "evidence_ids": [
+          "ev1"
+        ],
+        "concept_id": null,
+        "entity_kind": "ACTIVITY",
+        "dictionary_entry_id": null
+      },
+      {
+        "id": "n5",
+        "type": "CLAIM",
+        "surface": "受注件数が20件以上の場合、段取り替えにかかる時間の増加によって、製造に使える時間が減ることがある。",
+        "evidence_ids": [
+          "ev1"
+        ],
+        "predicate": "CAUSES",
+        "modality": "POSSIBLE",
+        "polarity": "POSITIVE",
+        "context": "GENERAL",
+        "match_status": "READY"
+      },
+      {
+        "id": "n6",
+        "type": "QUANTITY",
+        "surface": "段取り替えにかかる時間",
+        "evidence_ids": [
+          "ev1"
+        ],
+        "concept_id": "core:quantity.activity_duration",
+        "dictionary_entry_id": "core:quantity.activity_duration",
+        "dimension": "TIME",
+        "unit": null
+      }
+    ],
+    "relations": [
+      {
+        "id": "r8",
+        "from": "n5",
+        "role": "TO",
+        "to": "n8",
+        "evidence_ids": [
+          "ev1"
+        ]
+      },
+      {
+        "id": "r1",
+        "from": "n1",
+        "role": "BEARER",
+        "to": "n3",
+        "evidence_ids": [
+          "ev1"
+        ]
+      },
+      {
+        "id": "r5",
+        "from": "n2",
+        "role": "BEARER",
+        "to": "n4",
+        "evidence_ids": [
+          "ev1"
+        ]
+      },
+      {
+        "id": "r6",
+        "from": "n8",
+        "role": "QUANTITY",
+        "to": "n2",
+        "evidence_ids": [
+          "ev1"
+        ]
+      },
+      {
+        "id": "r2",
+        "from": "n7",
+        "role": "SUBJECT",
+        "to": "n1",
+        "evidence_ids": [
+          "ev1"
+        ]
+      },
+      {
+        "id": "r9",
+        "from": "n5",
+        "role": "CONDITION",
+        "to": "n7",
+        "evidence_ids": [
+          "ev1"
+        ]
+      },
+      {
+        "id": "r7",
+        "from": "n5",
+        "role": "FROM",
+        "to": "n10",
+        "evidence_ids": [
+          "ev1"
+        ]
+      },
+      {
+        "id": "r3",
+        "from": "n6",
+        "role": "BEARER",
+        "to": "n9",
+        "evidence_ids": [
+          "ev1"
+        ]
+      },
+      {
+        "id": "r4",
+        "from": "n10",
+        "role": "QUANTITY",
+        "to": "n6",
+        "evidence_ids": [
+          "ev1"
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "id": "ev1",
+        "quote": "受注件数が20件以上の場合、段取り替えにかかる時間の増加によって、製造に使える時間が減ることがある。"
+      }
+    ],
+    "qualifiers": [],
+    "unrepresented": [],
+    "dictionary_candidates": [],
+    "issues": []
+  },
+  {
+    "schema_version": "knowhow-graph-0.1",
+    "dictionary_versions": {
+      "core": "core-0.1",
+      "additional": "none"
+    },
+    "document_id": "K11",
+    "text": "予約件数が10件以上の場合、予約確認にかかる時間の増加によって、接客に使える時間が減ることがある。",
+    "nodes": [
+      {
+        "id": "n3",
+        "type": "QUANTITY",
+        "surface": "予約件数",
+        "evidence_ids": [
+          "ev1"
+        ],
+        "concept_id": "core:quantity.count",
+        "dictionary_entry_id": "core:quantity.count",
+        "dimension": "COUNT",
+        "unit": "件"
+      },
+      {
+        "id": "n5",
+        "type": "ENTITY",
+        "surface": "接客",
+        "evidence_ids": [
+          "ev1"
+        ],
+        "concept_id": null,
+        "entity_kind": "ACTIVITY",
+        "dictionary_entry_id": null
+      },
+      {
+        "id": "n8",
+        "type": "QUANTITY",
+        "surface": "予約確認にかかる時間",
+        "evidence_ids": [
+          "ev1"
+        ],
+        "concept_id": "core:quantity.activity_duration",
+        "dictionary_entry_id": "core:quantity.activity_duration",
+        "dimension": "TIME",
+        "unit": null
+      },
+      {
+        "id": "n10",
+        "type": "CHANGE",
+        "surface": "接客に使える時間が減る",
+        "evidence_ids": [
+          "ev1"
+        ],
+        "direction": "DECREASE",
+        "polarity": "POSITIVE",
+        "modality": "ASSERTED",
+        "context": "CONDITIONAL"
+      },
+      {
+        "id": "n2",
+        "type": "CHANGE",
+        "surface": "予約確認にかかる時間の増加",
+        "evidence_ids": [
+          "ev1"
+        ],
+        "direction": "INCREASE",
+        "polarity": "POSITIVE",
+        "modality": "ASSERTED",
+        "context": "CONDITIONAL"
+      },
+      {
+        "id": "n1",
+        "type": "ENTITY",
+        "surface": "予約確認",
+        "evidence_ids": [
+          "ev1"
+        ],
+        "concept_id": null,
+        "entity_kind": "ACTIVITY",
+        "dictionary_entry_id": null
+      },
+      {
+        "id": "n7",
+        "type": "CLAIM",
+        "surface": "予約件数が10件以上の場合、予約確認にかかる時間の増加によって、接客に使える時間が減ることがある。",
+        "evidence_ids": [
+          "ev1"
+        ],
+        "predicate": "CAUSES",
+        "modality": "POSSIBLE",
+        "polarity": "POSITIVE",
+        "context": "GENERAL",
+        "match_status": "READY"
+      },
+      {
+        "id": "n9",
+        "type": "STATE",
+        "surface": "予約件数が10件以上",
+        "evidence_ids": [
+          "ev1"
+        ],
+        "form": "COMPARISON",
+        "concept_id": null,
+        "dictionary_entry_id": null,
+        "comparator": "GE",
+        "value": 10,
+        "value_unit": "件",
+        "polarity": "POSITIVE",
+        "modality": "ASSERTED",
+        "context": "CONDITIONAL"
+      },
+      {
+        "id": "n4",
+        "type": "QUANTITY",
+        "surface": "接客に使える時間",
+        "evidence_ids": [
+          "ev1"
+        ],
+        "concept_id": "core:quantity.available_duration",
+        "dictionary_entry_id": "core:quantity.available_duration",
+        "dimension": "TIME",
+        "unit": null
+      },
+      {
+        "id": "n6",
+        "type": "ENTITY",
+        "surface": "予約",
+        "evidence_ids": [
+          "ev1"
+        ],
+        "concept_id": null,
+        "entity_kind": "ACTIVITY",
+        "dictionary_entry_id": null
+      }
+    ],
+    "relations": [
+      {
+        "id": "r8",
+        "from": "n7",
+        "role": "TO",
+        "to": "n10",
+        "evidence_ids": [
+          "ev1"
+        ]
+      },
+      {
+        "id": "r2",
+        "from": "n9",
+        "role": "SUBJECT",
+        "to": "n3",
+        "evidence_ids": [
+          "ev1"
+        ]
+      },
+      {
+        "id": "r9",
+        "from": "n7",
+        "role": "CONDITION",
+        "to": "n9",
+        "evidence_ids": [
+          "ev1"
+        ]
+      },
+      {
+        "id": "r5",
+        "from": "n4",
+        "role": "BEARER",
+        "to": "n5",
+        "evidence_ids": [
+          "ev1"
+        ]
+      },
+      {
+        "id": "r6",
+        "from": "n10",
+        "role": "QUANTITY",
+        "to": "n4",
+        "evidence_ids": [
+          "ev1"
+        ]
+      },
+      {
+        "id": "r3",
+        "from": "n8",
+        "role": "BEARER",
+        "to": "n1",
+        "evidence_ids": [
+          "ev1"
+        ]
+      },
+      {
+        "id": "r7",
+        "from": "n7",
+        "role": "FROM",
+        "to": "n2",
+        "evidence_ids": [
+          "ev1"
+        ]
+      },
+      {
+        "id": "r1",
+        "from": "n3",
+        "role": "BEARER",
+        "to": "n6",
+        "evidence_ids": [
+          "ev1"
+        ]
+      },
+      {
+        "id": "r4",
+        "from": "n2",
+        "role": "QUANTITY",
+        "to": "n8",
+        "evidence_ids": [
+          "ev1"
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "id": "ev1",
+        "quote": "予約件数が10件以上の場合、予約確認にかかる時間の増加によって、接客に使える時間が減ることがある。"
+      }
+    ],
+    "qualifiers": [],
+    "unrepresented": [],
+    "dictionary_candidates": [],
+    "issues": []
+  },
+  {
+    "schema_version": "knowhow-graph-0.1",
+    "dictionary_versions": {
+      "core": "core-0.1",
+      "additional": "none"
+    },
+    "document_id": "K12",
+    "text": "手順の追加によって、作業のしやすさが増すことがある。",
+    "nodes": [
+      {
+        "id": "n6",
+        "type": "ENTITY",
+        "surface": "作業",
+        "evidence_ids": [
+          "ev1"
+        ],
+        "concept_id": null,
+        "entity_kind": "ACTIVITY",
+        "dictionary_entry_id": null
+      },
+      {
+        "id": "n5",
+        "type": "CLAIM",
+        "surface": "手順の追加によって、作業のしやすさが増すことがある。",
+        "evidence_ids": [
+          "ev1"
+        ],
+        "predicate": "CAUSES",
+        "modality": "POSSIBLE",
+        "polarity": "POSITIVE",
+        "context": "GENERAL",
+        "match_status": "READY"
+      },
+      {
+        "id": "n4",
+        "type": "ACTION",
+        "surface": "手順の追加",
+        "evidence_ids": [
+          "ev1"
+        ],
+        "concept_id": "core:action.add",
+        "dictionary_entry_id": "core:action.add",
+        "polarity": "POSITIVE",
+        "modality": "ASSERTED",
+        "context": "CONDITIONAL"
+      },
+      {
+        "id": "n1",
+        "type": "QUANTITY",
+        "surface": "作業のしやすさ",
+        "evidence_ids": [
+          "ev1"
+        ],
+        "concept_id": null,
+        "dictionary_entry_id": null,
+        "dimension": "OTHER",
+        "unit": null
+      },
+      {
+        "id": "n3",
+        "type": "CHANGE",
+        "surface": "作業のしやすさが増す",
+        "evidence_ids": [
+          "ev1"
+        ],
+        "direction": "INCREASE",
+        "polarity": "POSITIVE",
+        "modality": "ASSERTED",
+        "context": "CONDITIONAL"
+      },
+      {
+        "id": "n2",
+        "type": "ENTITY",
+        "surface": "手順",
+        "evidence_ids": [
+          "ev1"
+        ],
+        "concept_id": null,
+        "entity_kind": "INFORMATION",
+        "dictionary_entry_id": null
+      }
+    ],
+    "relations": [
+      {
+        "id": "r5",
+        "from": "n5",
+        "role": "TO",
+        "to": "n3",
+        "evidence_ids": [
+          "ev1"
+        ]
+      },
+      {
+        "id": "r1",
+        "from": "n4",
+        "role": "TARGET",
+        "to": "n2",
+        "evidence_ids": [
+          "ev1"
+        ]
+      },
+      {
+        "id": "r4",
+        "from": "n5",
+        "role": "FROM",
+        "to": "n4",
+        "evidence_ids": [
+          "ev1"
+        ]
+      },
+      {
+        "id": "r2",
+        "from": "n1",
+        "role": "BEARER",
+        "to": "n6",
+        "evidence_ids": [
+          "ev1"
+        ]
+      },
+      {
+        "id": "r3",
+        "from": "n3",
+        "role": "QUANTITY",
+        "to": "n1",
+        "evidence_ids": [
+          "ev1"
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "id": "ev1",
+        "quote": "手順の追加によって、作業のしやすさが増すことがある。"
+      }
+    ],
+    "qualifiers": [],
+    "unrepresented": [],
+    "dictionary_candidates": [
+      {
+        "node_ids": [
+          "n1"
+        ],
+        "surface": "作業のしやすさ",
+        "proposed_definition": "作業を行いやすい程度",
+        "reason": "core-0.1に対応する量の概念がない"
+      }
+    ],
+    "issues": []
+  },
+  {
+    "schema_version": "knowhow-graph-0.1",
+    "dictionary_versions": {
+      "core": "core-0.1",
+      "additional": "none"
+    },
+    "document_id": "K13",
+    "text": "問い合わせの応答にかかる時間の増加は、窓口業務の遅れを示すことがある。",
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "CLAIM",
+        "surface": "問い合わせの応答にかかる時間の増加は、窓口業務の遅れを示すことがある。",
+        "evidence_ids": [
+          "ev1"
+        ],
+        "predicate": "SIGNALS",
+        "modality": "POSSIBLE",
+        "polarity": "POSITIVE",
+        "context": "GENERAL",
+        "match_status": "READY"
+      },
+      {
+        "id": "n6",
+        "type": "STATE",
+        "surface": "窓口業務の遅れ",
+        "evidence_ids": [
+          "ev1"
+        ],
+        "form": "QUALITATIVE",
+        "concept_id": "core:state.delayed",
+        "dictionary_entry_id": "core:state.delayed",
+        "comparator": null,
+        "value": null,
+        "value_unit": null,
+        "polarity": "POSITIVE",
+        "modality": "ASSERTED",
+        "context": "CONDITIONAL"
+      },
+      {
+        "id": "n3",
+        "type": "CHANGE",
+        "surface": "問い合わせの応答にかかる時間の増加",
+        "evidence_ids": [
+          "ev1"
+        ],
+        "direction": "INCREASE",
+        "polarity": "POSITIVE",
+        "modality": "ASSERTED",
+        "context": "CONDITIONAL"
+      },
+      {
+        "id": "n5",
+        "type": "ENTITY",
+        "surface": "窓口業務",
+        "evidence_ids": [
+          "ev1"
+        ],
+        "concept_id": null,
+        "entity_kind": "ACTIVITY",
+        "dictionary_entry_id": null
+      },
+      {
+        "id": "n4",
+        "type": "ENTITY",
+        "surface": "問い合わせの応答",
+        "evidence_ids": [
+          "ev1"
+        ],
+        "concept_id": null,
+        "entity_kind": "ACTIVITY",
+        "dictionary_entry_id": null
+      },
+      {
+        "id": "n2",
+        "type": "QUANTITY",
+        "surface": "問い合わせの応答にかかる時間",
+        "evidence_ids": [
+          "ev1"
+        ],
+        "concept_id": "core:quantity.activity_duration",
+        "dictionary_entry_id": "core:quantity.activity_duration",
+        "dimension": "TIME",
+        "unit": null
+      }
+    ],
+    "relations": [
+      {
+        "id": "r4",
+        "from": "n1",
+        "role": "FROM",
+        "to": "n3",
+        "evidence_ids": [
+          "ev1"
+        ]
+      },
+      {
+        "id": "r2",
+        "from": "n3",
+        "role": "QUANTITY",
+        "to": "n2",
+        "evidence_ids": [
+          "ev1"
+        ]
+      },
+      {
+        "id": "r3",
+        "from": "n6",
+        "role": "SUBJECT",
+        "to": "n5",
+        "evidence_ids": [
+          "ev1"
+        ]
+      },
+      {
+        "id": "r1",
+        "from": "n2",
+        "role": "BEARER",
+        "to": "n4",
+        "evidence_ids": [
+          "ev1"
+        ]
+      },
+      {
+        "id": "r5",
+        "from": "n1",
+        "role": "TO",
+        "to": "n6",
+        "evidence_ids": [
+          "ev1"
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "id": "ev1",
+        "quote": "問い合わせの応答にかかる時間の増加は、窓口業務の遅れを示すことがある。"
+      }
+    ],
+    "qualifiers": [],
+    "unrepresented": [],
+    "dictionary_candidates": [],
+    "issues": []
+  },
+  {
+    "schema_version": "knowhow-graph-0.1",
+    "dictionary_versions": {
+      "core": "core-0.1",
+      "additional": "none"
+    },
+    "document_id": "K14",
+    "text": "搬送にかかる時間の増加は、出荷作業の遅れを示すことがある。",
+    "nodes": [
+      {
+        "id": "n4",
+        "type": "CLAIM",
+        "surface": "搬送にかかる時間の増加は、出荷作業の遅れを示すことがある。",
+        "evidence_ids": [
+          "ev1"
+        ],
+        "predicate": "SIGNALS",
+        "modality": "POSSIBLE",
+        "polarity": "POSITIVE",
+        "context": "GENERAL",
+        "match_status": "READY"
+      },
+      {
+        "id": "n1",
+        "type": "CHANGE",
+        "surface": "搬送にかかる時間の増加",
+        "evidence_ids": [
+          "ev1"
+        ],
+        "direction": "INCREASE",
+        "polarity": "POSITIVE",
+        "modality": "ASSERTED",
+        "context": "CONDITIONAL"
+      },
+      {
+        "id": "n3",
+        "type": "ENTITY",
+        "surface": "出荷作業",
+        "evidence_ids": [
+          "ev1"
+        ],
+        "concept_id": null,
+        "entity_kind": "ACTIVITY",
+        "dictionary_entry_id": null
+      },
+      {
+        "id": "n5",
+        "type": "ENTITY",
+        "surface": "搬送",
+        "evidence_ids": [
+          "ev1"
+        ],
+        "concept_id": null,
+        "entity_kind": "ACTIVITY",
+        "dictionary_entry_id": null
+      },
+      {
+        "id": "n6",
+        "type": "STATE",
+        "surface": "出荷作業の遅れ",
+        "evidence_ids": [
+          "ev1"
+        ],
+        "form": "QUALITATIVE",
+        "concept_id": "core:state.delayed",
+        "dictionary_entry_id": "core:state.delayed",
+        "comparator": null,
+        "value": null,
+        "value_unit": null,
+        "polarity": "POSITIVE",
+        "modality": "ASSERTED",
+        "context": "CONDITIONAL"
+      },
+      {
+        "id": "n2",
+        "type": "QUANTITY",
+        "surface": "搬送にかかる時間",
+        "evidence_ids": [
+          "ev1"
+        ],
+        "concept_id": "core:quantity.activity_duration",
+        "dictionary_entry_id": "core:quantity.activity_duration",
+        "dimension": "TIME",
+        "unit": null
+      }
+    ],
+    "relations": [
+      {
+        "id": "r3",
+        "from": "n6",
+        "role": "SUBJECT",
+        "to": "n3",
+        "evidence_ids": [
+          "ev1"
+        ]
+      },
+      {
+        "id": "r5",
+        "from": "n4",
+        "role": "TO",
+        "to": "n6",
+        "evidence_ids": [
+          "ev1"
+        ]
+      },
+      {
+        "id": "r4",
+        "from": "n4",
+        "role": "FROM",
+        "to": "n1",
+        "evidence_ids": [
+          "ev1"
+        ]
+      },
+      {
+        "id": "r2",
+        "from": "n1",
+        "role": "QUANTITY",
+        "to": "n2",
+        "evidence_ids": [
+          "ev1"
+        ]
+      },
+      {
+        "id": "r1",
+        "from": "n2",
+        "role": "BEARER",
+        "to": "n5",
+        "evidence_ids": [
+          "ev1"
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "id": "ev1",
+        "quote": "搬送にかかる時間の増加は、出荷作業の遅れを示すことがある。"
+      }
+    ],
+    "qualifiers": [],
+    "unrepresented": [],
+    "dictionary_candidates": [],
+    "issues": []
+  },
+  {
+    "schema_version": "knowhow-graph-0.1",
+    "dictionary_versions": {
+      "core": "core-0.1",
+      "additional": "none"
+    },
+    "document_id": "K15",
+    "text": "確認にかかる時間の増加は、審査の遅れを引き起こすことがある。",
+    "nodes": [
+      {
+        "id": "n5",
+        "type": "ENTITY",
+        "surface": "審査",
+        "evidence_ids": [
+          "ev1"
+        ],
+        "concept_id": null,
+        "entity_kind": "ACTIVITY",
+        "dictionary_entry_id": null
+      },
+      {
+        "id": "n2",
+        "type": "CHANGE",
+        "surface": "確認にかかる時間の増加",
+        "evidence_ids": [
+          "ev1"
+        ],
+        "direction": "INCREASE",
+        "polarity": "POSITIVE",
+        "modality": "ASSERTED",
+        "context": "CONDITIONAL"
+      },
+      {
+        "id": "n4",
+        "type": "ENTITY",
+        "surface": "確認",
+        "evidence_ids": [
+          "ev1"
+        ],
+        "concept_id": null,
+        "entity_kind": "ACTIVITY",
+        "dictionary_entry_id": null
+      },
+      {
+        "id": "n3",
+        "type": "CLAIM",
+        "surface": "確認にかかる時間の増加は、審査の遅れを引き起こすことがある。",
+        "evidence_ids": [
+          "ev1"
+        ],
+        "predicate": "CAUSES",
+        "modality": "POSSIBLE",
+        "polarity": "POSITIVE",
+        "context": "GENERAL",
+        "match_status": "READY"
+      },
+      {
+        "id": "n6",
+        "type": "QUANTITY",
+        "surface": "確認にかかる時間",
+        "evidence_ids": [
+          "ev1"
+        ],
+        "concept_id": "core:quantity.activity_duration",
+        "dictionary_entry_id": "core:quantity.activity_duration",
+        "dimension": "TIME",
+        "unit": null
+      },
+      {
+        "id": "n1",
+        "type": "STATE",
+        "surface": "審査の遅れ",
+        "evidence_ids": [
+          "ev1"
+        ],
+        "form": "QUALITATIVE",
+        "concept_id": "core:state.delayed",
+        "dictionary_entry_id": "core:state.delayed",
+        "comparator": null,
+        "value": null,
+        "value_unit": null,
+        "polarity": "POSITIVE",
+        "modality": "ASSERTED",
+        "context": "CONDITIONAL"
+      }
+    ],
+    "relations": [
+      {
+        "id": "r4",
+        "from": "n3",
+        "role": "FROM",
+        "to": "n2",
+        "evidence_ids": [
+          "ev1"
+        ]
+      },
+      {
+        "id": "r1",
+        "from": "n6",
+        "role": "BEARER",
+        "to": "n4",
+        "evidence_ids": [
+          "ev1"
+        ]
+      },
+      {
+        "id": "r5",
+        "from": "n3",
+        "role": "TO",
+        "to": "n1",
+        "evidence_ids": [
+          "ev1"
+        ]
+      },
+      {
+        "id": "r3",
+        "from": "n1",
+        "role": "SUBJECT",
+        "to": "n5",
+        "evidence_ids": [
+          "ev1"
+        ]
+      },
+      {
+        "id": "r2",
+        "from": "n2",
+        "role": "QUANTITY",
+        "to": "n6",
+        "evidence_ids": [
+          "ev1"
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "id": "ev1",
+        "quote": "確認にかかる時間の増加は、審査の遅れを引き起こすことがある。"
+      }
+    ],
+    "qualifiers": [],
+    "unrepresented": [],
+    "dictionary_candidates": [],
+    "issues": []
+  },
+  {
+    "schema_version": "knowhow-graph-0.1",
+    "dictionary_versions": {
+      "core": "core-0.1",
+      "additional": "none"
+    },
+    "document_id": "K16",
+    "text": "装置を始動するには、装置の温度が80度以下であることが必要である。",
+    "nodes": [
+      {
+        "id": "n2",
+        "type": "QUANTITY",
+        "surface": "装置の温度",
+        "evidence_ids": [
+          "ev1"
+        ],
+        "concept_id": "core:quantity.temperature",
+        "dictionary_entry_id": "core:quantity.temperature",
+        "dimension": "TEMPERATURE",
+        "unit": "度"
+      },
+      {
+        "id": "n5",
+        "type": "ENTITY",
+        "surface": "装置",
+        "evidence_ids": [
+          "ev1"
+        ],
+        "concept_id": null,
+        "entity_kind": "PHYSICAL_OBJECT",
+        "dictionary_entry_id": null
+      },
+      {
+        "id": "n3",
+        "type": "ACTION",
+        "surface": "装置を始動する",
+        "evidence_ids": [
+          "ev1"
+        ],
+        "concept_id": "core:action.start",
+        "dictionary_entry_id": "core:action.start",
+        "polarity": "POSITIVE",
+        "modality": "ASSERTED",
+        "context": "CONDITIONAL"
+      },
+      {
+        "id": "n1",
+        "type": "CLAIM",
+        "surface": "装置を始動するには、装置の温度が80度以下であることが必要である。",
+        "evidence_ids": [
+          "ev1"
+        ],
+        "predicate": "REQUIRES",
+        "modality": "ASSERTED",
+        "polarity": "POSITIVE",
+        "context": "GENERAL",
+        "match_status": "READY"
+      },
+      {
+        "id": "n4",
+        "type": "STATE",
+        "surface": "装置の温度が80度以下",
+        "evidence_ids": [
+          "ev1"
+        ],
+        "form": "COMPARISON",
+        "concept_id": null,
+        "dictionary_entry_id": null,
+        "comparator": "LE",
+        "value": 80,
+        "value_unit": "度",
+        "polarity": "POSITIVE",
+        "modality": "ASSERTED",
+        "context": "CONDITIONAL"
+      }
+    ],
+    "relations": [
+      {
+        "id": "r3",
+        "from": "n4",
+        "role": "SUBJECT",
+        "to": "n2",
+        "evidence_ids": [
+          "ev1"
+        ]
+      },
+      {
+        "id": "r5",
+        "from": "n1",
+        "role": "TO",
+        "to": "n4",
+        "evidence_ids": [
+          "ev1"
+        ]
+      },
+      {
+        "id": "r4",
+        "from": "n1",
+        "role": "FROM",
+        "to": "n3",
+        "evidence_ids": [
+          "ev1"
+        ]
+      },
+      {
+        "id": "r1",
+        "from": "n3",
+        "role": "TARGET",
+        "to": "n5",
+        "evidence_ids": [
+          "ev1"
+        ]
+      },
+      {
+        "id": "r2",
+        "from": "n2",
+        "role": "BEARER",
+        "to": "n5",
+        "evidence_ids": [
+          "ev1"
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "id": "ev1",
+        "quote": "装置を始動するには、装置の温度が80度以下であることが必要である。"
+      }
+    ],
+    "qualifiers": [],
+    "unrepresented": [],
+    "dictionary_candidates": [],
+    "issues": []
+  },
+  {
+    "schema_version": "knowhow-graph-0.1",
+    "dictionary_versions": {
+      "core": "core-0.1",
+      "additional": "none"
+    },
+    "document_id": "K17",
+    "text": "炉を始動するには、炉の温度が80度以下であることが必要である。",
+    "nodes": [
+      {
+        "id": "n1",
+        "type": "QUANTITY",
+        "surface": "炉の温度",
+        "evidence_ids": [
+          "ev1"
+        ],
+        "concept_id": "core:quantity.temperature",
+        "dictionary_entry_id": "core:quantity.temperature",
+        "dimension": "TEMPERATURE",
+        "unit": "度"
+      },
+      {
+        "id": "n2",
+        "type": "ENTITY",
+        "surface": "炉",
+        "evidence_ids": [
+          "ev1"
+        ],
+        "concept_id": null,
+        "entity_kind": "PHYSICAL_OBJECT",
+        "dictionary_entry_id": null
+      },
+      {
+        "id": "n3",
+        "type": "CLAIM",
+        "surface": "炉を始動するには、炉の温度が80度以下であることが必要である。",
+        "evidence_ids": [
+          "ev1"
+        ],
+        "predicate": "REQUIRES",
+        "modality": "ASSERTED",
+        "polarity": "POSITIVE",
+        "context": "GENERAL",
+        "match_status": "READY"
+      },
+      {
+        "id": "n5",
+        "type": "STATE",
+        "surface": "炉の温度が80度以下",
+        "evidence_ids": [
+          "ev1"
+        ],
+        "form": "COMPARISON",
+        "concept_id": null,
+        "dictionary_entry_id": null,
+        "comparator": "LE",
+        "value": 80,
+        "value_unit": "度",
+        "polarity": "POSITIVE",
+        "modality": "ASSERTED",
+        "context": "CONDITIONAL"
+      },
+      {
+        "id": "n4",
+        "type": "ACTION",
+        "surface": "炉を始動する",
+        "evidence_ids": [
+          "ev1"
+        ],
+        "concept_id": "core:action.start",
+        "dictionary_entry_id": "core:action.start",
+        "polarity": "POSITIVE",
+        "modality": "ASSERTED",
+        "context": "CONDITIONAL"
+      }
+    ],
+    "relations": [
+      {
+        "id": "r5",
+        "from": "n3",
+        "role": "TO",
+        "to": "n5",
+        "evidence_ids": [
+          "ev1"
+        ]
+      },
+      {
+        "id": "r1",
+        "from": "n4",
+        "role": "TARGET",
+        "to": "n2",
+        "evidence_ids": [
+          "ev1"
+        ]
+      },
+      {
+        "id": "r2",
+        "from": "n1",
+        "role": "BEARER",
+        "to": "n2",
+        "evidence_ids": [
+          "ev1"
+        ]
+      },
+      {
+        "id": "r4",
+        "from": "n3",
+        "role": "FROM",
+        "to": "n4",
+        "evidence_ids": [
+          "ev1"
+        ]
+      },
+      {
+        "id": "r3",
+        "from": "n5",
+        "role": "SUBJECT",
+        "to": "n1",
+        "evidence_ids": [
+          "ev1"
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "id": "ev1",
+        "quote": "炉を始動するには、炉の温度が80度以下であることが必要である。"
+      }
+    ],
+    "qualifiers": [],
+    "unrepresented": [],
+    "dictionary_candidates": [],
+    "issues": []
+  },
+  {
+    "schema_version": "knowhow-graph-0.1",
+    "dictionary_versions": {
+      "core": "core-0.1",
+      "additional": "none"
+    },
+    "document_id": "K18",
+    "text": "ポンプを始動するには、ポンプの温度が80度以上であることが必要である。",
+    "nodes": [
+      {
+        "id": "n5",
+        "type": "QUANTITY",
+        "surface": "ポンプの温度",
+        "evidence_ids": [
+          "ev1"
+        ],
+        "concept_id": "core:quantity.temperature",
+        "dictionary_entry_id": "core:quantity.temperature",
+        "dimension": "TEMPERATURE",
+        "unit": "度"
+      },
+      {
+        "id": "n4",
+        "type": "STATE",
+        "surface": "ポンプの温度が80度以上",
+        "evidence_ids": [
+          "ev1"
+        ],
+        "form": "COMPARISON",
+        "concept_id": null,
+        "dictionary_entry_id": null,
+        "comparator": "GE",
+        "value": 80,
+        "value_unit": "度",
+        "polarity": "POSITIVE",
+        "modality": "ASSERTED",
+        "context": "CONDITIONAL"
+      },
+      {
+        "id": "n3",
+        "type": "ACTION",
+        "surface": "ポンプを始動する",
+        "evidence_ids": [
+          "ev1"
+        ],
+        "concept_id": "core:action.start",
+        "dictionary_entry_id": "core:action.start",
+        "polarity": "POSITIVE",
+        "modality": "ASSERTED",
+        "context": "CONDITIONAL"
+      },
+      {
+        "id": "n2",
+        "type": "CLAIM",
+        "surface": "ポンプを始動するには、ポンプの温度が80度以上であることが必要である。",
+        "evidence_ids": [
+          "ev1"
+        ],
+        "predicate": "REQUIRES",
+        "modality": "ASSERTED",
+        "polarity": "POSITIVE",
+        "context": "GENERAL",
+        "match_status": "READY"
+      },
+      {
+        "id": "n1",
+        "type": "ENTITY",
+        "surface": "ポンプ",
+        "evidence_ids": [
+          "ev1"
+        ],
+        "concept_id": null,
+        "entity_kind": "PHYSICAL_OBJECT",
+        "dictionary_entry_id": null
+      }
+    ],
+    "relations": [
+      {
+        "id": "r5",
+        "from": "n2",
+        "role": "TO",
+        "to": "n4",
+        "evidence_ids": [
+          "ev1"
+        ]
+      },
+      {
+        "id": "r1",
+        "from": "n3",
+        "role": "TARGET",
+        "to": "n1",
+        "evidence_ids": [
+          "ev1"
+        ]
+      },
+      {
+        "id": "r4",
+        "from": "n2",
+        "role": "FROM",
+        "to": "n3",
+        "evidence_ids": [
+          "ev1"
+        ]
+      },
+      {
+        "id": "r2",
+        "from": "n5",
+        "role": "BEARER",
+        "to": "n1",
+        "evidence_ids": [
+          "ev1"
+        ]
+      },
+      {
+        "id": "r3",
+        "from": "n4",
+        "role": "SUBJECT",
+        "to": "n5",
+        "evidence_ids": [
+          "ev1"
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "id": "ev1",
+        "quote": "ポンプを始動するには、ポンプの温度が80度以上であることが必要である。"
+      }
+    ],
+    "qualifiers": [],
+    "unrepresented": [],
+    "dictionary_candidates": [],
+    "issues": []
+  },
+  {
+    "schema_version": "knowhow-graph-0.1",
+    "dictionary_versions": {
+      "core": "core-0.1",
+      "additional": "none"
+    },
+    "document_id": "K19",
+    "text": "応答にかかる時間の増加と、確認にかかる時間の増加が共同の原因となり、処理に使える時間が減ることがある。",
+    "nodes": [
+      {
+        "id": "n8",
+        "type": "QUANTITY",
+        "surface": "確認にかかる時間",
+        "evidence_ids": [
+          "ev1"
+        ],
+        "concept_id": "core:quantity.activity_duration",
+        "dictionary_entry_id": "core:quantity.activity_duration",
+        "dimension": "TIME",
+        "unit": null
+      },
+      {
+        "id": "n1",
+        "type": "LOGIC",
+        "surface": "応答にかかる時間の増加と、確認にかかる時間の増加",
+        "evidence_ids": [
+          "ev1"
+        ],
+        "operator": "AND"
+      },
+      {
+        "id": "n11",
+        "type": "CLAIM",
+        "surface": "応答にかかる時間の増加と、確認にかかる時間の増加が共同の原因となり、処理に使える時間が減ることがある。",
+        "evidence_ids": [
+          "ev1"
+        ],
+        "predicate": "CAUSES",
+        "modality": "POSSIBLE",
+        "polarity": "POSITIVE",
+        "context": "GENERAL",
+        "match_status": "READY"
+      },
+      {
+        "id": "n3",
+        "type": "ENTITY",
+        "surface": "処理",
+        "evidence_ids": [
+          "ev1"
+        ],
+        "concept_id": null,
+        "entity_kind": "ACTIVITY",
+        "dictionary_entry_id": null
+      },
+      {
+        "id": "n10",
+        "type": "CHANGE",
+        "surface": "応答にかかる時間の増加",
+        "evidence_ids": [
+          "ev1"
+        ],
+        "direction": "INCREASE",
+        "polarity": "POSITIVE",
+        "modality": "ASSERTED",
+        "context": "CONDITIONAL"
+      },
+      {
+        "id": "n2",
+        "type": "QUANTITY",
+        "surface": "応答にかかる時間",
+        "evidence_ids": [
+          "ev1"
+        ],
+        "concept_id": "core:quantity.activity_duration",
+        "dictionary_entry_id": "core:quantity.activity_duration",
+        "dimension": "TIME",
+        "unit": null
+      },
+      {
+        "id": "n4",
+        "type": "CHANGE",
+        "surface": "処理に使える時間が減る",
+        "evidence_ids": [
+          "ev1"
+        ],
+        "direction": "DECREASE",
+        "polarity": "POSITIVE",
+        "modality": "ASSERTED",
+        "context": "CONDITIONAL"
+      },
+      {
+        "id": "n7",
+        "type": "QUANTITY",
+        "surface": "処理に使える時間",
+        "evidence_ids": [
+          "ev1"
+        ],
+        "concept_id": "core:quantity.available_duration",
+        "dictionary_entry_id": "core:quantity.available_duration",
+        "dimension": "TIME",
+        "unit": null
+      },
+      {
+        "id": "n5",
+        "type": "CHANGE",
+        "surface": "確認にかかる時間の増加",
+        "evidence_ids": [
+          "ev1"
+        ],
+        "direction": "INCREASE",
+        "polarity": "POSITIVE",
+        "modality": "ASSERTED",
+        "context": "CONDITIONAL"
+      },
+      {
+        "id": "n6",
+        "type": "ENTITY",
+        "surface": "確認",
+        "evidence_ids": [
+          "ev1"
+        ],
+        "concept_id": null,
+        "entity_kind": "ACTIVITY",
+        "dictionary_entry_id": null
+      },
+      {
+        "id": "n9",
+        "type": "ENTITY",
+        "surface": "応答",
+        "evidence_ids": [
+          "ev1"
+        ],
+        "concept_id": null,
+        "entity_kind": "ACTIVITY",
+        "dictionary_entry_id": null
+      }
+    ],
+    "relations": [
+      {
+        "id": "r7",
+        "from": "n7",
+        "role": "BEARER",
+        "to": "n3",
+        "evidence_ids": [
+          "ev1"
+        ]
+      },
+      {
+        "id": "r3",
+        "from": "n8",
+        "role": "BEARER",
+        "to": "n6",
+        "evidence_ids": [
+          "ev1"
+        ]
+      },
+      {
+        "id": "r1",
+        "from": "n2",
+        "role": "BEARER",
+        "to": "n9",
+        "evidence_ids": [
+          "ev1"
+        ]
+      },
+      {
+        "id": "r10",
+        "from": "n11",
+        "role": "TO",
+        "to": "n4",
+        "evidence_ids": [
+          "ev1"
+        ]
+      },
+      {
+        "id": "r5",
+        "from": "n1",
+        "role": "MEMBER",
+        "to": "n10",
+        "evidence_ids": [
+          "ev1"
+        ]
+      },
+      {
+        "id": "r8",
+        "from": "n4",
+        "role": "QUANTITY",
+        "to": "n7",
+        "evidence_ids": [
+          "ev1"
+        ]
+      },
+      {
+        "id": "r9",
+        "from": "n11",
+        "role": "FROM",
+        "to": "n1",
+        "evidence_ids": [
+          "ev1"
+        ]
+      },
+      {
+        "id": "r2",
+        "from": "n10",
+        "role": "QUANTITY",
+        "to": "n2",
+        "evidence_ids": [
+          "ev1"
+        ]
+      },
+      {
+        "id": "r4",
+        "from": "n5",
+        "role": "QUANTITY",
+        "to": "n8",
+        "evidence_ids": [
+          "ev1"
+        ]
+      },
+      {
+        "id": "r6",
+        "from": "n1",
+        "role": "MEMBER",
+        "to": "n5",
+        "evidence_ids": [
+          "ev1"
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "id": "ev1",
+        "quote": "応答にかかる時間の増加と、確認にかかる時間の増加が共同の原因となり、処理に使える時間が減ることがある。"
+      }
+    ],
+    "qualifiers": [],
+    "unrepresented": [],
+    "dictionary_candidates": [],
+    "issues": []
+  },
+  {
+    "schema_version": "knowhow-graph-0.1",
+    "dictionary_versions": {
+      "core": "core-0.1",
+      "additional": "none"
+    },
+    "document_id": "K20",
+    "text": "搬送にかかる時間の増加と、荷役にかかる時間の増加が共同の原因となり、出荷に使える時間が減ることがある。",
+    "nodes": [
+      {
+        "id": "n5",
+        "type": "QUANTITY",
+        "surface": "荷役にかかる時間",
+        "evidence_ids": [
+          "ev1"
+        ],
+        "concept_id": "core:quantity.activity_duration",
+        "dictionary_entry_id": "core:quantity.activity_duration",
+        "dimension": "TIME",
+        "unit": null
+      },
+      {
+        "id": "n8",
+        "type": "ENTITY",
+        "surface": "搬送",
+        "evidence_ids": [
+          "ev1"
+        ],
+        "concept_id": null,
+        "entity_kind": "ACTIVITY",
+        "dictionary_entry_id": null
+      },
+      {
+        "id": "n4",
+        "type": "ENTITY",
+        "surface": "荷役",
+        "evidence_ids": [
+          "ev1"
+        ],
+        "concept_id": null,
+        "entity_kind": "ACTIVITY",
+        "dictionary_entry_id": null
+      },
+      {
+        "id": "n1",
+        "type": "CHANGE",
+        "surface": "出荷に使える時間が減る",
+        "evidence_ids": [
+          "ev1"
+        ],
+        "direction": "DECREASE",
+        "polarity": "POSITIVE",
+        "modality": "ASSERTED",
+        "context": "CONDITIONAL"
+      },
+      {
+        "id": "n2",
+        "type": "CHANGE",
+        "surface": "搬送にかかる時間の増加",
+        "evidence_ids": [
+          "ev1"
+        ],
+        "direction": "INCREASE",
+        "polarity": "POSITIVE",
+        "modality": "ASSERTED",
+        "context": "CONDITIONAL"
+      },
+      {
+        "id": "n6",
+        "type": "ENTITY",
+        "surface": "出荷",
+        "evidence_ids": [
+          "ev1"
+        ],
+        "concept_id": null,
+        "entity_kind": "ACTIVITY",
+        "dictionary_entry_id": null
+      },
+      {
+        "id": "n9",
+        "type": "QUANTITY",
+        "surface": "搬送にかかる時間",
+        "evidence_ids": [
+          "ev1"
+        ],
+        "concept_id": "core:quantity.activity_duration",
+        "dictionary_entry_id": "core:quantity.activity_duration",
+        "dimension": "TIME",
+        "unit": null
+      },
+      {
+        "id": "n7",
+        "type": "QUANTITY",
+        "surface": "出荷に使える時間",
+        "evidence_ids": [
+          "ev1"
+        ],
+        "concept_id": "core:quantity.available_duration",
+        "dictionary_entry_id": "core:quantity.available_duration",
+        "dimension": "TIME",
+        "unit": null
+      },
+      {
+        "id": "n10",
+        "type": "CHANGE",
+        "surface": "荷役にかかる時間の増加",
+        "evidence_ids": [
+          "ev1"
+        ],
+        "direction": "INCREASE",
+        "polarity": "POSITIVE",
+        "modality": "ASSERTED",
+        "context": "CONDITIONAL"
+      },
+      {
+        "id": "n3",
+        "type": "CLAIM",
+        "surface": "搬送にかかる時間の増加と、荷役にかかる時間の増加が共同の原因となり、出荷に使える時間が減ることがある。",
+        "evidence_ids": [
+          "ev1"
+        ],
+        "predicate": "CAUSES",
+        "modality": "POSSIBLE",
+        "polarity": "POSITIVE",
+        "context": "GENERAL",
+        "match_status": "READY"
+      },
+      {
+        "id": "n11",
+        "type": "LOGIC",
+        "surface": "搬送にかかる時間の増加と、荷役にかかる時間の増加",
+        "evidence_ids": [
+          "ev1"
+        ],
+        "operator": "AND"
+      }
+    ],
+    "relations": [
+      {
+        "id": "r8",
+        "from": "n1",
+        "role": "QUANTITY",
+        "to": "n7",
+        "evidence_ids": [
+          "ev1"
+        ]
+      },
+      {
+        "id": "r7",
+        "from": "n7",
+        "role": "BEARER",
+        "to": "n6",
+        "evidence_ids": [
+          "ev1"
+        ]
+      },
+      {
+        "id": "r10",
+        "from": "n3",
+        "role": "TO",
+        "to": "n1",
+        "evidence_ids": [
+          "ev1"
+        ]
+      },
+      {
+        "id": "r6",
+        "from": "n11",
+        "role": "MEMBER",
+        "to": "n10",
+        "evidence_ids": [
+          "ev1"
+        ]
+      },
+      {
+        "id": "r3",
+        "from": "n5",
+        "role": "BEARER",
+        "to": "n4",
+        "evidence_ids": [
+          "ev1"
+        ]
+      },
+      {
+        "id": "r5",
+        "from": "n11",
+        "role": "MEMBER",
+        "to": "n2",
+        "evidence_ids": [
+          "ev1"
+        ]
+      },
+      {
+        "id": "r2",
+        "from": "n2",
+        "role": "QUANTITY",
+        "to": "n9",
+        "evidence_ids": [
+          "ev1"
+        ]
+      },
+      {
+        "id": "r9",
+        "from": "n3",
+        "role": "FROM",
+        "to": "n11",
+        "evidence_ids": [
+          "ev1"
+        ]
+      },
+      {
+        "id": "r1",
+        "from": "n9",
+        "role": "BEARER",
+        "to": "n8",
+        "evidence_ids": [
+          "ev1"
+        ]
+      },
+      {
+        "id": "r4",
+        "from": "n10",
+        "role": "QUANTITY",
+        "to": "n5",
+        "evidence_ids": [
+          "ev1"
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "id": "ev1",
+        "quote": "搬送にかかる時間の増加と、荷役にかかる時間の増加が共同の原因となり、出荷に使える時間が減ることがある。"
+      }
+    ],
+    "qualifiers": [],
+    "unrepresented": [],
+    "dictionary_candidates": [],
+    "issues": []
+  }
+]

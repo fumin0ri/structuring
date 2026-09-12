@@ -1,0 +1,960 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Knowhow normalized graph 0.1",
+  "description": "Shape validation only. Dictionary definitions, evidence, reference integrity, argument cardinalities, scope, and semantic fidelity require additional validation.",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": "knowhow-graph-0.1"
+    },
+    "dictionary_versions": {
+      "type": "object",
+      "properties": {
+        "core": {
+          "const": "core-0.1"
+        },
+        "additional": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "core",
+        "additional"
+      ],
+      "additionalProperties": false
+    },
+    "document_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "text": {
+      "type": "string"
+    },
+    "nodes": {
+      "type": "array",
+      "items": {
+        "oneOf": [
+          {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^n[1-9][0-9]*$"
+              },
+              "type": {
+                "const": "ENTITY"
+              },
+              "surface": {
+                "type": "string",
+                "minLength": 1
+              },
+              "evidence_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^ev[1-9][0-9]*$"
+                },
+                "minItems": 1
+              },
+              "concept_id": {
+                "anyOf": [
+                  {
+                    "type": "null"
+                  },
+                  {
+                    "type": "string",
+                    "pattern": "^local:[A-Za-z0-9_.-]+$"
+                  }
+                ]
+              },
+              "entity_kind": {
+                "enum": [
+                  "PERSON",
+                  "GROUP",
+                  "PHYSICAL_OBJECT",
+                  "INFORMATION",
+                  "ACTIVITY",
+                  "SYSTEM",
+                  "PLACE",
+                  "SUBSTANCE",
+                  "CATEGORY",
+                  "ABSTRACT",
+                  "UNKNOWN"
+                ]
+              },
+              "dictionary_entry_id": {
+                "anyOf": [
+                  {
+                    "type": "null"
+                  },
+                  {
+                    "type": "string",
+                    "pattern": "^local:[A-Za-z0-9_.-]+$"
+                  }
+                ]
+              }
+            },
+            "required": [
+              "id",
+              "type",
+              "surface",
+              "evidence_ids",
+              "concept_id",
+              "entity_kind",
+              "dictionary_entry_id"
+            ],
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^n[1-9][0-9]*$"
+              },
+              "type": {
+                "const": "ACTION"
+              },
+              "surface": {
+                "type": "string",
+                "minLength": 1
+              },
+              "evidence_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^ev[1-9][0-9]*$"
+                },
+                "minItems": 1
+              },
+              "polarity": {
+                "enum": [
+                  "POSITIVE",
+                  "NEGATIVE"
+                ]
+              },
+              "modality": {
+                "enum": [
+                  "ASSERTED",
+                  "POSSIBLE",
+                  "TENDENCY",
+                  "UNSPECIFIED"
+                ]
+              },
+              "context": {
+                "enum": [
+                  "EPISODE",
+                  "GENERAL",
+                  "CONDITIONAL",
+                  "RECOMMENDATION",
+                  "GOAL",
+                  "UNSPECIFIED"
+                ]
+              },
+              "concept_id": {
+                "anyOf": [
+                  {
+                    "type": "null"
+                  },
+                  {
+                    "enum": [
+                      "core:action.add",
+                      "core:action.remove",
+                      "core:action.move",
+                      "core:action.split",
+                      "core:action.combine",
+                      "core:action.observe",
+                      "core:action.measure",
+                      "core:action.compare",
+                      "core:action.adjust",
+                      "core:action.wait",
+                      "core:action.start",
+                      "core:action.stop"
+                    ]
+                  },
+                  {
+                    "type": "string",
+                    "pattern": "^local:[A-Za-z0-9_.-]+$"
+                  }
+                ]
+              },
+              "dictionary_entry_id": {
+                "anyOf": [
+                  {
+                    "type": "null"
+                  },
+                  {
+                    "enum": [
+                      "core:action.add",
+                      "core:action.remove",
+                      "core:action.move",
+                      "core:action.split",
+                      "core:action.combine",
+                      "core:action.observe",
+                      "core:action.measure",
+                      "core:action.compare",
+                      "core:action.adjust",
+                      "core:action.wait",
+                      "core:action.start",
+                      "core:action.stop"
+                    ]
+                  },
+                  {
+                    "type": "string",
+                    "pattern": "^local:[A-Za-z0-9_.-]+$"
+                  }
+                ]
+              }
+            },
+            "required": [
+              "id",
+              "type",
+              "surface",
+              "evidence_ids",
+              "polarity",
+              "modality",
+              "context",
+              "concept_id",
+              "dictionary_entry_id"
+            ],
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^n[1-9][0-9]*$"
+              },
+              "type": {
+                "const": "QUANTITY"
+              },
+              "surface": {
+                "type": "string",
+                "minLength": 1
+              },
+              "evidence_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^ev[1-9][0-9]*$"
+                },
+                "minItems": 1
+              },
+              "concept_id": {
+                "anyOf": [
+                  {
+                    "type": "null"
+                  },
+                  {
+                    "enum": [
+                      "core:quantity.count",
+                      "core:quantity.activity_duration",
+                      "core:quantity.required_duration",
+                      "core:quantity.available_duration",
+                      "core:quantity.waiting_duration",
+                      "core:quantity.distance",
+                      "core:quantity.mass",
+                      "core:quantity.temperature",
+                      "core:quantity.monetary_amount",
+                      "core:quantity.proportion"
+                    ]
+                  },
+                  {
+                    "type": "string",
+                    "pattern": "^local:[A-Za-z0-9_.-]+$"
+                  }
+                ]
+              },
+              "dimension": {
+                "enum": [
+                  "TIME",
+                  "COUNT",
+                  "LENGTH",
+                  "MASS",
+                  "TEMPERATURE",
+                  "MONEY",
+                  "RATIO",
+                  "OTHER",
+                  "UNKNOWN"
+                ]
+              },
+              "unit": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "dictionary_entry_id": {
+                "anyOf": [
+                  {
+                    "type": "null"
+                  },
+                  {
+                    "enum": [
+                      "core:quantity.count",
+                      "core:quantity.activity_duration",
+                      "core:quantity.required_duration",
+                      "core:quantity.available_duration",
+                      "core:quantity.waiting_duration",
+                      "core:quantity.distance",
+                      "core:quantity.mass",
+                      "core:quantity.temperature",
+                      "core:quantity.monetary_amount",
+                      "core:quantity.proportion"
+                    ]
+                  },
+                  {
+                    "type": "string",
+                    "pattern": "^local:[A-Za-z0-9_.-]+$"
+                  }
+                ]
+              }
+            },
+            "required": [
+              "id",
+              "type",
+              "surface",
+              "evidence_ids",
+              "concept_id",
+              "dimension",
+              "unit",
+              "dictionary_entry_id"
+            ],
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^n[1-9][0-9]*$"
+              },
+              "type": {
+                "const": "CHANGE"
+              },
+              "surface": {
+                "type": "string",
+                "minLength": 1
+              },
+              "evidence_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^ev[1-9][0-9]*$"
+                },
+                "minItems": 1
+              },
+              "polarity": {
+                "enum": [
+                  "POSITIVE",
+                  "NEGATIVE"
+                ]
+              },
+              "modality": {
+                "enum": [
+                  "ASSERTED",
+                  "POSSIBLE",
+                  "TENDENCY",
+                  "UNSPECIFIED"
+                ]
+              },
+              "context": {
+                "enum": [
+                  "EPISODE",
+                  "GENERAL",
+                  "CONDITIONAL",
+                  "RECOMMENDATION",
+                  "GOAL",
+                  "UNSPECIFIED"
+                ]
+              },
+              "direction": {
+                "enum": [
+                  "INCREASE",
+                  "DECREASE",
+                  "OTHER"
+                ]
+              }
+            },
+            "required": [
+              "id",
+              "type",
+              "surface",
+              "evidence_ids",
+              "polarity",
+              "modality",
+              "context",
+              "direction"
+            ],
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^n[1-9][0-9]*$"
+              },
+              "type": {
+                "const": "STATE"
+              },
+              "surface": {
+                "type": "string",
+                "minLength": 1
+              },
+              "evidence_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^ev[1-9][0-9]*$"
+                },
+                "minItems": 1
+              },
+              "polarity": {
+                "enum": [
+                  "POSITIVE",
+                  "NEGATIVE"
+                ]
+              },
+              "modality": {
+                "enum": [
+                  "ASSERTED",
+                  "POSSIBLE",
+                  "TENDENCY",
+                  "UNSPECIFIED"
+                ]
+              },
+              "context": {
+                "enum": [
+                  "EPISODE",
+                  "GENERAL",
+                  "CONDITIONAL",
+                  "RECOMMENDATION",
+                  "GOAL",
+                  "UNSPECIFIED"
+                ]
+              },
+              "form": {
+                "enum": [
+                  "QUALITATIVE",
+                  "COMPARISON"
+                ]
+              },
+              "concept_id": {
+                "anyOf": [
+                  {
+                    "type": "null"
+                  },
+                  {
+                    "enum": [
+                      "core:state.delayed"
+                    ]
+                  },
+                  {
+                    "type": "string",
+                    "pattern": "^local:[A-Za-z0-9_.-]+$"
+                  }
+                ]
+              },
+              "dictionary_entry_id": {
+                "anyOf": [
+                  {
+                    "type": "null"
+                  },
+                  {
+                    "enum": [
+                      "core:state.delayed"
+                    ]
+                  },
+                  {
+                    "type": "string",
+                    "pattern": "^local:[A-Za-z0-9_.-]+$"
+                  }
+                ]
+              },
+              "comparator": {
+                "anyOf": [
+                  {
+                    "type": "null"
+                  },
+                  {
+                    "enum": [
+                      "EQ",
+                      "NE",
+                      "LT",
+                      "LE",
+                      "GT",
+                      "GE"
+                    ]
+                  }
+                ]
+              },
+              "value": {
+                "type": [
+                  "string",
+                  "number",
+                  "null"
+                ]
+              },
+              "value_unit": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            },
+            "required": [
+              "id",
+              "type",
+              "surface",
+              "evidence_ids",
+              "polarity",
+              "modality",
+              "context",
+              "form",
+              "concept_id",
+              "dictionary_entry_id",
+              "comparator",
+              "value",
+              "value_unit"
+            ],
+            "additionalProperties": false,
+            "allOf": [
+              {
+                "if": {
+                  "properties": {
+                    "form": {
+                      "const": "QUALITATIVE"
+                    }
+                  }
+                },
+                "then": {
+                  "properties": {
+                    "comparator": {
+                      "type": "null"
+                    },
+                    "value": {
+                      "type": "null"
+                    },
+                    "value_unit": {
+                      "type": "null"
+                    }
+                  }
+                }
+              },
+              {
+                "if": {
+                  "properties": {
+                    "form": {
+                      "const": "COMPARISON"
+                    }
+                  }
+                },
+                "then": {
+                  "properties": {
+                    "concept_id": {
+                      "type": "null"
+                    },
+                    "dictionary_entry_id": {
+                      "type": "null"
+                    },
+                    "comparator": {
+                      "enum": [
+                        "EQ",
+                        "NE",
+                        "LT",
+                        "LE",
+                        "GT",
+                        "GE"
+                      ]
+                    },
+                    "value": {
+                      "type": [
+                        "string",
+                        "number"
+                      ]
+                    }
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^n[1-9][0-9]*$"
+              },
+              "type": {
+                "const": "CLAIM"
+              },
+              "surface": {
+                "type": "string",
+                "minLength": 1
+              },
+              "evidence_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^ev[1-9][0-9]*$"
+                },
+                "minItems": 1
+              },
+              "polarity": {
+                "enum": [
+                  "POSITIVE",
+                  "NEGATIVE"
+                ]
+              },
+              "modality": {
+                "enum": [
+                  "ASSERTED",
+                  "POSSIBLE",
+                  "TENDENCY",
+                  "UNSPECIFIED"
+                ]
+              },
+              "context": {
+                "enum": [
+                  "EPISODE",
+                  "GENERAL",
+                  "CONDITIONAL",
+                  "RECOMMENDATION",
+                  "GOAL",
+                  "UNSPECIFIED"
+                ]
+              },
+              "predicate": {
+                "enum": [
+                  "CAUSES",
+                  "SIGNALS",
+                  "REQUIRES",
+                  "PREVENTS",
+                  "PRECEDES"
+                ]
+              },
+              "match_status": {
+                "enum": [
+                  "READY",
+                  "NEEDS_REVIEW"
+                ]
+              }
+            },
+            "required": [
+              "id",
+              "type",
+              "surface",
+              "evidence_ids",
+              "polarity",
+              "modality",
+              "context",
+              "predicate",
+              "match_status"
+            ],
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^n[1-9][0-9]*$"
+              },
+              "type": {
+                "const": "LOGIC"
+              },
+              "surface": {
+                "type": "string",
+                "minLength": 1
+              },
+              "evidence_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "pattern": "^ev[1-9][0-9]*$"
+                },
+                "minItems": 1
+              },
+              "operator": {
+                "enum": [
+                  "AND",
+                  "OR",
+                  "NOT"
+                ]
+              }
+            },
+            "required": [
+              "id",
+              "type",
+              "surface",
+              "evidence_ids",
+              "operator"
+            ],
+            "additionalProperties": false
+          }
+        ]
+      }
+    },
+    "relations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^r[1-9][0-9]*$"
+          },
+          "from": {
+            "type": "string",
+            "pattern": "^n[1-9][0-9]*$"
+          },
+          "role": {
+            "enum": [
+              "AGENT",
+              "TARGET",
+              "ORIGIN",
+              "DESTINATION",
+              "BEARER",
+              "QUANTITY",
+              "SUBJECT",
+              "FROM",
+              "TO",
+              "CONDITION",
+              "MEMBER"
+            ]
+          },
+          "to": {
+            "type": "string",
+            "pattern": "^n[1-9][0-9]*$"
+          },
+          "evidence_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^ev[1-9][0-9]*$"
+            },
+            "minItems": 1
+          }
+        },
+        "required": [
+          "id",
+          "from",
+          "role",
+          "to",
+          "evidence_ids"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^ev[1-9][0-9]*$"
+          },
+          "quote": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "id",
+          "quote"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "qualifiers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^q[1-9][0-9]*$"
+          },
+          "applies_to": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^[nr][1-9][0-9]*$"
+            },
+            "minItems": 1
+          },
+          "kind": {
+            "enum": [
+              "CONDITION",
+              "EXCEPTION",
+              "BASELINE",
+              "QUANTIFIER",
+              "TIME",
+              "LOCATION",
+              "SCOPE",
+              "OTHER"
+            ]
+          },
+          "text": {
+            "type": "string",
+            "minLength": 1
+          },
+          "evidence_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^ev[1-9][0-9]*$"
+            },
+            "minItems": 1
+          },
+          "reason": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "id",
+          "applies_to",
+          "kind",
+          "text",
+          "evidence_ids",
+          "reason"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "unrepresented": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "text": {
+            "type": "string",
+            "minLength": 1
+          },
+          "evidence_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^ev[1-9][0-9]*$"
+            },
+            "minItems": 1
+          },
+          "reason": {
+            "type": "string",
+            "minLength": 1
+          },
+          "related_node_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^n[1-9][0-9]*$"
+            }
+          }
+        },
+        "required": [
+          "text",
+          "evidence_ids",
+          "reason",
+          "related_node_ids"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "dictionary_candidates": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "node_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^n[1-9][0-9]*$"
+            },
+            "minItems": 1
+          },
+          "surface": {
+            "type": "string",
+            "minLength": 1
+          },
+          "proposed_definition": {
+            "type": "string",
+            "minLength": 1
+          },
+          "reason": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "node_ids",
+          "surface",
+          "proposed_definition",
+          "reason"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "issues": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "enum": [
+              "AMBIGUITY",
+              "MISSING_ARGUMENT",
+              "DICTIONARY_CONFLICT",
+              "UNSUPPORTED_EXPRESSION",
+              "COREFERENCE_UNCERTAIN"
+            ]
+          },
+          "related_node_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^n[1-9][0-9]*$"
+            }
+          },
+          "evidence_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^ev[1-9][0-9]*$"
+            }
+          },
+          "message": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "code",
+          "related_node_ids",
+          "evidence_ids",
+          "message"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "schema_version",
+    "dictionary_versions",
+    "document_id",
+    "text",
+    "nodes",
+    "relations",
+    "evidence",
+    "qualifiers",
+    "unrepresented",
+    "dictionary_candidates",
+    "issues"
+  ],
+  "additionalProperties": false
+}

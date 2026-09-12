@@ -1,0 +1,3338 @@
+{
+  "profile": "shape_only",
+  "entity_policy": "ENTITY as distinct variables; original kinds recorded",
+  "max_claims": 2,
+  "min_support": 2,
+  "input_sha256": "3230b1dab156bdec3108137c5081f5489b0af7ea5d6dcd4f4b5cd9df88c7f90e",
+  "stats": {
+    "documents": 20,
+    "fragments_total": 36,
+    "fragments_accepted": 35,
+    "fragments_deferred": 1,
+    "distinct_patterns": 7,
+    "recurring_patterns": 7,
+    "exact_isomorphism_calls": 28,
+    "elapsed_seconds_including_validation": 0.017976900000121532
+  },
+  "patterns": [
+    {
+      "pattern_id": "P001",
+      "claim_count": 1,
+      "representative_document": "K01",
+      "representative_claim_ids": [
+        "n3"
+      ],
+      "nodes": [
+        {
+          "id": "n10",
+          "type": "ENTITY",
+          "surface": "説明・調整",
+          "evidence_ids": [
+            "ev1",
+            "ev2"
+          ],
+          "concept_id": null,
+          "entity_kind": "ACTIVITY",
+          "dictionary_entry_id": null
+        },
+        {
+          "id": "n2",
+          "type": "ENTITY",
+          "surface": "実作業",
+          "evidence_ids": [
+            "ev2"
+          ],
+          "concept_id": null,
+          "entity_kind": "ACTIVITY",
+          "dictionary_entry_id": null
+        },
+        {
+          "id": "n3",
+          "type": "CLAIM",
+          "surface": "説明・調整にかかる時間の増加によって、実作業に使える時間が減ることがある。",
+          "evidence_ids": [
+            "ev2"
+          ],
+          "predicate": "CAUSES",
+          "modality": "POSSIBLE",
+          "polarity": "POSITIVE",
+          "context": "GENERAL",
+          "match_status": "READY"
+        },
+        {
+          "id": "n5",
+          "type": "QUANTITY",
+          "surface": "実作業に使える時間",
+          "evidence_ids": [
+            "ev2"
+          ],
+          "concept_id": "core:quantity.available_duration",
+          "dictionary_entry_id": "core:quantity.available_duration",
+          "dimension": "TIME",
+          "unit": null
+        },
+        {
+          "id": "n6",
+          "type": "CHANGE",
+          "surface": "実作業に使える時間が減る",
+          "evidence_ids": [
+            "ev2"
+          ],
+          "direction": "DECREASE",
+          "polarity": "POSITIVE",
+          "modality": "ASSERTED",
+          "context": "CONDITIONAL"
+        },
+        {
+          "id": "n7",
+          "type": "QUANTITY",
+          "surface": "説明・調整にかかる時間",
+          "evidence_ids": [
+            "ev1",
+            "ev2"
+          ],
+          "concept_id": "core:quantity.activity_duration",
+          "dictionary_entry_id": "core:quantity.activity_duration",
+          "dimension": "TIME",
+          "unit": null
+        },
+        {
+          "id": "n9",
+          "type": "CHANGE",
+          "surface": "説明・調整にかかる時間が増える",
+          "evidence_ids": [
+            "ev1",
+            "ev2"
+          ],
+          "direction": "INCREASE",
+          "polarity": "POSITIVE",
+          "modality": "ASSERTED",
+          "context": "CONDITIONAL"
+        }
+      ],
+      "relations": [
+        {
+          "id": "r5",
+          "from": "n6",
+          "role": "QUANTITY",
+          "to": "n5",
+          "evidence_ids": [
+            "ev2"
+          ]
+        },
+        {
+          "id": "r8",
+          "from": "n3",
+          "role": "FROM",
+          "to": "n9",
+          "evidence_ids": [
+            "ev2"
+          ]
+        },
+        {
+          "id": "r2",
+          "from": "n7",
+          "role": "BEARER",
+          "to": "n10",
+          "evidence_ids": [
+            "ev1",
+            "ev2"
+          ]
+        },
+        {
+          "id": "r9",
+          "from": "n3",
+          "role": "TO",
+          "to": "n6",
+          "evidence_ids": [
+            "ev2"
+          ]
+        },
+        {
+          "id": "r4",
+          "from": "n5",
+          "role": "BEARER",
+          "to": "n2",
+          "evidence_ids": [
+            "ev2"
+          ]
+        },
+        {
+          "id": "r3",
+          "from": "n9",
+          "role": "QUANTITY",
+          "to": "n7",
+          "evidence_ids": [
+            "ev1",
+            "ev2"
+          ]
+        }
+      ],
+      "match_labels": {
+        "n10": [
+          "ENTITY"
+        ],
+        "n2": [
+          "ENTITY"
+        ],
+        "n3": [
+          "CLAIM"
+        ],
+        "n5": [
+          "QUANTITY"
+        ],
+        "n6": [
+          "CHANGE"
+        ],
+        "n7": [
+          "QUANTITY"
+        ],
+        "n9": [
+          "CHANGE"
+        ]
+      },
+      "occurrences": [
+        {
+          "key": "K01:n3",
+          "document_id": "K01",
+          "claim_ids": [
+            "n3"
+          ],
+          "node_mapping": {
+            "n10": "n10",
+            "n2": "n2",
+            "n3": "n3",
+            "n5": "n5",
+            "n6": "n6",
+            "n7": "n7",
+            "n9": "n9"
+          },
+          "edge_mapping": {
+            "r5": "r5",
+            "r8": "r8",
+            "r2": "r2",
+            "r9": "r9",
+            "r4": "r4",
+            "r3": "r3"
+          },
+          "entity_substitutions": [
+            {
+              "pattern_node": "n10",
+              "source_node": "n10",
+              "source_surface": "説明・調整",
+              "source_kind": "ACTIVITY",
+              "source_concept_id": null
+            },
+            {
+              "pattern_node": "n2",
+              "source_node": "n2",
+              "source_surface": "実作業",
+              "source_kind": "ACTIVITY",
+              "source_concept_id": null
+            }
+          ],
+          "evidence": [
+            {
+              "id": "ev1",
+              "quote": "人員の追加によって、説明・調整にかかる時間が増えることがある。"
+            },
+            {
+              "id": "ev2",
+              "quote": "説明・調整にかかる時間の増加によって、実作業に使える時間が減ることがある。"
+            }
+          ]
+        },
+        {
+          "key": "K02:n4",
+          "document_id": "K02",
+          "claim_ids": [
+            "n4"
+          ],
+          "node_mapping": {
+            "n10": "n6",
+            "n2": "n5",
+            "n3": "n4",
+            "n5": "n10",
+            "n6": "n1",
+            "n7": "n7",
+            "n9": "n3"
+          },
+          "edge_mapping": {
+            "r5": "r5",
+            "r8": "r8",
+            "r2": "r2",
+            "r9": "r9",
+            "r4": "r4",
+            "r3": "r3"
+          },
+          "entity_substitutions": [
+            {
+              "pattern_node": "n10",
+              "source_node": "n6",
+              "source_surface": "段取り替え",
+              "source_kind": "ACTIVITY",
+              "source_concept_id": null
+            },
+            {
+              "pattern_node": "n2",
+              "source_node": "n5",
+              "source_surface": "製造",
+              "source_kind": "ACTIVITY",
+              "source_concept_id": null
+            }
+          ],
+          "evidence": [
+            {
+              "id": "ev1",
+              "quote": "製品種類の追加によって、段取り替えにかかる時間が増えることがある。"
+            },
+            {
+              "id": "ev2",
+              "quote": "段取り替えにかかる時間の増加によって、製造に使える時間が減ることがある。"
+            }
+          ]
+        },
+        {
+          "key": "K03:n10",
+          "document_id": "K03",
+          "claim_ids": [
+            "n10"
+          ],
+          "node_mapping": {
+            "n10": "n9",
+            "n2": "n4",
+            "n3": "n10",
+            "n5": "n2",
+            "n6": "n3",
+            "n7": "n7",
+            "n9": "n1"
+          },
+          "edge_mapping": {
+            "r5": "r5",
+            "r8": "r8",
+            "r2": "r2",
+            "r9": "r9",
+            "r4": "r4",
+            "r3": "r3"
+          },
+          "entity_substitutions": [
+            {
+              "pattern_node": "n10",
+              "source_node": "n9",
+              "source_surface": "予約確認",
+              "source_kind": "ACTIVITY",
+              "source_concept_id": null
+            },
+            {
+              "pattern_node": "n2",
+              "source_node": "n4",
+              "source_surface": "接客",
+              "source_kind": "ACTIVITY",
+              "source_concept_id": null
+            }
+          ],
+          "evidence": [
+            {
+              "id": "ev1",
+              "quote": "予約枠の追加によって、予約確認にかかる時間が増えることがある。"
+            },
+            {
+              "id": "ev2",
+              "quote": "予約確認にかかる時間の増加によって、接客に使える時間が減ることがある。"
+            }
+          ]
+        },
+        {
+          "key": "K04:n12",
+          "document_id": "K04",
+          "claim_ids": [
+            "n12"
+          ],
+          "node_mapping": {
+            "n10": "n2",
+            "n2": "n10",
+            "n3": "n12",
+            "n5": "n8",
+            "n6": "n9",
+            "n7": "n11",
+            "n9": "n7"
+          },
+          "edge_mapping": {
+            "r5": "r5",
+            "r8": "r8",
+            "r2": "r2",
+            "r9": "r9",
+            "r4": "r4",
+            "r3": "r3"
+          },
+          "entity_substitutions": [
+            {
+              "pattern_node": "n10",
+              "source_node": "n2",
+              "source_surface": "照合",
+              "source_kind": "ACTIVITY",
+              "source_concept_id": null
+            },
+            {
+              "pattern_node": "n2",
+              "source_node": "n10",
+              "source_surface": "審査",
+              "source_kind": "ACTIVITY",
+              "source_concept_id": null
+            }
+          ],
+          "evidence": [
+            {
+              "id": "ev1",
+              "quote": "書類様式の追加によって、照合にかかる時間が増えることがある。"
+            },
+            {
+              "id": "ev2",
+              "quote": "照合にかかる時間の増加によって、審査に使える時間が減ることがある。"
+            }
+          ]
+        },
+        {
+          "key": "K05:n6",
+          "document_id": "K05",
+          "claim_ids": [
+            "n6"
+          ],
+          "node_mapping": {
+            "n10": "n7",
+            "n2": "n9",
+            "n3": "n6",
+            "n5": "n2",
+            "n6": "n1",
+            "n7": "n8",
+            "n9": "n5"
+          },
+          "edge_mapping": {
+            "r5": "r5",
+            "r8": "r8",
+            "r2": "r2",
+            "r9": "r9",
+            "r4": "r4",
+            "r3": "r3"
+          },
+          "entity_substitutions": [
+            {
+              "pattern_node": "n10",
+              "source_node": "n7",
+              "source_surface": "照合",
+              "source_kind": "ACTIVITY",
+              "source_concept_id": null
+            },
+            {
+              "pattern_node": "n2",
+              "source_node": "n9",
+              "source_surface": "審査",
+              "source_kind": "ACTIVITY",
+              "source_concept_id": null
+            }
+          ],
+          "evidence": [
+            {
+              "id": "ev1",
+              "quote": "参考書類の追加によって、照合にかかる時間が増えることがある。"
+            },
+            {
+              "id": "ev2",
+              "quote": "照合にかかる時間の増加によって、審査に必要な時間が減ることがある。"
+            }
+          ]
+        },
+        {
+          "key": "K06:n2",
+          "document_id": "K06",
+          "claim_ids": [
+            "n2"
+          ],
+          "node_mapping": {
+            "n10": "n6",
+            "n2": "n10",
+            "n3": "n2",
+            "n5": "n8",
+            "n6": "n7",
+            "n7": "n5",
+            "n9": "n3"
+          },
+          "edge_mapping": {
+            "r5": "r5",
+            "r8": "r8",
+            "r2": "r2",
+            "r9": "r9",
+            "r4": "r4",
+            "r3": "r3"
+          },
+          "entity_substitutions": [
+            {
+              "pattern_node": "n10",
+              "source_node": "n6",
+              "source_surface": "照合",
+              "source_kind": "ACTIVITY",
+              "source_concept_id": null
+            },
+            {
+              "pattern_node": "n2",
+              "source_node": "n10",
+              "source_surface": "審査",
+              "source_kind": "ACTIVITY",
+              "source_concept_id": null
+            }
+          ],
+          "evidence": [
+            {
+              "id": "ev1",
+              "quote": "帳票の追加によって、照合にかかる時間が増えることがある。"
+            },
+            {
+              "id": "ev2",
+              "quote": "照合にかかる時間の増加は、審査に使える時間の減少を引き起こさない。"
+            }
+          ]
+        },
+        {
+          "key": "K07:n8",
+          "document_id": "K07",
+          "claim_ids": [
+            "n8"
+          ],
+          "node_mapping": {
+            "n10": "n7",
+            "n2": "n4",
+            "n3": "n8",
+            "n5": "n2",
+            "n6": "n10",
+            "n7": "n6",
+            "n9": "n9"
+          },
+          "edge_mapping": {
+            "r5": "r5",
+            "r8": "r8",
+            "r2": "r2",
+            "r9": "r9",
+            "r4": "r4",
+            "r3": "r3"
+          },
+          "entity_substitutions": [
+            {
+              "pattern_node": "n10",
+              "source_node": "n7",
+              "source_surface": "照合",
+              "source_kind": "ACTIVITY",
+              "source_concept_id": null
+            },
+            {
+              "pattern_node": "n2",
+              "source_node": "n4",
+              "source_surface": "審査",
+              "source_kind": "ACTIVITY",
+              "source_concept_id": null
+            }
+          ],
+          "evidence": [
+            {
+              "id": "ev1",
+              "quote": "確認項目の追加によって、照合にかかる時間が増えることがある。"
+            },
+            {
+              "id": "ev2",
+              "quote": "照合にかかる時間が増えた後に、審査に使える時間が減ることがある。"
+            }
+          ]
+        },
+        {
+          "key": "K08:n6",
+          "document_id": "K08",
+          "claim_ids": [
+            "n6"
+          ],
+          "node_mapping": {
+            "n10": "n9",
+            "n2": "n8",
+            "n3": "n6",
+            "n5": "n7",
+            "n6": "n1",
+            "n7": "n10",
+            "n9": "n3"
+          },
+          "edge_mapping": {
+            "r5": "r5",
+            "r8": "r8",
+            "r2": "r2",
+            "r9": "r9",
+            "r4": "r4",
+            "r3": "r3"
+          },
+          "entity_substitutions": [
+            {
+              "pattern_node": "n10",
+              "source_node": "n9",
+              "source_surface": "照合",
+              "source_kind": "ACTIVITY",
+              "source_concept_id": null
+            },
+            {
+              "pattern_node": "n2",
+              "source_node": "n8",
+              "source_surface": "審査",
+              "source_kind": "ACTIVITY",
+              "source_concept_id": null
+            }
+          ],
+          "evidence": [
+            {
+              "id": "ev1",
+              "quote": "記録項目の追加によって、照合にかかる時間が増える。"
+            },
+            {
+              "id": "ev2",
+              "quote": "照合にかかる時間の増加によって、審査に使える時間が減る。"
+            }
+          ]
+        }
+      ],
+      "supporting_documents": [
+        "K01",
+        "K02",
+        "K03",
+        "K04",
+        "K05",
+        "K06",
+        "K07",
+        "K08"
+      ],
+      "support_count": 8,
+      "occurrence_count": 8
+    },
+    {
+      "pattern_id": "P002",
+      "claim_count": 1,
+      "representative_document": "K01",
+      "representative_claim_ids": [
+        "n8"
+      ],
+      "nodes": [
+        {
+          "id": "n1",
+          "type": "ENTITY",
+          "surface": "人員",
+          "evidence_ids": [
+            "ev1"
+          ],
+          "concept_id": null,
+          "entity_kind": "GROUP",
+          "dictionary_entry_id": null
+        },
+        {
+          "id": "n10",
+          "type": "ENTITY",
+          "surface": "説明・調整",
+          "evidence_ids": [
+            "ev1",
+            "ev2"
+          ],
+          "concept_id": null,
+          "entity_kind": "ACTIVITY",
+          "dictionary_entry_id": null
+        },
+        {
+          "id": "n4",
+          "type": "ACTION",
+          "surface": "人員の追加",
+          "evidence_ids": [
+            "ev1"
+          ],
+          "concept_id": "core:action.add",
+          "dictionary_entry_id": "core:action.add",
+          "polarity": "POSITIVE",
+          "modality": "ASSERTED",
+          "context": "CONDITIONAL"
+        },
+        {
+          "id": "n7",
+          "type": "QUANTITY",
+          "surface": "説明・調整にかかる時間",
+          "evidence_ids": [
+            "ev1",
+            "ev2"
+          ],
+          "concept_id": "core:quantity.activity_duration",
+          "dictionary_entry_id": "core:quantity.activity_duration",
+          "dimension": "TIME",
+          "unit": null
+        },
+        {
+          "id": "n8",
+          "type": "CLAIM",
+          "surface": "人員の追加によって、説明・調整にかかる時間が増えることがある。",
+          "evidence_ids": [
+            "ev1"
+          ],
+          "predicate": "CAUSES",
+          "modality": "POSSIBLE",
+          "polarity": "POSITIVE",
+          "context": "GENERAL",
+          "match_status": "READY"
+        },
+        {
+          "id": "n9",
+          "type": "CHANGE",
+          "surface": "説明・調整にかかる時間が増える",
+          "evidence_ids": [
+            "ev1",
+            "ev2"
+          ],
+          "direction": "INCREASE",
+          "polarity": "POSITIVE",
+          "modality": "ASSERTED",
+          "context": "CONDITIONAL"
+        }
+      ],
+      "relations": [
+        {
+          "id": "r2",
+          "from": "n7",
+          "role": "BEARER",
+          "to": "n10",
+          "evidence_ids": [
+            "ev1",
+            "ev2"
+          ]
+        },
+        {
+          "id": "r1",
+          "from": "n4",
+          "role": "TARGET",
+          "to": "n1",
+          "evidence_ids": [
+            "ev1"
+          ]
+        },
+        {
+          "id": "r6",
+          "from": "n8",
+          "role": "FROM",
+          "to": "n4",
+          "evidence_ids": [
+            "ev1"
+          ]
+        },
+        {
+          "id": "r7",
+          "from": "n8",
+          "role": "TO",
+          "to": "n9",
+          "evidence_ids": [
+            "ev1"
+          ]
+        },
+        {
+          "id": "r3",
+          "from": "n9",
+          "role": "QUANTITY",
+          "to": "n7",
+          "evidence_ids": [
+            "ev1",
+            "ev2"
+          ]
+        }
+      ],
+      "match_labels": {
+        "n1": [
+          "ENTITY"
+        ],
+        "n10": [
+          "ENTITY"
+        ],
+        "n4": [
+          "ACTION"
+        ],
+        "n7": [
+          "QUANTITY"
+        ],
+        "n8": [
+          "CLAIM"
+        ],
+        "n9": [
+          "CHANGE"
+        ]
+      },
+      "occurrences": [
+        {
+          "key": "K01:n8",
+          "document_id": "K01",
+          "claim_ids": [
+            "n8"
+          ],
+          "node_mapping": {
+            "n1": "n1",
+            "n10": "n10",
+            "n4": "n4",
+            "n7": "n7",
+            "n8": "n8",
+            "n9": "n9"
+          },
+          "edge_mapping": {
+            "r2": "r2",
+            "r1": "r1",
+            "r6": "r6",
+            "r7": "r7",
+            "r3": "r3"
+          },
+          "entity_substitutions": [
+            {
+              "pattern_node": "n1",
+              "source_node": "n1",
+              "source_surface": "人員",
+              "source_kind": "GROUP",
+              "source_concept_id": null
+            },
+            {
+              "pattern_node": "n10",
+              "source_node": "n10",
+              "source_surface": "説明・調整",
+              "source_kind": "ACTIVITY",
+              "source_concept_id": null
+            }
+          ],
+          "evidence": [
+            {
+              "id": "ev1",
+              "quote": "人員の追加によって、説明・調整にかかる時間が増えることがある。"
+            },
+            {
+              "id": "ev2",
+              "quote": "説明・調整にかかる時間の増加によって、実作業に使える時間が減ることがある。"
+            }
+          ]
+        },
+        {
+          "key": "K02:n2",
+          "document_id": "K02",
+          "claim_ids": [
+            "n2"
+          ],
+          "node_mapping": {
+            "n1": "n9",
+            "n10": "n6",
+            "n4": "n8",
+            "n7": "n7",
+            "n8": "n2",
+            "n9": "n3"
+          },
+          "edge_mapping": {
+            "r2": "r2",
+            "r1": "r1",
+            "r6": "r6",
+            "r7": "r7",
+            "r3": "r3"
+          },
+          "entity_substitutions": [
+            {
+              "pattern_node": "n1",
+              "source_node": "n9",
+              "source_surface": "製品種類",
+              "source_kind": "CATEGORY",
+              "source_concept_id": null
+            },
+            {
+              "pattern_node": "n10",
+              "source_node": "n6",
+              "source_surface": "段取り替え",
+              "source_kind": "ACTIVITY",
+              "source_concept_id": null
+            }
+          ],
+          "evidence": [
+            {
+              "id": "ev1",
+              "quote": "製品種類の追加によって、段取り替えにかかる時間が増えることがある。"
+            },
+            {
+              "id": "ev2",
+              "quote": "段取り替えにかかる時間の増加によって、製造に使える時間が減ることがある。"
+            }
+          ]
+        },
+        {
+          "key": "K03:n8",
+          "document_id": "K03",
+          "claim_ids": [
+            "n8"
+          ],
+          "node_mapping": {
+            "n1": "n5",
+            "n10": "n9",
+            "n4": "n6",
+            "n7": "n7",
+            "n8": "n8",
+            "n9": "n1"
+          },
+          "edge_mapping": {
+            "r2": "r2",
+            "r1": "r1",
+            "r6": "r6",
+            "r7": "r7",
+            "r3": "r3"
+          },
+          "entity_substitutions": [
+            {
+              "pattern_node": "n1",
+              "source_node": "n5",
+              "source_surface": "予約枠",
+              "source_kind": "ABSTRACT",
+              "source_concept_id": null
+            },
+            {
+              "pattern_node": "n10",
+              "source_node": "n9",
+              "source_surface": "予約確認",
+              "source_kind": "ACTIVITY",
+              "source_concept_id": null
+            }
+          ],
+          "evidence": [
+            {
+              "id": "ev1",
+              "quote": "予約枠の追加によって、予約確認にかかる時間が増えることがある。"
+            },
+            {
+              "id": "ev2",
+              "quote": "予約確認にかかる時間の増加によって、接客に使える時間が減ることがある。"
+            }
+          ]
+        },
+        {
+          "key": "K04:n4",
+          "document_id": "K04",
+          "claim_ids": [
+            "n4"
+          ],
+          "node_mapping": {
+            "n1": "n3",
+            "n10": "n2",
+            "n4": "n5",
+            "n7": "n11",
+            "n8": "n4",
+            "n9": "n7"
+          },
+          "edge_mapping": {
+            "r2": "r2",
+            "r1": "r1",
+            "r6": "r6",
+            "r7": "r7",
+            "r3": "r3"
+          },
+          "entity_substitutions": [
+            {
+              "pattern_node": "n1",
+              "source_node": "n3",
+              "source_surface": "書類様式",
+              "source_kind": "INFORMATION",
+              "source_concept_id": null
+            },
+            {
+              "pattern_node": "n10",
+              "source_node": "n2",
+              "source_surface": "照合",
+              "source_kind": "ACTIVITY",
+              "source_concept_id": null
+            }
+          ],
+          "evidence": [
+            {
+              "id": "ev1",
+              "quote": "書類様式の追加によって、照合にかかる時間が増えることがある。"
+            },
+            {
+              "id": "ev2",
+              "quote": "照合にかかる時間の増加によって、審査に使える時間が減ることがある。"
+            }
+          ]
+        },
+        {
+          "key": "K05:n10",
+          "document_id": "K05",
+          "claim_ids": [
+            "n10"
+          ],
+          "node_mapping": {
+            "n1": "n3",
+            "n10": "n7",
+            "n4": "n4",
+            "n7": "n8",
+            "n8": "n10",
+            "n9": "n5"
+          },
+          "edge_mapping": {
+            "r2": "r2",
+            "r1": "r1",
+            "r6": "r6",
+            "r7": "r7",
+            "r3": "r3"
+          },
+          "entity_substitutions": [
+            {
+              "pattern_node": "n1",
+              "source_node": "n3",
+              "source_surface": "参考書類",
+              "source_kind": "INFORMATION",
+              "source_concept_id": null
+            },
+            {
+              "pattern_node": "n10",
+              "source_node": "n7",
+              "source_surface": "照合",
+              "source_kind": "ACTIVITY",
+              "source_concept_id": null
+            }
+          ],
+          "evidence": [
+            {
+              "id": "ev1",
+              "quote": "参考書類の追加によって、照合にかかる時間が増えることがある。"
+            },
+            {
+              "id": "ev2",
+              "quote": "照合にかかる時間の増加によって、審査に必要な時間が減ることがある。"
+            }
+          ]
+        },
+        {
+          "key": "K06:n1",
+          "document_id": "K06",
+          "claim_ids": [
+            "n1"
+          ],
+          "node_mapping": {
+            "n1": "n4",
+            "n10": "n6",
+            "n4": "n9",
+            "n7": "n5",
+            "n8": "n1",
+            "n9": "n3"
+          },
+          "edge_mapping": {
+            "r2": "r2",
+            "r1": "r1",
+            "r6": "r6",
+            "r7": "r7",
+            "r3": "r3"
+          },
+          "entity_substitutions": [
+            {
+              "pattern_node": "n1",
+              "source_node": "n4",
+              "source_surface": "帳票",
+              "source_kind": "INFORMATION",
+              "source_concept_id": null
+            },
+            {
+              "pattern_node": "n10",
+              "source_node": "n6",
+              "source_surface": "照合",
+              "source_kind": "ACTIVITY",
+              "source_concept_id": null
+            }
+          ],
+          "evidence": [
+            {
+              "id": "ev1",
+              "quote": "帳票の追加によって、照合にかかる時間が増えることがある。"
+            },
+            {
+              "id": "ev2",
+              "quote": "照合にかかる時間の増加は、審査に使える時間の減少を引き起こさない。"
+            }
+          ]
+        },
+        {
+          "key": "K07:n1",
+          "document_id": "K07",
+          "claim_ids": [
+            "n1"
+          ],
+          "node_mapping": {
+            "n1": "n5",
+            "n10": "n7",
+            "n4": "n3",
+            "n7": "n6",
+            "n8": "n1",
+            "n9": "n9"
+          },
+          "edge_mapping": {
+            "r2": "r2",
+            "r1": "r1",
+            "r6": "r6",
+            "r7": "r7",
+            "r3": "r3"
+          },
+          "entity_substitutions": [
+            {
+              "pattern_node": "n1",
+              "source_node": "n5",
+              "source_surface": "確認項目",
+              "source_kind": "INFORMATION",
+              "source_concept_id": null
+            },
+            {
+              "pattern_node": "n10",
+              "source_node": "n7",
+              "source_surface": "照合",
+              "source_kind": "ACTIVITY",
+              "source_concept_id": null
+            }
+          ],
+          "evidence": [
+            {
+              "id": "ev1",
+              "quote": "確認項目の追加によって、照合にかかる時間が増えることがある。"
+            },
+            {
+              "id": "ev2",
+              "quote": "照合にかかる時間が増えた後に、審査に使える時間が減ることがある。"
+            }
+          ]
+        },
+        {
+          "key": "K08:n4",
+          "document_id": "K08",
+          "claim_ids": [
+            "n4"
+          ],
+          "node_mapping": {
+            "n1": "n5",
+            "n10": "n9",
+            "n4": "n2",
+            "n7": "n10",
+            "n8": "n4",
+            "n9": "n3"
+          },
+          "edge_mapping": {
+            "r2": "r2",
+            "r1": "r1",
+            "r6": "r6",
+            "r7": "r7",
+            "r3": "r3"
+          },
+          "entity_substitutions": [
+            {
+              "pattern_node": "n1",
+              "source_node": "n5",
+              "source_surface": "記録項目",
+              "source_kind": "INFORMATION",
+              "source_concept_id": null
+            },
+            {
+              "pattern_node": "n10",
+              "source_node": "n9",
+              "source_surface": "照合",
+              "source_kind": "ACTIVITY",
+              "source_concept_id": null
+            }
+          ],
+          "evidence": [
+            {
+              "id": "ev1",
+              "quote": "記録項目の追加によって、照合にかかる時間が増える。"
+            },
+            {
+              "id": "ev2",
+              "quote": "照合にかかる時間の増加によって、審査に使える時間が減る。"
+            }
+          ]
+        }
+      ],
+      "supporting_documents": [
+        "K01",
+        "K02",
+        "K03",
+        "K04",
+        "K05",
+        "K06",
+        "K07",
+        "K08"
+      ],
+      "support_count": 8,
+      "occurrence_count": 8
+    },
+    {
+      "pattern_id": "P003",
+      "claim_count": 2,
+      "representative_document": "K01",
+      "representative_claim_ids": [
+        "n3",
+        "n8"
+      ],
+      "nodes": [
+        {
+          "id": "n1",
+          "type": "ENTITY",
+          "surface": "人員",
+          "evidence_ids": [
+            "ev1"
+          ],
+          "concept_id": null,
+          "entity_kind": "GROUP",
+          "dictionary_entry_id": null
+        },
+        {
+          "id": "n10",
+          "type": "ENTITY",
+          "surface": "説明・調整",
+          "evidence_ids": [
+            "ev1",
+            "ev2"
+          ],
+          "concept_id": null,
+          "entity_kind": "ACTIVITY",
+          "dictionary_entry_id": null
+        },
+        {
+          "id": "n2",
+          "type": "ENTITY",
+          "surface": "実作業",
+          "evidence_ids": [
+            "ev2"
+          ],
+          "concept_id": null,
+          "entity_kind": "ACTIVITY",
+          "dictionary_entry_id": null
+        },
+        {
+          "id": "n3",
+          "type": "CLAIM",
+          "surface": "説明・調整にかかる時間の増加によって、実作業に使える時間が減ることがある。",
+          "evidence_ids": [
+            "ev2"
+          ],
+          "predicate": "CAUSES",
+          "modality": "POSSIBLE",
+          "polarity": "POSITIVE",
+          "context": "GENERAL",
+          "match_status": "READY"
+        },
+        {
+          "id": "n4",
+          "type": "ACTION",
+          "surface": "人員の追加",
+          "evidence_ids": [
+            "ev1"
+          ],
+          "concept_id": "core:action.add",
+          "dictionary_entry_id": "core:action.add",
+          "polarity": "POSITIVE",
+          "modality": "ASSERTED",
+          "context": "CONDITIONAL"
+        },
+        {
+          "id": "n5",
+          "type": "QUANTITY",
+          "surface": "実作業に使える時間",
+          "evidence_ids": [
+            "ev2"
+          ],
+          "concept_id": "core:quantity.available_duration",
+          "dictionary_entry_id": "core:quantity.available_duration",
+          "dimension": "TIME",
+          "unit": null
+        },
+        {
+          "id": "n6",
+          "type": "CHANGE",
+          "surface": "実作業に使える時間が減る",
+          "evidence_ids": [
+            "ev2"
+          ],
+          "direction": "DECREASE",
+          "polarity": "POSITIVE",
+          "modality": "ASSERTED",
+          "context": "CONDITIONAL"
+        },
+        {
+          "id": "n7",
+          "type": "QUANTITY",
+          "surface": "説明・調整にかかる時間",
+          "evidence_ids": [
+            "ev1",
+            "ev2"
+          ],
+          "concept_id": "core:quantity.activity_duration",
+          "dictionary_entry_id": "core:quantity.activity_duration",
+          "dimension": "TIME",
+          "unit": null
+        },
+        {
+          "id": "n8",
+          "type": "CLAIM",
+          "surface": "人員の追加によって、説明・調整にかかる時間が増えることがある。",
+          "evidence_ids": [
+            "ev1"
+          ],
+          "predicate": "CAUSES",
+          "modality": "POSSIBLE",
+          "polarity": "POSITIVE",
+          "context": "GENERAL",
+          "match_status": "READY"
+        },
+        {
+          "id": "n9",
+          "type": "CHANGE",
+          "surface": "説明・調整にかかる時間が増える",
+          "evidence_ids": [
+            "ev1",
+            "ev2"
+          ],
+          "direction": "INCREASE",
+          "polarity": "POSITIVE",
+          "modality": "ASSERTED",
+          "context": "CONDITIONAL"
+        }
+      ],
+      "relations": [
+        {
+          "id": "r5",
+          "from": "n6",
+          "role": "QUANTITY",
+          "to": "n5",
+          "evidence_ids": [
+            "ev2"
+          ]
+        },
+        {
+          "id": "r8",
+          "from": "n3",
+          "role": "FROM",
+          "to": "n9",
+          "evidence_ids": [
+            "ev2"
+          ]
+        },
+        {
+          "id": "r2",
+          "from": "n7",
+          "role": "BEARER",
+          "to": "n10",
+          "evidence_ids": [
+            "ev1",
+            "ev2"
+          ]
+        },
+        {
+          "id": "r1",
+          "from": "n4",
+          "role": "TARGET",
+          "to": "n1",
+          "evidence_ids": [
+            "ev1"
+          ]
+        },
+        {
+          "id": "r9",
+          "from": "n3",
+          "role": "TO",
+          "to": "n6",
+          "evidence_ids": [
+            "ev2"
+          ]
+        },
+        {
+          "id": "r6",
+          "from": "n8",
+          "role": "FROM",
+          "to": "n4",
+          "evidence_ids": [
+            "ev1"
+          ]
+        },
+        {
+          "id": "r4",
+          "from": "n5",
+          "role": "BEARER",
+          "to": "n2",
+          "evidence_ids": [
+            "ev2"
+          ]
+        },
+        {
+          "id": "r7",
+          "from": "n8",
+          "role": "TO",
+          "to": "n9",
+          "evidence_ids": [
+            "ev1"
+          ]
+        },
+        {
+          "id": "r3",
+          "from": "n9",
+          "role": "QUANTITY",
+          "to": "n7",
+          "evidence_ids": [
+            "ev1",
+            "ev2"
+          ]
+        }
+      ],
+      "match_labels": {
+        "n1": [
+          "ENTITY"
+        ],
+        "n10": [
+          "ENTITY"
+        ],
+        "n2": [
+          "ENTITY"
+        ],
+        "n3": [
+          "CLAIM"
+        ],
+        "n4": [
+          "ACTION"
+        ],
+        "n5": [
+          "QUANTITY"
+        ],
+        "n6": [
+          "CHANGE"
+        ],
+        "n7": [
+          "QUANTITY"
+        ],
+        "n8": [
+          "CLAIM"
+        ],
+        "n9": [
+          "CHANGE"
+        ]
+      },
+      "occurrences": [
+        {
+          "key": "K01:n3,n8",
+          "document_id": "K01",
+          "claim_ids": [
+            "n3",
+            "n8"
+          ],
+          "node_mapping": {
+            "n1": "n1",
+            "n10": "n10",
+            "n2": "n2",
+            "n3": "n3",
+            "n4": "n4",
+            "n5": "n5",
+            "n6": "n6",
+            "n7": "n7",
+            "n8": "n8",
+            "n9": "n9"
+          },
+          "edge_mapping": {
+            "r5": "r5",
+            "r8": "r8",
+            "r2": "r2",
+            "r1": "r1",
+            "r9": "r9",
+            "r6": "r6",
+            "r4": "r4",
+            "r7": "r7",
+            "r3": "r3"
+          },
+          "entity_substitutions": [
+            {
+              "pattern_node": "n1",
+              "source_node": "n1",
+              "source_surface": "人員",
+              "source_kind": "GROUP",
+              "source_concept_id": null
+            },
+            {
+              "pattern_node": "n10",
+              "source_node": "n10",
+              "source_surface": "説明・調整",
+              "source_kind": "ACTIVITY",
+              "source_concept_id": null
+            },
+            {
+              "pattern_node": "n2",
+              "source_node": "n2",
+              "source_surface": "実作業",
+              "source_kind": "ACTIVITY",
+              "source_concept_id": null
+            }
+          ],
+          "evidence": [
+            {
+              "id": "ev1",
+              "quote": "人員の追加によって、説明・調整にかかる時間が増えることがある。"
+            },
+            {
+              "id": "ev2",
+              "quote": "説明・調整にかかる時間の増加によって、実作業に使える時間が減ることがある。"
+            }
+          ]
+        },
+        {
+          "key": "K02:n2,n4",
+          "document_id": "K02",
+          "claim_ids": [
+            "n2",
+            "n4"
+          ],
+          "node_mapping": {
+            "n1": "n9",
+            "n10": "n6",
+            "n2": "n5",
+            "n3": "n4",
+            "n4": "n8",
+            "n5": "n10",
+            "n6": "n1",
+            "n7": "n7",
+            "n8": "n2",
+            "n9": "n3"
+          },
+          "edge_mapping": {
+            "r5": "r5",
+            "r8": "r8",
+            "r2": "r2",
+            "r1": "r1",
+            "r9": "r9",
+            "r6": "r6",
+            "r4": "r4",
+            "r7": "r7",
+            "r3": "r3"
+          },
+          "entity_substitutions": [
+            {
+              "pattern_node": "n1",
+              "source_node": "n9",
+              "source_surface": "製品種類",
+              "source_kind": "CATEGORY",
+              "source_concept_id": null
+            },
+            {
+              "pattern_node": "n10",
+              "source_node": "n6",
+              "source_surface": "段取り替え",
+              "source_kind": "ACTIVITY",
+              "source_concept_id": null
+            },
+            {
+              "pattern_node": "n2",
+              "source_node": "n5",
+              "source_surface": "製造",
+              "source_kind": "ACTIVITY",
+              "source_concept_id": null
+            }
+          ],
+          "evidence": [
+            {
+              "id": "ev1",
+              "quote": "製品種類の追加によって、段取り替えにかかる時間が増えることがある。"
+            },
+            {
+              "id": "ev2",
+              "quote": "段取り替えにかかる時間の増加によって、製造に使える時間が減ることがある。"
+            }
+          ]
+        },
+        {
+          "key": "K03:n10,n8",
+          "document_id": "K03",
+          "claim_ids": [
+            "n10",
+            "n8"
+          ],
+          "node_mapping": {
+            "n1": "n5",
+            "n10": "n9",
+            "n2": "n4",
+            "n3": "n10",
+            "n4": "n6",
+            "n5": "n2",
+            "n6": "n3",
+            "n7": "n7",
+            "n8": "n8",
+            "n9": "n1"
+          },
+          "edge_mapping": {
+            "r5": "r5",
+            "r8": "r8",
+            "r2": "r2",
+            "r1": "r1",
+            "r9": "r9",
+            "r6": "r6",
+            "r4": "r4",
+            "r7": "r7",
+            "r3": "r3"
+          },
+          "entity_substitutions": [
+            {
+              "pattern_node": "n1",
+              "source_node": "n5",
+              "source_surface": "予約枠",
+              "source_kind": "ABSTRACT",
+              "source_concept_id": null
+            },
+            {
+              "pattern_node": "n10",
+              "source_node": "n9",
+              "source_surface": "予約確認",
+              "source_kind": "ACTIVITY",
+              "source_concept_id": null
+            },
+            {
+              "pattern_node": "n2",
+              "source_node": "n4",
+              "source_surface": "接客",
+              "source_kind": "ACTIVITY",
+              "source_concept_id": null
+            }
+          ],
+          "evidence": [
+            {
+              "id": "ev1",
+              "quote": "予約枠の追加によって、予約確認にかかる時間が増えることがある。"
+            },
+            {
+              "id": "ev2",
+              "quote": "予約確認にかかる時間の増加によって、接客に使える時間が減ることがある。"
+            }
+          ]
+        },
+        {
+          "key": "K04:n12,n4",
+          "document_id": "K04",
+          "claim_ids": [
+            "n12",
+            "n4"
+          ],
+          "node_mapping": {
+            "n1": "n3",
+            "n10": "n2",
+            "n2": "n10",
+            "n3": "n12",
+            "n4": "n5",
+            "n5": "n8",
+            "n6": "n9",
+            "n7": "n11",
+            "n8": "n4",
+            "n9": "n7"
+          },
+          "edge_mapping": {
+            "r5": "r5",
+            "r8": "r8",
+            "r2": "r2",
+            "r1": "r1",
+            "r9": "r9",
+            "r6": "r6",
+            "r4": "r4",
+            "r7": "r7",
+            "r3": "r3"
+          },
+          "entity_substitutions": [
+            {
+              "pattern_node": "n1",
+              "source_node": "n3",
+              "source_surface": "書類様式",
+              "source_kind": "INFORMATION",
+              "source_concept_id": null
+            },
+            {
+              "pattern_node": "n10",
+              "source_node": "n2",
+              "source_surface": "照合",
+              "source_kind": "ACTIVITY",
+              "source_concept_id": null
+            },
+            {
+              "pattern_node": "n2",
+              "source_node": "n10",
+              "source_surface": "審査",
+              "source_kind": "ACTIVITY",
+              "source_concept_id": null
+            }
+          ],
+          "evidence": [
+            {
+              "id": "ev1",
+              "quote": "書類様式の追加によって、照合にかかる時間が増えることがある。"
+            },
+            {
+              "id": "ev2",
+              "quote": "照合にかかる時間の増加によって、審査に使える時間が減ることがある。"
+            }
+          ]
+        },
+        {
+          "key": "K05:n10,n6",
+          "document_id": "K05",
+          "claim_ids": [
+            "n10",
+            "n6"
+          ],
+          "node_mapping": {
+            "n1": "n3",
+            "n10": "n7",
+            "n2": "n9",
+            "n3": "n6",
+            "n4": "n4",
+            "n5": "n2",
+            "n6": "n1",
+            "n7": "n8",
+            "n8": "n10",
+            "n9": "n5"
+          },
+          "edge_mapping": {
+            "r5": "r5",
+            "r8": "r8",
+            "r2": "r2",
+            "r1": "r1",
+            "r9": "r9",
+            "r6": "r6",
+            "r4": "r4",
+            "r7": "r7",
+            "r3": "r3"
+          },
+          "entity_substitutions": [
+            {
+              "pattern_node": "n1",
+              "source_node": "n3",
+              "source_surface": "参考書類",
+              "source_kind": "INFORMATION",
+              "source_concept_id": null
+            },
+            {
+              "pattern_node": "n10",
+              "source_node": "n7",
+              "source_surface": "照合",
+              "source_kind": "ACTIVITY",
+              "source_concept_id": null
+            },
+            {
+              "pattern_node": "n2",
+              "source_node": "n9",
+              "source_surface": "審査",
+              "source_kind": "ACTIVITY",
+              "source_concept_id": null
+            }
+          ],
+          "evidence": [
+            {
+              "id": "ev1",
+              "quote": "参考書類の追加によって、照合にかかる時間が増えることがある。"
+            },
+            {
+              "id": "ev2",
+              "quote": "照合にかかる時間の増加によって、審査に必要な時間が減ることがある。"
+            }
+          ]
+        },
+        {
+          "key": "K06:n1,n2",
+          "document_id": "K06",
+          "claim_ids": [
+            "n1",
+            "n2"
+          ],
+          "node_mapping": {
+            "n1": "n4",
+            "n10": "n6",
+            "n2": "n10",
+            "n3": "n2",
+            "n4": "n9",
+            "n5": "n8",
+            "n6": "n7",
+            "n7": "n5",
+            "n8": "n1",
+            "n9": "n3"
+          },
+          "edge_mapping": {
+            "r5": "r5",
+            "r8": "r8",
+            "r2": "r2",
+            "r1": "r1",
+            "r9": "r9",
+            "r6": "r6",
+            "r4": "r4",
+            "r7": "r7",
+            "r3": "r3"
+          },
+          "entity_substitutions": [
+            {
+              "pattern_node": "n1",
+              "source_node": "n4",
+              "source_surface": "帳票",
+              "source_kind": "INFORMATION",
+              "source_concept_id": null
+            },
+            {
+              "pattern_node": "n10",
+              "source_node": "n6",
+              "source_surface": "照合",
+              "source_kind": "ACTIVITY",
+              "source_concept_id": null
+            },
+            {
+              "pattern_node": "n2",
+              "source_node": "n10",
+              "source_surface": "審査",
+              "source_kind": "ACTIVITY",
+              "source_concept_id": null
+            }
+          ],
+          "evidence": [
+            {
+              "id": "ev1",
+              "quote": "帳票の追加によって、照合にかかる時間が増えることがある。"
+            },
+            {
+              "id": "ev2",
+              "quote": "照合にかかる時間の増加は、審査に使える時間の減少を引き起こさない。"
+            }
+          ]
+        },
+        {
+          "key": "K07:n1,n8",
+          "document_id": "K07",
+          "claim_ids": [
+            "n1",
+            "n8"
+          ],
+          "node_mapping": {
+            "n1": "n5",
+            "n10": "n7",
+            "n2": "n4",
+            "n3": "n8",
+            "n4": "n3",
+            "n5": "n2",
+            "n6": "n10",
+            "n7": "n6",
+            "n8": "n1",
+            "n9": "n9"
+          },
+          "edge_mapping": {
+            "r5": "r5",
+            "r8": "r8",
+            "r2": "r2",
+            "r1": "r1",
+            "r9": "r9",
+            "r6": "r6",
+            "r4": "r4",
+            "r7": "r7",
+            "r3": "r3"
+          },
+          "entity_substitutions": [
+            {
+              "pattern_node": "n1",
+              "source_node": "n5",
+              "source_surface": "確認項目",
+              "source_kind": "INFORMATION",
+              "source_concept_id": null
+            },
+            {
+              "pattern_node": "n10",
+              "source_node": "n7",
+              "source_surface": "照合",
+              "source_kind": "ACTIVITY",
+              "source_concept_id": null
+            },
+            {
+              "pattern_node": "n2",
+              "source_node": "n4",
+              "source_surface": "審査",
+              "source_kind": "ACTIVITY",
+              "source_concept_id": null
+            }
+          ],
+          "evidence": [
+            {
+              "id": "ev1",
+              "quote": "確認項目の追加によって、照合にかかる時間が増えることがある。"
+            },
+            {
+              "id": "ev2",
+              "quote": "照合にかかる時間が増えた後に、審査に使える時間が減ることがある。"
+            }
+          ]
+        },
+        {
+          "key": "K08:n4,n6",
+          "document_id": "K08",
+          "claim_ids": [
+            "n4",
+            "n6"
+          ],
+          "node_mapping": {
+            "n1": "n5",
+            "n10": "n9",
+            "n2": "n8",
+            "n3": "n6",
+            "n4": "n2",
+            "n5": "n7",
+            "n6": "n1",
+            "n7": "n10",
+            "n8": "n4",
+            "n9": "n3"
+          },
+          "edge_mapping": {
+            "r5": "r5",
+            "r8": "r8",
+            "r2": "r2",
+            "r1": "r1",
+            "r9": "r9",
+            "r6": "r6",
+            "r4": "r4",
+            "r7": "r7",
+            "r3": "r3"
+          },
+          "entity_substitutions": [
+            {
+              "pattern_node": "n1",
+              "source_node": "n5",
+              "source_surface": "記録項目",
+              "source_kind": "INFORMATION",
+              "source_concept_id": null
+            },
+            {
+              "pattern_node": "n10",
+              "source_node": "n9",
+              "source_surface": "照合",
+              "source_kind": "ACTIVITY",
+              "source_concept_id": null
+            },
+            {
+              "pattern_node": "n2",
+              "source_node": "n8",
+              "source_surface": "審査",
+              "source_kind": "ACTIVITY",
+              "source_concept_id": null
+            }
+          ],
+          "evidence": [
+            {
+              "id": "ev1",
+              "quote": "記録項目の追加によって、照合にかかる時間が増える。"
+            },
+            {
+              "id": "ev2",
+              "quote": "照合にかかる時間の増加によって、審査に使える時間が減る。"
+            }
+          ]
+        }
+      ],
+      "supporting_documents": [
+        "K01",
+        "K02",
+        "K03",
+        "K04",
+        "K05",
+        "K06",
+        "K07",
+        "K08"
+      ],
+      "support_count": 8,
+      "occurrence_count": 8
+    },
+    {
+      "pattern_id": "P004",
+      "claim_count": 1,
+      "representative_document": "K09",
+      "representative_claim_ids": [
+        "n10"
+      ],
+      "nodes": [
+        {
+          "id": "n1",
+          "type": "QUANTITY",
+          "surface": "受付件数",
+          "evidence_ids": [
+            "ev1"
+          ],
+          "concept_id": "core:quantity.count",
+          "dictionary_entry_id": "core:quantity.count",
+          "dimension": "COUNT",
+          "unit": "件"
+        },
+        {
+          "id": "n10",
+          "type": "CLAIM",
+          "surface": "受付件数が10件以上の場合、照合にかかる時間の増加によって、審査に使える時間が減ることがある。",
+          "evidence_ids": [
+            "ev1"
+          ],
+          "predicate": "CAUSES",
+          "modality": "POSSIBLE",
+          "polarity": "POSITIVE",
+          "context": "GENERAL",
+          "match_status": "READY"
+        },
+        {
+          "id": "n2",
+          "type": "ENTITY",
+          "surface": "照合",
+          "evidence_ids": [
+            "ev1"
+          ],
+          "concept_id": null,
+          "entity_kind": "ACTIVITY",
+          "dictionary_entry_id": null
+        },
+        {
+          "id": "n3",
+          "type": "QUANTITY",
+          "surface": "照合にかかる時間",
+          "evidence_ids": [
+            "ev1"
+          ],
+          "concept_id": "core:quantity.activity_duration",
+          "dictionary_entry_id": "core:quantity.activity_duration",
+          "dimension": "TIME",
+          "unit": null
+        },
+        {
+          "id": "n4",
+          "type": "CHANGE",
+          "surface": "照合にかかる時間の増加",
+          "evidence_ids": [
+            "ev1"
+          ],
+          "direction": "INCREASE",
+          "polarity": "POSITIVE",
+          "modality": "ASSERTED",
+          "context": "CONDITIONAL"
+        },
+        {
+          "id": "n5",
+          "type": "ENTITY",
+          "surface": "受付",
+          "evidence_ids": [
+            "ev1"
+          ],
+          "concept_id": null,
+          "entity_kind": "ACTIVITY",
+          "dictionary_entry_id": null
+        },
+        {
+          "id": "n6",
+          "type": "ENTITY",
+          "surface": "審査",
+          "evidence_ids": [
+            "ev1"
+          ],
+          "concept_id": null,
+          "entity_kind": "ACTIVITY",
+          "dictionary_entry_id": null
+        },
+        {
+          "id": "n7",
+          "type": "QUANTITY",
+          "surface": "審査に使える時間",
+          "evidence_ids": [
+            "ev1"
+          ],
+          "concept_id": "core:quantity.available_duration",
+          "dictionary_entry_id": "core:quantity.available_duration",
+          "dimension": "TIME",
+          "unit": null
+        },
+        {
+          "id": "n8",
+          "type": "CHANGE",
+          "surface": "審査に使える時間が減る",
+          "evidence_ids": [
+            "ev1"
+          ],
+          "direction": "DECREASE",
+          "polarity": "POSITIVE",
+          "modality": "ASSERTED",
+          "context": "CONDITIONAL"
+        },
+        {
+          "id": "n9",
+          "type": "STATE",
+          "surface": "受付件数が10件以上",
+          "evidence_ids": [
+            "ev1"
+          ],
+          "form": "COMPARISON",
+          "concept_id": null,
+          "dictionary_entry_id": null,
+          "comparator": "GE",
+          "value": 10,
+          "value_unit": "件",
+          "polarity": "POSITIVE",
+          "modality": "ASSERTED",
+          "context": "CONDITIONAL"
+        }
+      ],
+      "relations": [
+        {
+          "id": "r6",
+          "from": "n8",
+          "role": "QUANTITY",
+          "to": "n7",
+          "evidence_ids": [
+            "ev1"
+          ]
+        },
+        {
+          "id": "r8",
+          "from": "n10",
+          "role": "TO",
+          "to": "n8",
+          "evidence_ids": [
+            "ev1"
+          ]
+        },
+        {
+          "id": "r3",
+          "from": "n3",
+          "role": "BEARER",
+          "to": "n2",
+          "evidence_ids": [
+            "ev1"
+          ]
+        },
+        {
+          "id": "r5",
+          "from": "n7",
+          "role": "BEARER",
+          "to": "n6",
+          "evidence_ids": [
+            "ev1"
+          ]
+        },
+        {
+          "id": "r2",
+          "from": "n9",
+          "role": "SUBJECT",
+          "to": "n1",
+          "evidence_ids": [
+            "ev1"
+          ]
+        },
+        {
+          "id": "r9",
+          "from": "n10",
+          "role": "CONDITION",
+          "to": "n9",
+          "evidence_ids": [
+            "ev1"
+          ]
+        },
+        {
+          "id": "r4",
+          "from": "n4",
+          "role": "QUANTITY",
+          "to": "n3",
+          "evidence_ids": [
+            "ev1"
+          ]
+        },
+        {
+          "id": "r1",
+          "from": "n1",
+          "role": "BEARER",
+          "to": "n5",
+          "evidence_ids": [
+            "ev1"
+          ]
+        },
+        {
+          "id": "r7",
+          "from": "n10",
+          "role": "FROM",
+          "to": "n4",
+          "evidence_ids": [
+            "ev1"
+          ]
+        }
+      ],
+      "match_labels": {
+        "n1": [
+          "QUANTITY"
+        ],
+        "n10": [
+          "CLAIM"
+        ],
+        "n2": [
+          "ENTITY"
+        ],
+        "n3": [
+          "QUANTITY"
+        ],
+        "n4": [
+          "CHANGE"
+        ],
+        "n5": [
+          "ENTITY"
+        ],
+        "n6": [
+          "ENTITY"
+        ],
+        "n7": [
+          "QUANTITY"
+        ],
+        "n8": [
+          "CHANGE"
+        ],
+        "n9": [
+          "STATE"
+        ]
+      },
+      "occurrences": [
+        {
+          "key": "K09:n10",
+          "document_id": "K09",
+          "claim_ids": [
+            "n10"
+          ],
+          "node_mapping": {
+            "n1": "n1",
+            "n10": "n10",
+            "n2": "n2",
+            "n3": "n3",
+            "n4": "n4",
+            "n5": "n5",
+            "n6": "n6",
+            "n7": "n7",
+            "n8": "n8",
+            "n9": "n9"
+          },
+          "edge_mapping": {
+            "r6": "r6",
+            "r8": "r8",
+            "r3": "r3",
+            "r5": "r5",
+            "r2": "r2",
+            "r9": "r9",
+            "r4": "r4",
+            "r1": "r1",
+            "r7": "r7"
+          },
+          "entity_substitutions": [
+            {
+              "pattern_node": "n2",
+              "source_node": "n2",
+              "source_surface": "照合",
+              "source_kind": "ACTIVITY",
+              "source_concept_id": null
+            },
+            {
+              "pattern_node": "n5",
+              "source_node": "n5",
+              "source_surface": "受付",
+              "source_kind": "ACTIVITY",
+              "source_concept_id": null
+            },
+            {
+              "pattern_node": "n6",
+              "source_node": "n6",
+              "source_surface": "審査",
+              "source_kind": "ACTIVITY",
+              "source_concept_id": null
+            }
+          ],
+          "evidence": [
+            {
+              "id": "ev1",
+              "quote": "受付件数が10件以上の場合、照合にかかる時間の増加によって、審査に使える時間が減ることがある。"
+            }
+          ]
+        },
+        {
+          "key": "K10:n5",
+          "document_id": "K10",
+          "claim_ids": [
+            "n5"
+          ],
+          "node_mapping": {
+            "n1": "n1",
+            "n10": "n5",
+            "n2": "n9",
+            "n3": "n6",
+            "n4": "n10",
+            "n5": "n3",
+            "n6": "n4",
+            "n7": "n2",
+            "n8": "n8",
+            "n9": "n7"
+          },
+          "edge_mapping": {
+            "r6": "r6",
+            "r8": "r8",
+            "r3": "r3",
+            "r5": "r5",
+            "r2": "r2",
+            "r9": "r9",
+            "r4": "r4",
+            "r1": "r1",
+            "r7": "r7"
+          },
+          "entity_substitutions": [
+            {
+              "pattern_node": "n2",
+              "source_node": "n9",
+              "source_surface": "段取り替え",
+              "source_kind": "ACTIVITY",
+              "source_concept_id": null
+            },
+            {
+              "pattern_node": "n5",
+              "source_node": "n3",
+              "source_surface": "受注",
+              "source_kind": "ACTIVITY",
+              "source_concept_id": null
+            },
+            {
+              "pattern_node": "n6",
+              "source_node": "n4",
+              "source_surface": "製造",
+              "source_kind": "ACTIVITY",
+              "source_concept_id": null
+            }
+          ],
+          "evidence": [
+            {
+              "id": "ev1",
+              "quote": "受注件数が20件以上の場合、段取り替えにかかる時間の増加によって、製造に使える時間が減ることがある。"
+            }
+          ]
+        },
+        {
+          "key": "K11:n7",
+          "document_id": "K11",
+          "claim_ids": [
+            "n7"
+          ],
+          "node_mapping": {
+            "n1": "n3",
+            "n10": "n7",
+            "n2": "n1",
+            "n3": "n8",
+            "n4": "n2",
+            "n5": "n6",
+            "n6": "n5",
+            "n7": "n4",
+            "n8": "n10",
+            "n9": "n9"
+          },
+          "edge_mapping": {
+            "r6": "r6",
+            "r8": "r8",
+            "r3": "r3",
+            "r5": "r5",
+            "r2": "r2",
+            "r9": "r9",
+            "r4": "r4",
+            "r1": "r1",
+            "r7": "r7"
+          },
+          "entity_substitutions": [
+            {
+              "pattern_node": "n2",
+              "source_node": "n1",
+              "source_surface": "予約確認",
+              "source_kind": "ACTIVITY",
+              "source_concept_id": null
+            },
+            {
+              "pattern_node": "n5",
+              "source_node": "n6",
+              "source_surface": "予約",
+              "source_kind": "ACTIVITY",
+              "source_concept_id": null
+            },
+            {
+              "pattern_node": "n6",
+              "source_node": "n5",
+              "source_surface": "接客",
+              "source_kind": "ACTIVITY",
+              "source_concept_id": null
+            }
+          ],
+          "evidence": [
+            {
+              "id": "ev1",
+              "quote": "予約件数が10件以上の場合、予約確認にかかる時間の増加によって、接客に使える時間が減ることがある。"
+            }
+          ]
+        }
+      ],
+      "supporting_documents": [
+        "K09",
+        "K10",
+        "K11"
+      ],
+      "support_count": 3,
+      "occurrence_count": 3
+    },
+    {
+      "pattern_id": "P005",
+      "claim_count": 1,
+      "representative_document": "K13",
+      "representative_claim_ids": [
+        "n1"
+      ],
+      "nodes": [
+        {
+          "id": "n1",
+          "type": "CLAIM",
+          "surface": "問い合わせの応答にかかる時間の増加は、窓口業務の遅れを示すことがある。",
+          "evidence_ids": [
+            "ev1"
+          ],
+          "predicate": "SIGNALS",
+          "modality": "POSSIBLE",
+          "polarity": "POSITIVE",
+          "context": "GENERAL",
+          "match_status": "READY"
+        },
+        {
+          "id": "n2",
+          "type": "QUANTITY",
+          "surface": "問い合わせの応答にかかる時間",
+          "evidence_ids": [
+            "ev1"
+          ],
+          "concept_id": "core:quantity.activity_duration",
+          "dictionary_entry_id": "core:quantity.activity_duration",
+          "dimension": "TIME",
+          "unit": null
+        },
+        {
+          "id": "n3",
+          "type": "CHANGE",
+          "surface": "問い合わせの応答にかかる時間の増加",
+          "evidence_ids": [
+            "ev1"
+          ],
+          "direction": "INCREASE",
+          "polarity": "POSITIVE",
+          "modality": "ASSERTED",
+          "context": "CONDITIONAL"
+        },
+        {
+          "id": "n4",
+          "type": "ENTITY",
+          "surface": "問い合わせの応答",
+          "evidence_ids": [
+            "ev1"
+          ],
+          "concept_id": null,
+          "entity_kind": "ACTIVITY",
+          "dictionary_entry_id": null
+        },
+        {
+          "id": "n5",
+          "type": "ENTITY",
+          "surface": "窓口業務",
+          "evidence_ids": [
+            "ev1"
+          ],
+          "concept_id": null,
+          "entity_kind": "ACTIVITY",
+          "dictionary_entry_id": null
+        },
+        {
+          "id": "n6",
+          "type": "STATE",
+          "surface": "窓口業務の遅れ",
+          "evidence_ids": [
+            "ev1"
+          ],
+          "form": "QUALITATIVE",
+          "concept_id": "core:state.delayed",
+          "dictionary_entry_id": "core:state.delayed",
+          "comparator": null,
+          "value": null,
+          "value_unit": null,
+          "polarity": "POSITIVE",
+          "modality": "ASSERTED",
+          "context": "CONDITIONAL"
+        }
+      ],
+      "relations": [
+        {
+          "id": "r4",
+          "from": "n1",
+          "role": "FROM",
+          "to": "n3",
+          "evidence_ids": [
+            "ev1"
+          ]
+        },
+        {
+          "id": "r2",
+          "from": "n3",
+          "role": "QUANTITY",
+          "to": "n2",
+          "evidence_ids": [
+            "ev1"
+          ]
+        },
+        {
+          "id": "r3",
+          "from": "n6",
+          "role": "SUBJECT",
+          "to": "n5",
+          "evidence_ids": [
+            "ev1"
+          ]
+        },
+        {
+          "id": "r1",
+          "from": "n2",
+          "role": "BEARER",
+          "to": "n4",
+          "evidence_ids": [
+            "ev1"
+          ]
+        },
+        {
+          "id": "r5",
+          "from": "n1",
+          "role": "TO",
+          "to": "n6",
+          "evidence_ids": [
+            "ev1"
+          ]
+        }
+      ],
+      "match_labels": {
+        "n1": [
+          "CLAIM"
+        ],
+        "n2": [
+          "QUANTITY"
+        ],
+        "n3": [
+          "CHANGE"
+        ],
+        "n4": [
+          "ENTITY"
+        ],
+        "n5": [
+          "ENTITY"
+        ],
+        "n6": [
+          "STATE"
+        ]
+      },
+      "occurrences": [
+        {
+          "key": "K13:n1",
+          "document_id": "K13",
+          "claim_ids": [
+            "n1"
+          ],
+          "node_mapping": {
+            "n1": "n1",
+            "n2": "n2",
+            "n3": "n3",
+            "n4": "n4",
+            "n5": "n5",
+            "n6": "n6"
+          },
+          "edge_mapping": {
+            "r4": "r4",
+            "r2": "r2",
+            "r3": "r3",
+            "r1": "r1",
+            "r5": "r5"
+          },
+          "entity_substitutions": [
+            {
+              "pattern_node": "n4",
+              "source_node": "n4",
+              "source_surface": "問い合わせの応答",
+              "source_kind": "ACTIVITY",
+              "source_concept_id": null
+            },
+            {
+              "pattern_node": "n5",
+              "source_node": "n5",
+              "source_surface": "窓口業務",
+              "source_kind": "ACTIVITY",
+              "source_concept_id": null
+            }
+          ],
+          "evidence": [
+            {
+              "id": "ev1",
+              "quote": "問い合わせの応答にかかる時間の増加は、窓口業務の遅れを示すことがある。"
+            }
+          ]
+        },
+        {
+          "key": "K14:n4",
+          "document_id": "K14",
+          "claim_ids": [
+            "n4"
+          ],
+          "node_mapping": {
+            "n1": "n4",
+            "n2": "n2",
+            "n3": "n1",
+            "n4": "n5",
+            "n5": "n3",
+            "n6": "n6"
+          },
+          "edge_mapping": {
+            "r4": "r4",
+            "r2": "r2",
+            "r3": "r3",
+            "r1": "r1",
+            "r5": "r5"
+          },
+          "entity_substitutions": [
+            {
+              "pattern_node": "n4",
+              "source_node": "n5",
+              "source_surface": "搬送",
+              "source_kind": "ACTIVITY",
+              "source_concept_id": null
+            },
+            {
+              "pattern_node": "n5",
+              "source_node": "n3",
+              "source_surface": "出荷作業",
+              "source_kind": "ACTIVITY",
+              "source_concept_id": null
+            }
+          ],
+          "evidence": [
+            {
+              "id": "ev1",
+              "quote": "搬送にかかる時間の増加は、出荷作業の遅れを示すことがある。"
+            }
+          ]
+        },
+        {
+          "key": "K15:n3",
+          "document_id": "K15",
+          "claim_ids": [
+            "n3"
+          ],
+          "node_mapping": {
+            "n1": "n3",
+            "n2": "n6",
+            "n3": "n2",
+            "n4": "n4",
+            "n5": "n5",
+            "n6": "n1"
+          },
+          "edge_mapping": {
+            "r4": "r4",
+            "r2": "r2",
+            "r3": "r3",
+            "r1": "r1",
+            "r5": "r5"
+          },
+          "entity_substitutions": [
+            {
+              "pattern_node": "n4",
+              "source_node": "n4",
+              "source_surface": "確認",
+              "source_kind": "ACTIVITY",
+              "source_concept_id": null
+            },
+            {
+              "pattern_node": "n5",
+              "source_node": "n5",
+              "source_surface": "審査",
+              "source_kind": "ACTIVITY",
+              "source_concept_id": null
+            }
+          ],
+          "evidence": [
+            {
+              "id": "ev1",
+              "quote": "確認にかかる時間の増加は、審査の遅れを引き起こすことがある。"
+            }
+          ]
+        }
+      ],
+      "supporting_documents": [
+        "K13",
+        "K14",
+        "K15"
+      ],
+      "support_count": 3,
+      "occurrence_count": 3
+    },
+    {
+      "pattern_id": "P006",
+      "claim_count": 1,
+      "representative_document": "K16",
+      "representative_claim_ids": [
+        "n1"
+      ],
+      "nodes": [
+        {
+          "id": "n1",
+          "type": "CLAIM",
+          "surface": "装置を始動するには、装置の温度が80度以下であることが必要である。",
+          "evidence_ids": [
+            "ev1"
+          ],
+          "predicate": "REQUIRES",
+          "modality": "ASSERTED",
+          "polarity": "POSITIVE",
+          "context": "GENERAL",
+          "match_status": "READY"
+        },
+        {
+          "id": "n2",
+          "type": "QUANTITY",
+          "surface": "装置の温度",
+          "evidence_ids": [
+            "ev1"
+          ],
+          "concept_id": "core:quantity.temperature",
+          "dictionary_entry_id": "core:quantity.temperature",
+          "dimension": "TEMPERATURE",
+          "unit": "度"
+        },
+        {
+          "id": "n3",
+          "type": "ACTION",
+          "surface": "装置を始動する",
+          "evidence_ids": [
+            "ev1"
+          ],
+          "concept_id": "core:action.start",
+          "dictionary_entry_id": "core:action.start",
+          "polarity": "POSITIVE",
+          "modality": "ASSERTED",
+          "context": "CONDITIONAL"
+        },
+        {
+          "id": "n4",
+          "type": "STATE",
+          "surface": "装置の温度が80度以下",
+          "evidence_ids": [
+            "ev1"
+          ],
+          "form": "COMPARISON",
+          "concept_id": null,
+          "dictionary_entry_id": null,
+          "comparator": "LE",
+          "value": 80,
+          "value_unit": "度",
+          "polarity": "POSITIVE",
+          "modality": "ASSERTED",
+          "context": "CONDITIONAL"
+        },
+        {
+          "id": "n5",
+          "type": "ENTITY",
+          "surface": "装置",
+          "evidence_ids": [
+            "ev1"
+          ],
+          "concept_id": null,
+          "entity_kind": "PHYSICAL_OBJECT",
+          "dictionary_entry_id": null
+        }
+      ],
+      "relations": [
+        {
+          "id": "r3",
+          "from": "n4",
+          "role": "SUBJECT",
+          "to": "n2",
+          "evidence_ids": [
+            "ev1"
+          ]
+        },
+        {
+          "id": "r5",
+          "from": "n1",
+          "role": "TO",
+          "to": "n4",
+          "evidence_ids": [
+            "ev1"
+          ]
+        },
+        {
+          "id": "r4",
+          "from": "n1",
+          "role": "FROM",
+          "to": "n3",
+          "evidence_ids": [
+            "ev1"
+          ]
+        },
+        {
+          "id": "r1",
+          "from": "n3",
+          "role": "TARGET",
+          "to": "n5",
+          "evidence_ids": [
+            "ev1"
+          ]
+        },
+        {
+          "id": "r2",
+          "from": "n2",
+          "role": "BEARER",
+          "to": "n5",
+          "evidence_ids": [
+            "ev1"
+          ]
+        }
+      ],
+      "match_labels": {
+        "n1": [
+          "CLAIM"
+        ],
+        "n2": [
+          "QUANTITY"
+        ],
+        "n3": [
+          "ACTION"
+        ],
+        "n4": [
+          "STATE"
+        ],
+        "n5": [
+          "ENTITY"
+        ]
+      },
+      "occurrences": [
+        {
+          "key": "K16:n1",
+          "document_id": "K16",
+          "claim_ids": [
+            "n1"
+          ],
+          "node_mapping": {
+            "n1": "n1",
+            "n2": "n2",
+            "n3": "n3",
+            "n4": "n4",
+            "n5": "n5"
+          },
+          "edge_mapping": {
+            "r3": "r3",
+            "r5": "r5",
+            "r4": "r4",
+            "r1": "r1",
+            "r2": "r2"
+          },
+          "entity_substitutions": [
+            {
+              "pattern_node": "n5",
+              "source_node": "n5",
+              "source_surface": "装置",
+              "source_kind": "PHYSICAL_OBJECT",
+              "source_concept_id": null
+            }
+          ],
+          "evidence": [
+            {
+              "id": "ev1",
+              "quote": "装置を始動するには、装置の温度が80度以下であることが必要である。"
+            }
+          ]
+        },
+        {
+          "key": "K17:n3",
+          "document_id": "K17",
+          "claim_ids": [
+            "n3"
+          ],
+          "node_mapping": {
+            "n1": "n3",
+            "n2": "n1",
+            "n3": "n4",
+            "n4": "n5",
+            "n5": "n2"
+          },
+          "edge_mapping": {
+            "r3": "r3",
+            "r5": "r5",
+            "r4": "r4",
+            "r1": "r1",
+            "r2": "r2"
+          },
+          "entity_substitutions": [
+            {
+              "pattern_node": "n5",
+              "source_node": "n2",
+              "source_surface": "炉",
+              "source_kind": "PHYSICAL_OBJECT",
+              "source_concept_id": null
+            }
+          ],
+          "evidence": [
+            {
+              "id": "ev1",
+              "quote": "炉を始動するには、炉の温度が80度以下であることが必要である。"
+            }
+          ]
+        },
+        {
+          "key": "K18:n2",
+          "document_id": "K18",
+          "claim_ids": [
+            "n2"
+          ],
+          "node_mapping": {
+            "n1": "n2",
+            "n2": "n5",
+            "n3": "n3",
+            "n4": "n4",
+            "n5": "n1"
+          },
+          "edge_mapping": {
+            "r3": "r3",
+            "r5": "r5",
+            "r4": "r4",
+            "r1": "r1",
+            "r2": "r2"
+          },
+          "entity_substitutions": [
+            {
+              "pattern_node": "n5",
+              "source_node": "n1",
+              "source_surface": "ポンプ",
+              "source_kind": "PHYSICAL_OBJECT",
+              "source_concept_id": null
+            }
+          ],
+          "evidence": [
+            {
+              "id": "ev1",
+              "quote": "ポンプを始動するには、ポンプの温度が80度以上であることが必要である。"
+            }
+          ]
+        }
+      ],
+      "supporting_documents": [
+        "K16",
+        "K17",
+        "K18"
+      ],
+      "support_count": 3,
+      "occurrence_count": 3
+    },
+    {
+      "pattern_id": "P007",
+      "claim_count": 1,
+      "representative_document": "K19",
+      "representative_claim_ids": [
+        "n11"
+      ],
+      "nodes": [
+        {
+          "id": "n1",
+          "type": "LOGIC",
+          "surface": "応答にかかる時間の増加と、確認にかかる時間の増加",
+          "evidence_ids": [
+            "ev1"
+          ],
+          "operator": "AND"
+        },
+        {
+          "id": "n10",
+          "type": "CHANGE",
+          "surface": "応答にかかる時間の増加",
+          "evidence_ids": [
+            "ev1"
+          ],
+          "direction": "INCREASE",
+          "polarity": "POSITIVE",
+          "modality": "ASSERTED",
+          "context": "CONDITIONAL"
+        },
+        {
+          "id": "n11",
+          "type": "CLAIM",
+          "surface": "応答にかかる時間の増加と、確認にかかる時間の増加が共同の原因となり、処理に使える時間が減ることがある。",
+          "evidence_ids": [
+            "ev1"
+          ],
+          "predicate": "CAUSES",
+          "modality": "POSSIBLE",
+          "polarity": "POSITIVE",
+          "context": "GENERAL",
+          "match_status": "READY"
+        },
+        {
+          "id": "n2",
+          "type": "QUANTITY",
+          "surface": "応答にかかる時間",
+          "evidence_ids": [
+            "ev1"
+          ],
+          "concept_id": "core:quantity.activity_duration",
+          "dictionary_entry_id": "core:quantity.activity_duration",
+          "dimension": "TIME",
+          "unit": null
+        },
+        {
+          "id": "n3",
+          "type": "ENTITY",
+          "surface": "処理",
+          "evidence_ids": [
+            "ev1"
+          ],
+          "concept_id": null,
+          "entity_kind": "ACTIVITY",
+          "dictionary_entry_id": null
+        },
+        {
+          "id": "n4",
+          "type": "CHANGE",
+          "surface": "処理に使える時間が減る",
+          "evidence_ids": [
+            "ev1"
+          ],
+          "direction": "DECREASE",
+          "polarity": "POSITIVE",
+          "modality": "ASSERTED",
+          "context": "CONDITIONAL"
+        },
+        {
+          "id": "n5",
+          "type": "CHANGE",
+          "surface": "確認にかかる時間の増加",
+          "evidence_ids": [
+            "ev1"
+          ],
+          "direction": "INCREASE",
+          "polarity": "POSITIVE",
+          "modality": "ASSERTED",
+          "context": "CONDITIONAL"
+        },
+        {
+          "id": "n6",
+          "type": "ENTITY",
+          "surface": "確認",
+          "evidence_ids": [
+            "ev1"
+          ],
+          "concept_id": null,
+          "entity_kind": "ACTIVITY",
+          "dictionary_entry_id": null
+        },
+        {
+          "id": "n7",
+          "type": "QUANTITY",
+          "surface": "処理に使える時間",
+          "evidence_ids": [
+            "ev1"
+          ],
+          "concept_id": "core:quantity.available_duration",
+          "dictionary_entry_id": "core:quantity.available_duration",
+          "dimension": "TIME",
+          "unit": null
+        },
+        {
+          "id": "n8",
+          "type": "QUANTITY",
+          "surface": "確認にかかる時間",
+          "evidence_ids": [
+            "ev1"
+          ],
+          "concept_id": "core:quantity.activity_duration",
+          "dictionary_entry_id": "core:quantity.activity_duration",
+          "dimension": "TIME",
+          "unit": null
+        },
+        {
+          "id": "n9",
+          "type": "ENTITY",
+          "surface": "応答",
+          "evidence_ids": [
+            "ev1"
+          ],
+          "concept_id": null,
+          "entity_kind": "ACTIVITY",
+          "dictionary_entry_id": null
+        }
+      ],
+      "relations": [
+        {
+          "id": "r7",
+          "from": "n7",
+          "role": "BEARER",
+          "to": "n3",
+          "evidence_ids": [
+            "ev1"
+          ]
+        },
+        {
+          "id": "r3",
+          "from": "n8",
+          "role": "BEARER",
+          "to": "n6",
+          "evidence_ids": [
+            "ev1"
+          ]
+        },
+        {
+          "id": "r1",
+          "from": "n2",
+          "role": "BEARER",
+          "to": "n9",
+          "evidence_ids": [
+            "ev1"
+          ]
+        },
+        {
+          "id": "r10",
+          "from": "n11",
+          "role": "TO",
+          "to": "n4",
+          "evidence_ids": [
+            "ev1"
+          ]
+        },
+        {
+          "id": "r5",
+          "from": "n1",
+          "role": "MEMBER",
+          "to": "n10",
+          "evidence_ids": [
+            "ev1"
+          ]
+        },
+        {
+          "id": "r8",
+          "from": "n4",
+          "role": "QUANTITY",
+          "to": "n7",
+          "evidence_ids": [
+            "ev1"
+          ]
+        },
+        {
+          "id": "r9",
+          "from": "n11",
+          "role": "FROM",
+          "to": "n1",
+          "evidence_ids": [
+            "ev1"
+          ]
+        },
+        {
+          "id": "r2",
+          "from": "n10",
+          "role": "QUANTITY",
+          "to": "n2",
+          "evidence_ids": [
+            "ev1"
+          ]
+        },
+        {
+          "id": "r4",
+          "from": "n5",
+          "role": "QUANTITY",
+          "to": "n8",
+          "evidence_ids": [
+            "ev1"
+          ]
+        },
+        {
+          "id": "r6",
+          "from": "n1",
+          "role": "MEMBER",
+          "to": "n5",
+          "evidence_ids": [
+            "ev1"
+          ]
+        }
+      ],
+      "match_labels": {
+        "n1": [
+          "LOGIC"
+        ],
+        "n10": [
+          "CHANGE"
+        ],
+        "n11": [
+          "CLAIM"
+        ],
+        "n2": [
+          "QUANTITY"
+        ],
+        "n3": [
+          "ENTITY"
+        ],
+        "n4": [
+          "CHANGE"
+        ],
+        "n5": [
+          "CHANGE"
+        ],
+        "n6": [
+          "ENTITY"
+        ],
+        "n7": [
+          "QUANTITY"
+        ],
+        "n8": [
+          "QUANTITY"
+        ],
+        "n9": [
+          "ENTITY"
+        ]
+      },
+      "occurrences": [
+        {
+          "key": "K19:n11",
+          "document_id": "K19",
+          "claim_ids": [
+            "n11"
+          ],
+          "node_mapping": {
+            "n1": "n1",
+            "n10": "n10",
+            "n11": "n11",
+            "n2": "n2",
+            "n3": "n3",
+            "n4": "n4",
+            "n5": "n5",
+            "n6": "n6",
+            "n7": "n7",
+            "n8": "n8",
+            "n9": "n9"
+          },
+          "edge_mapping": {
+            "r7": "r7",
+            "r3": "r3",
+            "r1": "r1",
+            "r10": "r10",
+            "r5": "r5",
+            "r8": "r8",
+            "r9": "r9",
+            "r2": "r2",
+            "r4": "r4",
+            "r6": "r6"
+          },
+          "entity_substitutions": [
+            {
+              "pattern_node": "n3",
+              "source_node": "n3",
+              "source_surface": "処理",
+              "source_kind": "ACTIVITY",
+              "source_concept_id": null
+            },
+            {
+              "pattern_node": "n6",
+              "source_node": "n6",
+              "source_surface": "確認",
+              "source_kind": "ACTIVITY",
+              "source_concept_id": null
+            },
+            {
+              "pattern_node": "n9",
+              "source_node": "n9",
+              "source_surface": "応答",
+              "source_kind": "ACTIVITY",
+              "source_concept_id": null
+            }
+          ],
+          "evidence": [
+            {
+              "id": "ev1",
+              "quote": "応答にかかる時間の増加と、確認にかかる時間の増加が共同の原因となり、処理に使える時間が減ることがある。"
+            }
+          ]
+        },
+        {
+          "key": "K20:n3",
+          "document_id": "K20",
+          "claim_ids": [
+            "n3"
+          ],
+          "node_mapping": {
+            "n1": "n11",
+            "n10": "n10",
+            "n11": "n3",
+            "n2": "n5",
+            "n3": "n6",
+            "n4": "n1",
+            "n5": "n2",
+            "n6": "n8",
+            "n7": "n7",
+            "n8": "n9",
+            "n9": "n4"
+          },
+          "edge_mapping": {
+            "r7": "r7",
+            "r3": "r1",
+            "r1": "r3",
+            "r10": "r10",
+            "r5": "r6",
+            "r8": "r8",
+            "r9": "r9",
+            "r2": "r4",
+            "r4": "r2",
+            "r6": "r5"
+          },
+          "entity_substitutions": [
+            {
+              "pattern_node": "n3",
+              "source_node": "n6",
+              "source_surface": "出荷",
+              "source_kind": "ACTIVITY",
+              "source_concept_id": null
+            },
+            {
+              "pattern_node": "n6",
+              "source_node": "n8",
+              "source_surface": "搬送",
+              "source_kind": "ACTIVITY",
+              "source_concept_id": null
+            },
+            {
+              "pattern_node": "n9",
+              "source_node": "n4",
+              "source_surface": "荷役",
+              "source_kind": "ACTIVITY",
+              "source_concept_id": null
+            }
+          ],
+          "evidence": [
+            {
+              "id": "ev1",
+              "quote": "搬送にかかる時間の増加と、荷役にかかる時間の増加が共同の原因となり、出荷に使える時間が減ることがある。"
+            }
+          ]
+        }
+      ],
+      "supporting_documents": [
+        "K19",
+        "K20"
+      ],
+      "support_count": 2,
+      "occurrence_count": 2
+    }
+  ],
+  "recurring_pattern_ids": [
+    "P001",
+    "P002",
+    "P003",
+    "P004",
+    "P005",
+    "P006",
+    "P007"
+  ],
+  "deferred": [
+    {
+      "document_id": "K12",
+      "roots": [
+        "n5"
+      ],
+      "reasons": [
+        "n1: unregistered meaning"
+      ]
+    }
+  ]
+}
